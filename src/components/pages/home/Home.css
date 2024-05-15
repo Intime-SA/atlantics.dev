@@ -1,0 +1,116 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 70% 30%; /* 70% para la izquierda, 30% para la derecha */
+  height: 100vh;
+  width: "100vw";
+}
+
+.left-component {
+  background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
+  padding: 20px;
+}
+
+.right-component {
+  background-color: #e0e0e0; /* Color de fondo para la sección derecha */
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+}
+
+h2 {
+  background: linear-gradient(
+    270deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+}
+
+.fontRubikMonoOne {
+  font-family: "Rubik Mono One", monospace;
+}
+
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.section-animation {
+  animation: slideInAndGrow 1s ease-out forwards;
+  margin-right: "5rem";
+}
+
+/* src/App.css */
+@keyframes slideInFromRightAndGrow {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.typography-animation {
+  animation: slideInFromRightAndGrow 1s ease-out forwards;
+}
+
+@keyframes slideInFromRightAndGrowWithFade {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.h2-animation {
+  animation: slideInFromRightAndGrowWithFade 2s ease-out forwards; /* 2s delay */
+}

@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.card {
+  position: absolute;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: "none";
+  transition: all 0.3s ease;
+  border-radius: "50px";
+  margin-right: 20rem;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* Mover hacia arriba y aumentar tamaño */
+  z-index: 1; /* Asegura que la tarjeta activada esté por delante */
+}
+
+.card1 {
+  top: 90%;
+  left: 5%;
+  background-color: "none";
+}
+
+.card2 {
+  top: 75%;
+  left: 15%;
+  background-color: "none";
+}
+.card3 {
+  top: 60%;
+  left: 25%;
+  background-color: "none";
+}
