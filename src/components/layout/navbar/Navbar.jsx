@@ -145,7 +145,11 @@ function DrawerAppBar(props) {
       <Box
         component="main"
         sx={{
-          backgroundImage: `url('../../../../fondo-section2.jpg')`, // Reemplaza con la URL de tu imagen
+          background: "rgb(2,0,36)",
+          backgroundImage:
+            "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
+
+          /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
