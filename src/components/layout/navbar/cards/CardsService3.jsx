@@ -18,9 +18,8 @@ export default function CardsService3() {
   return (
     <Card
       sx={{
-        maxWidth: "25vw",
         borderRadius: "40px",
-        width: "25vw",
+        height: "39vh",
         boxShadow: "none",
       }}
     >
@@ -28,11 +27,11 @@ export default function CardsService3() {
         <CardMedia
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/mp.png?alt=media&token=cb1cce98-f6a1-4366-8a52-98471cbd8212"
-          height="150px"
+          height="250px"
           alt="green iguana"
-          sx={{ objectFit: "cover", size: "cover", boxShadow: "none" }}
+          sx={{ objectFit: "cover", size: "cover" }}
         />
-        <CardContent sx={{ padding: "1rem", boxShadow: "none" }}>
+        <CardContent sx={{ padding: "2rem" }}>
           <Typography
             className="title"
             gutterBottom
@@ -47,19 +46,8 @@ export default function CardsService3() {
             color="text.secondary"
             sx={{ fontWeight: 600 }}
           >
-            Optimiza tus pagos con Mercado Pago y aprovecha los beneficios.
-            Integraciones seguras y eficientes para tu negocio.
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: "right",
-              fontFamily: "'Jaro', sans-serif",
-              color: "#1976D2",
-            }}
-          >
-            <strong>Protege a tus clientes</strong>
+            Conecta con Mercado Pago y tene el control de tu negocio.
+            Integracion facil, rapido y seguro.
           </Typography>
         </CardContent>
       </CardActionArea>

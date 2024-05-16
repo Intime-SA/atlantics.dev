@@ -53,7 +53,12 @@ const Home = () => {
 
       <section
         className="section-animation"
-        style={{ width: "90vw", display: "flex", justifyContent: "flex-end" }}
+        style={{
+          width: "90vw",
+          display: "flex",
+          justifyContent: "flex-end",
+          marginTop: "50vh",
+        }}
       >
         <img
           src="../../../0000Chat bot-pana.svg"

@@ -10,18 +10,20 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import "./CardsServices.css";
 
 export default function CardsServices() {
   const theme = useTheme();
 
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Card
       sx={{
-        maxWidth: "25vw",
         borderRadius: "40px",
-        width: "25vw",
         boxShadow: "none",
+        height: "39vh",
       }}
     >
       <CardActionArea>
@@ -29,9 +31,9 @@ export default function CardsServices() {
           component="img"
           image="https://assets-global.website-files.com/64cb8feadae4f2e5a069eb86/64fc664b8f4d3af0f389e06d_Chatgpt.jpg"
           alt="green iguana"
-          height="150px"
+          height={isMobile ? "150px" : "250px"}
         />
-        <CardContent sx={{ padding: "1rem" }}>
+        <CardContent sx={{ padding: "2rem" }}>
           <Typography
             className="title"
             gutterBottom
@@ -48,17 +50,6 @@ export default function CardsServices() {
           >
             Comunicación instantánea y automatización para tu negocio. Servicio
             personalizado disponbile las 24 horas.
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: "right",
-              fontFamily: "'Jaro', sans-serif",
-              color: "#1976D2",
-            }}
-          >
-            <strong>Transforma tu negocio</strong>
           </Typography>
         </CardContent>
       </CardActionArea>

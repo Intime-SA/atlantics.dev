@@ -91,9 +91,15 @@ function DrawerAppBar(props) {
           >
             {" "}
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              width: "40%",
+            }}
+          >
             {navItems.map((item) => (
-              <Button
+              <Typography
                 key={item}
                 sx={{
                   fontFamily: "'Jaro', sans-serif",
@@ -107,17 +113,15 @@ function DrawerAppBar(props) {
                     height: "100%",
                     top: "0",
                     left: "-100%",
-                    backgroundColor: "lightblue", // Cambia a tu color deseado
-                    zIndex: "-1",
-                    transition: "left 0.3s ease-in-out",
+                    color: "#1976d2", // Cambia a tu color deseado
                   },
                   "&:hover::before": {
                     left: "0",
                   },
                 }}
               >
-                {item}
-              </Button>
+                <Link class="typography-animation">{item}</Link>
+              </Typography>
             ))}
           </Box>
         </Toolbar>
@@ -170,7 +174,7 @@ function DrawerAppBar(props) {
             padding: "0px",
 
             width: "100%",
-            height: "100vh",
+            height: "150vh",
             background: "rgb(2,0,36)",
             backgroundImage:
               "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
