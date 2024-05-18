@@ -257,10 +257,7 @@ function DrawerAppBar(props) {
               fontSize: "1.5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne">
-              Armamos tu e-Commerce
-              <br />
-            </h1>
+            <h1 className="fontRubikMonoOne">Armamos tu e-Commerce</h1>
 
             <div>
               <div className="componentPesos">

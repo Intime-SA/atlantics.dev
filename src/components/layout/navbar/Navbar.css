@@ -367,7 +367,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60vw;
+  width: 100%;
 }
 
 .highlight-circle {
@@ -487,7 +487,20 @@ h1 {
   padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
   width: 100vw;
 }
+.css-1c6cu7h-MuiPaper-root-MuiAppBar-root {
+  padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
+  width: 100vw;
+}
+
 @media only screen and (max-width: 768px) {
+  .componentPesos {
+    font-size: 1vh;
+    color: #a7ffff; /* Ajusta el ángulo según sea necesario */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
   .cardJobs2 {
     display: none;
   }
@@ -563,5 +576,9 @@ h1 {
   .css-hyum1k-MuiToolbar-root {
     margin: 0;
     padding: 0;
+  }
+  .css-1c6cu7h-MuiPaper-root-MuiAppBar-root {
+    padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
+    width: 100vw;
   }
 }
