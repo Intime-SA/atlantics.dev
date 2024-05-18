@@ -73,7 +73,6 @@ a {
   display: "flex";
   justify-content: "space-around";
   align-items: "flex-start";
-  margin-bottom: 5rem;
 }
 
 .typography-animation {
@@ -107,6 +106,7 @@ h1 {
   background: transparent;
   backdrop-filter: blur(10px);
   animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
+  margin-bottom: 5rem;
 }
 .profile-card1 {
   margin-top: 25rem;
