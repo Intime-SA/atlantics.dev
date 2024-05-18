@@ -207,7 +207,7 @@ function DrawerAppBar(props) {
             zoom: "0.9",
 
             width: "100%",
-            height: "150vh",
+            height: "200vh",
             background: "rgb(2,0,36)",
             backgroundImage:
               "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
@@ -261,7 +261,7 @@ function DrawerAppBar(props) {
               Armamos tu e-Commerce
               <br />
             </h1>
-            <h1 className="fontRubikMonoOne">propio</h1>
+
             <div>
               <div className="componentPesos">
                 <div>

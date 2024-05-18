@@ -54,12 +54,12 @@ a {
 }
 
 .card2 {
-  top: 70%;
-  left: 15%;
+  top: 50%;
+  left: 60%;
   background-color: "none";
 }
 .card3 {
-  top: 120%;
+  top: 90%;
   left: 5%;
   background-color: "none";
 }
@@ -218,8 +218,6 @@ h1 {
 
 .container {
   height: 160vh;
-  width: 100vw;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,7 +237,6 @@ h1 {
 }
 .pre-container {
   height: 200vh;
-  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -255,7 +252,6 @@ h1 {
 }
 .pre-container3 {
   height: 200vh;
-  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -267,7 +263,7 @@ h1 {
 
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
-  top: -300px; /* Añadir posición relativa al contenedor */
+  /* Añadir posición relativa al contenedor */
   z-index: 0;
 }
 .pre2-container {
@@ -366,13 +362,12 @@ h1 {
   font-size: 16px;
 }
 .componentPesos {
-  font-size: 1vw;
+  font-size: 2vh;
   color: #a7ffff; /* Ajusta el ángulo según sea necesario */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60vw;
-  margin: 5rem;
 }
 
 .highlight-circle {
@@ -427,6 +422,7 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
+  margin: 5rem;
   z-index: 1000;
 }
 
@@ -487,7 +483,10 @@ h1 {
   left: 10vw;
   z-index: 1; /* Asegura que esté por encima de otros elementos si es necesario */
 }
-
+.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.css-hyum1k-MuiToolbar-root {
+  padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
+  width: 100vw;
+}
 @media only screen and (max-width: 768px) {
   .cardJobs2 {
     display: none;

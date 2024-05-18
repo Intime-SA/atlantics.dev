@@ -100,6 +100,8 @@ h2 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
+  margin-top: 10rem;
+  margin-left: 0rem;
 }
 
 @keyframes slideInAndGrow {

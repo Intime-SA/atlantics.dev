@@ -22,7 +22,7 @@ export default function CardsService3() {
       className=""
       sx={{
         borderRadius: "40px",
-        height: isMobile ? "50vh" : "auto",
+        height: isMobile ? "100vh" : "auto",
         boxShadow: "none",
       }}
     >

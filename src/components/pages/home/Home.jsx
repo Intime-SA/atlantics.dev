@@ -50,9 +50,7 @@ const Home = () => {
             gutterBottom
           >
             <h2 className="h2-animation">
-              Desarrollamos soluciones personalizadas para tus necesidades. Te
-              adaptamos al mundo de la inteligencia artificial sin cambiar tu
-              tecnologia de base
+              Desarrollamos soluciones personalizadas
             </h2>
           </Typography>
         </Container>
@@ -61,10 +59,10 @@ const Home = () => {
       <section
         className="section-animation"
         style={{
-          width: "90vw",
+          width: "100%",
           display: "flex",
           justifyContent: "flex-end",
-          marginTop: isMobile ? "10vh" : "50vh",
+          marginTop: isMobile ? "-100px" : "50vh",
         }}
       >
         <img
