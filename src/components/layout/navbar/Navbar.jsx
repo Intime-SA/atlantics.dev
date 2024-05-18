@@ -27,8 +27,8 @@ const drawerWidth = 240;
 const navItems = ["Inicio", "Staff", "Servicios", "Contacto"];
 
 function DrawerAppBar(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  /*   const { window } = props;
+   */ const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -53,9 +53,26 @@ function DrawerAppBar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const container = undefined;
+  /*     window !== undefined ? () => window().document.body : undefined;
+   */
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -71,7 +88,13 @@ function DrawerAppBar(props) {
           style={{
             display: "flex",
             justifyContent: "flex-end",
-            backgroundColor: "transparent",
+            backgroundColor: isScrolled
+              ? "rgba(255, 255, 255, 0.3)"
+              : "transparent", // Fondo semitransparente cuando se desplaza
+            backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
+            WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
+            padding: "10px",
+            borderRadius: "10px", // Opcional: bordes redondeados
           }}
         >
           <img
@@ -181,6 +204,7 @@ function DrawerAppBar(props) {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            zoom: "0.9",
 
             width: "100%",
             height: "150vh",
@@ -189,16 +213,17 @@ function DrawerAppBar(props) {
               "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
           }}
         >
-          <div class="card card1" style={{ padding: "0px" }}>
+          <div class="card card2" style={{ padding: "0px" }}>
             <CardsServices />
           </div>
-          <div class="card card2" style={{ padding: "0px" }}>
+          <div class="card card1" style={{ padding: "0px" }}>
             <CardsService2 />
           </div>
           <div class="card card3">
             <CardsService3 />
           </div>
         </div>
+
         <div className="grupoCardsPadre">
           <div className="grupoCards">
             <div class="profile-card1" id="a1">
@@ -221,18 +246,118 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
+        <div class="pre-container">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              marginTop: "5rem",
+              fontSize: "1.5rem",
+            }}
+          >
+            <h1 className="fontRubikMonoOne">
+              Armamos tu e-Commerce
+              <br />
+            </h1>
+            <h1 className="fontRubikMonoOne">propio</h1>
+            <div>
+              <div className="componentPesos">
+                <div>
+                  <span
+                    id="componentPeso"
+                    style={{
+                      fontSize: "10vw",
+                      color: "#a7ffff",
+                      width: "5rem",
+                      marginRight: "5rem",
+                    }}
+                    class="material-symbols-outlined"
+                  >
+                    attach_money
+                  </span>
+                </div>
+                <div>
+                  <h2>Integraciones con plataformas de Pago y Envio.</h2>
+                </div>
+              </div>
+              <div className="componentPesos">
+                <div>
+                  <h2>Servicio disponible 24hs! Sin intermediarios!</h2>
+                </div>
+                <div class="highlight-circle">
+                  <span id="componentPeso2" class="material-symbols-outlined">
+                    cloud
+                  </span>
+                </div>
+              </div>
+              <div className="componentPesos">
+                <div>
+                  <span
+                    style={{ width: "5rem", marginRight: "5rem" }}
+                    id="componentPeso3"
+                    class="material-symbols-outlined"
+                  >
+                    monitoring
+                  </span>
+                </div>
+                <div>
+                  <h2>Acceso a informacion clave del negocio</h2>
+                </div>
+              </div>
+              <div className="componentPesos">
+                <div>
+                  <h2>Aplicaciones integradas a sus sistemas</h2>
+                </div>
+                <div class="highlight-circle">
+                  <span id="componentPeso2" class="material-symbols-outlined">
+                    <span class="material-symbols-outlined">qr_code_2</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container2"></div>
+        </div>
+        <div class="container">
+          <div class="icon2">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Brown_Minimalist_Store_Highlight_Covers-removebg-preview.png?alt=media&token=8cbdbe5b-2f89-43e2-a01f-bedf6ce60a2b"
+              alt="Icono grande"
+            />
+          </div>
+          <div class="icon">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Brown_Minimalist_Store_Highlight_Covers__1_-removebg-preview.png?alt=media&token=881cee28-6dea-412d-9e63-4a98259baa9d"
+              alt="Icono grande"
+            />
+          </div>
+          <div class="cards-container">
+            <div class="cardJobs2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/desk.png?alt=media&token=c12ca57e-dacf-42da-8237-4b052d01b449"
+                alt="Project 1"
+                width="600px"
+                style={{ padding: 0, margin: 0 }}
+              />
+            </div>
+            <div class="cardJobs">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd1232mobile.png?alt=media&token=2c97c53a-8c9a-416d-bf9d-30779cf25f94"
+                alt="Project 1"
+                width="200px"
+                style={{ padding: 0, margin: 0 }}
+                sizes="contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="pre-container3"></div>
         <Footer />
       </Box>
     </Box>
   );
 }
-
-DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default DrawerAppBar;

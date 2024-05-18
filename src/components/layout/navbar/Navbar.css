@@ -20,13 +20,14 @@ a {
 
 .card {
   position: absolute;
-  width: 500px;
+  width: 40vw;
   padding: 20px;
   border-radius: 50px;
   background-color: transparent;
   transition: transform 0.3s ease; /* Cambiado para afectar solo la transformación */
   margin-right: 20rem;
   animation: slideInAndGrow 3s ease-out forwards;
+  margin-bottom: 5rem;
 }
 
 .card:hover {
@@ -215,7 +216,286 @@ h1 {
   width: 100%; /* Aumentar el ancho del subrayado al 100% */
 }
 
+.container {
+  height: 160vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-size: cover;
+  background-color: #06090a;
+  background-image: linear-gradient(
+    0deg,
+    #06090a 0%,
+    #aa6f6f 50%,
+    #080707 100%
+  );
+
+  clip-path: polygon(-20% 15%, 100% 0, 120% 80%, 0% 100%);
+  position: relative; /* Añadir posición relativa al contenedor */
+}
+.pre-container {
+  height: 200vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-size: cover;
+  background-color: #212020;
+  background-image: linear-gradient(315deg, #212020 32%, #30638a 100%);
+
+  clip-path: polygon(0% 0%, 100% 0, 120% 85%, 0% 100%);
+  position: relative;
+  top: 25vh; /* Añadir posición relativa al contenedor */
+}
+.pre-container3 {
+  height: 200vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-size: cover;
+  background-color: #212020;
+  background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
+
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  top: -300px; /* Añadir posición relativa al contenedor */
+  z-index: 0;
+}
+.pre2-container {
+  height: 60vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  position: relative;
+  top: 500px; /* Añadir posición relativa al contenedor */
+}
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.cards-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+  background-size: cover;
+  background-color: transparent;
+
+  position: relative; /* Añadir posición relativa al contenedor */
+}
+
+.cardJobs {
+  width: 200px;
+  display: flex;
+
+  border-radius: 10px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* Fondo blanco para la card */
+  transition: transform 0.6s, width 0.5s; /* Añade un efecto de transición */
+  position: relative; /* Añadir posición relativa para referencia */
+  top: 100px;
+  right: 50px;
+}
+
+.cardJobs2 {
+  width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fondo blanco para la card */
+  transition: transform 0.6s, width 0.5s; /* Añade un efecto de transición */
+  position: relative; /* Posición relativa para superponer */
+  top: -50px;
+}
+
+.cardJobs:hover {
+  cursor: pointer;
+  z-index: 1000; /* Un valor alto para asegurar que esté por encima de otros divs */
+  transform: scale(1.4); /* Efecto de aumento en todas las direcciones */
+}
+
+.cardJobs2:hover {
+  cursor: pointer;
+  z-index: 1000; /* También un valor alto para esta carta */
+  transform: scale(1.4); /* Efecto de aumento en todas las direcciones */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Overlay semi-transparente */
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-description {
+  padding: 15px;
+  font-size: 16px;
+}
+.componentPesos {
+  font-size: 1vw;
+  color: #a7ffff; /* Ajusta el ángulo según sea necesario */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: 5rem;
+}
+
+.highlight-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+  width: 10rem;
+  height: 10rem;
+}
+.highlight-circle span {
+  font-size: 10vw;
+  color: #a7ffff;
+}
+
+#componentPeso {
+  font-size: 10vw;
+  color: #a7ffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#componentPeso3 {
+  transform: rotate(0deg);
+  font-size: 10vw;
+  color: #a7ffff; /* Ajusta el ángulo según sea necesario */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fontRubikMonoOne {
+  font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent;
+  z-index: 1000;
+}
+
+.container2 {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.benefit {
+  max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.icon2 img {
+  width: 20vw; /* Ajusta el tamaño inicial del icono según sea necesario */
+  position: absolute;
+  animation: suspend 3s infinite alternate ease-in-out; /* Animación constante */
+  top: 5vh;
+  right: 5vw;
+}
+
+@keyframes suspend {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  100% {
+    transform: scale(1.1); /* Tamaño aumentado */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra ligeramente más oscura */
+  }
+}
+@keyframes suspend2 {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  100% {
+    transform: scale(1.1); /* Tamaño aumentado */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra ligeramente más oscura */
+  }
+}
+
+/* Ajustes específicos para el segundo icono */
+.icon img {
+  position: absolute;
+  animation: suspend2 1s infinite alternate ease-in-out; /* Animación constante */
+
+  width: 10vw; /* Ajusta el tamaño inicial del segundo icono según sea necesario */
+  top: 60vh;
+  left: 10vw;
+  z-index: 1; /* Asegura que esté por encima de otros elementos si es necesario */
+}
+
 @media only screen and (max-width: 768px) {
+  .cardJobs2 {
+    display: none;
+  }
+
+  .cardJobs:hover img {
+    transform: scale(1.1);
+  }
   .grupoCards {
     display: flex;
     flex-direction: column;

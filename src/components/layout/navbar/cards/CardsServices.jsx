@@ -23,7 +23,7 @@ export default function CardsServices() {
       sx={{
         borderRadius: "40px",
         boxShadow: "none",
-        height: isMobile ? "50vh" : "39vh",
+        height: isMobile ? "50vh" : "auto",
       }}
     >
       <CardActionArea>
@@ -31,7 +31,7 @@ export default function CardsServices() {
           component="img"
           image="https://assets-global.website-files.com/64cb8feadae4f2e5a069eb86/64fc664b8f4d3af0f389e06d_Chatgpt.jpg"
           alt="green iguana"
-          height={isMobile ? "150px" : "250px"}
+          height={isMobile ? "150px" : "450px"}
         />
         <CardContent sx={{ padding: "2rem" }}>
           <Typography

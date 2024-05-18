@@ -33,7 +33,7 @@ const Home = () => {
               fontWeight: "bold",
               color: "#1976d2",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)", // Agregar sombreado al texto
-              marginTop: "2rem",
+              marginTop: "5rem",
             }}
           >
             <h1 className="fontRubikMonoOne">Software Factory</h1>
@@ -45,6 +45,7 @@ const Home = () => {
               fontSize: "120%",
               color: "#1976d2",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)", // Agregar sombreado al texto
+              marginTop: "1rem",
             }}
             gutterBottom
           >
