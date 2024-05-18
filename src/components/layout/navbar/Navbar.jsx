@@ -250,6 +250,7 @@ function DrawerAppBar(props) {
         <div class="pre-container">
           <div
             style={{
+              width: "800%",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
