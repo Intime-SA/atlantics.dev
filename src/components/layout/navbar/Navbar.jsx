@@ -214,10 +214,10 @@ function DrawerAppBar(props) {
               "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
           }}
         >
-          <div class="card card2" style={{ padding: "0px" }}>
+          <div class="card card2">
             <CardsServices />
           </div>
-          <div class="card card1" style={{ padding: "0px" }}>
+          <div class="card card1">
             <CardsService2 />
           </div>
           <div class="card card3">
@@ -250,7 +250,7 @@ function DrawerAppBar(props) {
         <div class="pre-container">
           <div
             style={{
-              width: "800%",
+              width: "100%",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
@@ -259,9 +259,16 @@ function DrawerAppBar(props) {
               fontSize: "1.5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne">Armamos tu e-Commerce</h1>
+            <h1 className="fontRubikMonoOne2">Armamos tu e-Commerce</h1>
 
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <div className="componentPesos">
                 <div>
                   <span
@@ -352,7 +359,7 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
-        <div class="pre-container3"></div>
+        <div class="pre-container4"></div>
         <Footer />
       </Box>
     </Box>

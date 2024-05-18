@@ -25,7 +25,6 @@ a {
   border-radius: 50px;
   background-color: transparent;
   transition: transform 0.3s ease; /* Cambiado para afectar solo la transformación */
-  margin-right: 20rem;
   animation: slideInAndGrow 3s ease-out forwards;
   margin-bottom: 5rem;
 }
@@ -93,15 +92,14 @@ h1 {
 .profile-card2 {
   border-radius: 25px;
   height: 500px;
-  width: 50%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: transparent;
-  backdrop-filter: blur(10px);
   animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
   margin-bottom: 5rem;
 }
@@ -233,10 +231,11 @@ h1 {
 }
 .pre-container {
   height: 200vh;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   background-size: cover;
   background-color: #212020;
@@ -260,6 +259,23 @@ h1 {
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   /* Añadir posición relativa al contenedor */
+  z-index: 0;
+}
+.pre-container4 {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-size: cover;
+  background-color: #212020;
+  background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
+
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  /* Añadir posición relativa al contenedor */
+  top: -280px;
   z-index: 0;
 }
 .pre2-container {
@@ -418,8 +434,35 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
-  margin: 1rem;
-  z-index: 1000;
+  width: 100%;
+}
+.fontRubikMonoOne2 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 5rem;
+  width: 80%;
 }
 
 .container2 {
@@ -501,13 +544,18 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 80%;
   }
   .cardJobs2 {
     display: none;
   }
 
+  .cardJobs {
+    right: 0px;
+  }
+
   .cardJobs:hover img {
+    left: 500px;
     transform: scale(1.1);
   }
   .grupoCards {

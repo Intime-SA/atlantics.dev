@@ -21,6 +21,7 @@ export default function CardsService2() {
   return (
     <Card
       sx={{
+        width: isMobile ? "350px" : "auto",
         borderRadius: "40px",
         boxShadow: "none",
         height: isMobile ? "60vh" : "auto",
@@ -31,7 +32,6 @@ export default function CardsService2() {
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here..png?alt=media&token=194ea975-be00-4e3a-bd35-52ae11d98b56"
           alt="green iguana"
-          width="300px"
           height={isMobile ? "150px" : "250px"}
         />
         <CardContent sx={{ padding: "2rem" }}>
