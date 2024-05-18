@@ -30,7 +30,6 @@ export default function CardsService3() {
         <CardMedia
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/mp.png?alt=media&token=cb1cce98-f6a1-4366-8a52-98471cbd8212"
-          height="250px"
           alt="green iguana"
           sx={{ objectFit: "cover", size: "cover" }}
         />
