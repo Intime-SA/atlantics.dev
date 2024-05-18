@@ -175,6 +175,11 @@ h1 {
   text-align: center;
 }
 
+.css-hyum1k-MuiToolbar-root {
+  margin: 0;
+  padding: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .grupoCards {
     display: flex;
