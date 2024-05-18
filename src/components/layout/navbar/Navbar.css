@@ -76,70 +76,6 @@ a {
   margin-top: 15rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .grupoCards {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 0rem;
-    width: "100%";
-    display: "flex";
-    flex-direction: column;
-    justify-content: "";
-    align-items: "flex-start";
-  }
-
-  .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 60vh;
-    padding: 5px;
-    border-radius: 50px;
-    background-color: transparent; /* Cambiado para afectar solo la transformación */
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 5rem;
-  }
-  .card1 {
-    top: 0;
-    left: 0;
-    transform: none;
-    background-color: transparent;
-  }
-
-  .card2 {
-    top: 0;
-    left: 0;
-    transform: none;
-    background-color: transparent;
-  }
-
-  .card3 {
-    top: 0;
-    left: 0;
-    transform: none;
-    background-color: transparent;
-  }
-
-  .typography-animation {
-    font-size: 50%;
-  }
-
-  .grupoCardsProfile {
-    display: flex;
-    flex-direction: column;
-  }
-  #asd123 {
-    display: none;
-  }
-}
-
 .typography-animation {
   background: linear-gradient(270deg, #a7ffff 42.86%, #89fcff 50%);
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
@@ -237,4 +173,76 @@ h1 {
   font-size: 1.5rem;
   color: #777;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .grupoCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 0rem;
+    width: "100%";
+    display: "flex";
+    flex-direction: column;
+    justify-content: "";
+    align-items: "flex-start";
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: transparent; /* Cambiado para afectar solo la transformación */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+  }
+  .card1 {
+    top: 0;
+    left: 0;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .card2 {
+    top: 0;
+    left: 0;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .card3 {
+    top: 0;
+    left: 0;
+    transform: none;
+    background-color: transparent;
+  }
+
+  .typography-animation {
+    font-size: 50%;
+  }
+
+  .grupoCardsProfile {
+    display: flex;
+    flex-direction: column;
+  }
+  #asd123 {
+    display: none;
+  }
+  .profile-card1,
+  .profile-card2 {
+    width: 300px;
+    padding: 0rem;
+  }
+  .css-hyum1k-MuiToolbar-root {
+    margin: 0;
+    padding: 0;
+  }
 }
