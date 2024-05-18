@@ -211,7 +211,7 @@ h1 {
 }
 
 .container {
-  height: 160vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -262,20 +262,19 @@ h1 {
   z-index: 0;
 }
 .pre-container4 {
-  height: 100vh;
+  height: 200vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background-size: cover;
   background-color: #212020;
   background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
 
-  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   /* Añadir posición relativa al contenedor */
-  top: -280px;
+  top: -330px;
   z-index: 0;
 }
 .pre2-container {
@@ -438,7 +437,7 @@ h1 {
 }
 .fontRubikMonoOne2 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 10vh;
   font-family: "Rubik Mono One", monospace;
   background: linear-gradient(
     135deg,
@@ -461,7 +460,7 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
   width: 80%;
 }
 
@@ -538,6 +537,10 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .fontRubikMonoOne2 {
+    text-align: center;
+    font-size: 3vh;
+  }
   .componentPesos {
     font-size: 1vh;
     color: #a7ffff; /* Ajusta el ángulo según sea necesario */

@@ -185,9 +185,7 @@ function DrawerAppBar(props) {
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
 
           /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+
           minHeight: "100vh",
           minWidth: "100vw", // Ajusta la altura según sea necesario
         }}
@@ -255,11 +253,17 @@ function DrawerAppBar(props) {
               justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
-              marginTop: "5rem",
+
               fontSize: "1.5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne2">Armamos tu e-Commerce</h1>
+            <h1 className="fontRubikMonoOne2">
+              Armamos tu
+              <br />
+              e-Commerce
+              <br />
+              <span style={{ color: "#AFFFFF" }}>PROPIO</span>
+            </h1>
 
             <div
               style={{

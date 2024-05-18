@@ -30,7 +30,7 @@ export default function CardsServices() {
       <CardActionArea>
         <CardMedia
           component="img"
-          image="https://assets-global.website-files.com/64cb8feadae4f2e5a069eb86/64fc664b8f4d3af0f389e06d_Chatgpt.jpg"
+          image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123333.jpg?alt=media&token=6c019fc6-ce82-47fb-a792-b06057afc65a"
           alt="green iguana"
           height={isMobile ? "150px" : "450px"}
         />
