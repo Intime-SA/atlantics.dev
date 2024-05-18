@@ -11,15 +11,18 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import "./CardsServices.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function CardsService3() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Card
+      className=""
       sx={{
         borderRadius: "40px",
-        height: "39vh",
+        height: isMobile ? "50vh" : "39vh",
         boxShadow: "none",
       }}
     >

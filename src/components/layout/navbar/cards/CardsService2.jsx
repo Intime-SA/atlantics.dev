@@ -11,25 +11,27 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import "./CardsServices.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function CardsService2() {
   const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Card
       sx={{
         borderRadius: "40px",
         boxShadow: "none",
-        height: "39vh",
+        height: isMobile ? "50vh" : "39vh",
       }}
     >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="250px"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here..png?alt=media&token=194ea975-be00-4e3a-bd35-52ae11d98b56"
           alt="green iguana"
-          sx={{ objectFit: "cover", size: "cover" }}
+          sx={{ objectFit: "cover", size: "cover", size: "800%" }}
         />
         <CardContent sx={{ padding: "2rem" }}>
           <Typography

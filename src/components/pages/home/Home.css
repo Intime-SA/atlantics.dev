@@ -64,8 +64,42 @@ h2 {
   color: transparent; /* Hacer el color del texto transparente */
 }
 
+.section-animation {
+  width: "90vw";
+  display: "flex";
+  justify-content: "flex-end";
+  margin-top: "50vh";
+}
+
+@media only screen and (max-width: 768px) {
+  .fontRubikMonoOne {
+    font-size: 70%;
+  }
+}
+
 .fontRubikMonoOne {
   font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent;
 }
 
 @keyframes slideInAndGrow {

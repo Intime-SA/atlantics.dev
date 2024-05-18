@@ -1,8 +1,14 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
 import "./Home.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const Home = () => {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Container maxWidth="lg" className="home-container">
       {/* Sección izquierda */}
@@ -57,7 +63,7 @@ const Home = () => {
           width: "90vw",
           display: "flex",
           justifyContent: "flex-end",
-          marginTop: "50vh",
+          marginTop: isMobile ? "10vh" : "50vh",
         }}
       >
         <img

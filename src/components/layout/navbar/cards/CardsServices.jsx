@@ -23,7 +23,7 @@ export default function CardsServices() {
       sx={{
         borderRadius: "40px",
         boxShadow: "none",
-        height: "39vh",
+        height: isMobile ? "50vh" : "39vh",
       }}
     >
       <CardActionArea>

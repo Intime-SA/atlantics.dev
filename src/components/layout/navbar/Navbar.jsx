@@ -21,6 +21,7 @@ import { Card } from "@mui/material";
 import CardsServices from "./cards/CardsServices";
 import CardsService2 from "./cards/CardsService2";
 import CardsService3 from "./cards/CardsService3";
+import Footer from "./footer/Footer";
 
 const drawerWidth = 240;
 const navItems = ["Inicio", "Staff", "Servicios", "Contacto"];
@@ -69,7 +70,7 @@ function DrawerAppBar(props) {
         <Toolbar
           style={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-end",
             backgroundColor: "transparent",
           }}
         >
@@ -120,7 +121,9 @@ function DrawerAppBar(props) {
                   },
                 }}
               >
-                <Link class="typography-animation">{item}</Link>
+                <Link id="asd123" class="typography-animation">
+                  {item}
+                </Link>
               </Typography>
             ))}
           </Box>
@@ -149,6 +152,9 @@ function DrawerAppBar(props) {
       <Box
         component="main"
         sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
           background: "rgb(2,0,36)",
           backgroundImage:
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
@@ -163,15 +169,18 @@ function DrawerAppBar(props) {
         }}
       >
         <Toolbar />
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <Home />
-
-          <div style={{ width: "70%" }}></div>
         </div>
         <div
+          className="grupoCardsProfile"
           style={{
             margin: "0px",
             padding: "0px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
 
             width: "100%",
             height: "150vh",
@@ -190,6 +199,29 @@ function DrawerAppBar(props) {
             <CardsService3 />
           </div>
         </div>
+        <div className="grupoCardsPadre">
+          <div className="grupoCards">
+            <div class="profile-card1" id="a1">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
+                alt="Ramiro Martin Arce"
+              />
+              <h1>Rodrigo Silva</h1>
+              <h2>CTO - Cofounder</h2>
+              <h3>Full-Stack Developer</h3>
+            </div>
+            <div class="profile-card2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/CambioUrl.png?alt=media&token=191540f4-4037-4a12-83ba-882cba7b5c10"
+                alt="Ramiro Martin Arce"
+              />
+              <h1>Ramiro Martin Arce</h1>
+              <h2>CEO - Cofounder</h2>
+              <h3>Business Analyst</h3>
+            </div>
+          </div>
+        </div>
+        <Footer />
       </Box>
     </Box>
   );
