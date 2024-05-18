@@ -215,7 +215,7 @@ function DrawerAppBar(props) {
           <div class="card card2">
             <CardsServices />
           </div>
-          <div class="card card1">
+           <div class="card card1">
             <CardsService2 />
           </div>
           <div class="card card3">
