@@ -31,7 +31,8 @@ export default function CardsService2() {
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here..png?alt=media&token=194ea975-be00-4e3a-bd35-52ae11d98b56"
           alt="green iguana"
-          sx={{ objectFit: "cover", size: "cover", size: "800%" }}
+          sx={{ objectFit: "cover", size: "80%" }}
+          height={isMobile ? "150px" : "250px"}
         />
         <CardContent sx={{ padding: "2rem" }}>
           <Typography

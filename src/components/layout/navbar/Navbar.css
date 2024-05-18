@@ -73,7 +73,7 @@ a {
   display: "flex";
   justify-content: "space-around";
   align-items: "flex-start";
-  margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 
 .typography-animation {
@@ -104,10 +104,24 @@ h1 {
   justify-content: space-around;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   background: transparent;
   backdrop-filter: blur(10px);
-  margin-bottom: 5rem;
+  animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
+}
+.profile-card1 {
+  margin-top: 25rem;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1); /* Aumenta el tamaño */
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 .profile-card1:hover,
@@ -178,6 +192,27 @@ h1 {
 .css-hyum1k-MuiToolbar-root {
   margin: 0;
   padding: 0;
+}
+
+#asd123 {
+  position: relative; /* Establecer posición relativa para el subrayado */
+  /* Color inicial del texto */
+  transition: color 0.3s; /* Transición suave para el cambio de color del texto */
+}
+
+#asd123::before {
+  content: ""; /* Agregar un elemento pseudo ::before para crear el subrayado */
+  position: absolute; /* Establecer posición absoluta para el subrayado */
+  bottom: 0; /* Colocar el subrayado al fondo del elemento */
+  left: 0; /* Iniciar desde la izquierda */
+  width: 0; /* Inicialmente sin ancho */
+  height: 2px; /* Grosor del subrayado */
+  background-color: #c0dbdb; /* Color del subrayado */
+  transition: width 0.3s; /* Transición suave para el ancho del subrayado */
+}
+
+#asd123:hover::before {
+  width: 100%; /* Aumentar el ancho del subrayado al 100% */
 }
 
 @media only screen and (max-width: 768px) {
