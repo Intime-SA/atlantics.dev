@@ -65,7 +65,7 @@ h2 {
 }
 
 .section-animation {
-  width: "90vw";
+  width: "100%";
   display: "flex";
   justify-content: "flex-end";
   margin-top: "50vh";

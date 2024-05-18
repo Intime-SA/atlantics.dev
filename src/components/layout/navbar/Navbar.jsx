@@ -93,7 +93,6 @@ function DrawerAppBar(props) {
               : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            padding: "10px",
             borderRadius: "10px", // Opcional: bordes redondeados
           }}
         >
