@@ -74,7 +74,9 @@ function DrawerAppBar(props) {
   /*     window !== undefined ? () => window().document.body : undefined;
    */
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box
+      sx={{ display: "flex", width: "100vw", padding: "0px", margin: "0px" }}
+    >
       <CssBaseline />
       <AppBar
         component="nav"
@@ -86,14 +88,15 @@ function DrawerAppBar(props) {
       >
         <Toolbar
           style={{
+            width: "100%",
             display: "flex",
-            justifyContent: "flex-end",
+            justifyContent: "flex-start",
             backgroundColor: isScrolled
               ? "rgba(255, 255, 255, 0.3)"
               : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            borderRadius: "10px", // Opcional: bordes redondeados
+            // Opcional: bordes redondeados
           }}
         >
           <img
@@ -103,7 +106,7 @@ function DrawerAppBar(props) {
             style={{
               width: "5rem",
               height: "5rem",
-              margin: "0px",
+              margin: "5px",
               padding: "0px",
             }}
           />
@@ -187,7 +190,6 @@ function DrawerAppBar(props) {
           backgroundRepeat: "no-repeat",
           minHeight: "100vh",
           minWidth: "100vw", // Ajusta la altura según sea necesario
-          opacity: "0.9",
         }}
       >
         <Toolbar />
