@@ -6,3 +6,7 @@
 body {
   zoom: 1; /* Reduce la escala del contenido al 90% */
 }
+html {
+  display: flex;
+  justify-content: center;
+}

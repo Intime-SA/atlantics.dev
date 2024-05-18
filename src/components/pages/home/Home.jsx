@@ -23,7 +23,7 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          {/*           <Typography
+          <Typography
             variant="h1"
             component="h1"
             gutterBottom
@@ -38,8 +38,7 @@ const Home = () => {
           >
             <h1 className="fontRubikMonoOne">Software Factory</h1>
           </Typography>
-          */}{" "}
-          <Typography
+          {/*           <Typography
             variant="body1"
             style={{
               fontFamily: "'Jaro', sans-serif",
@@ -53,7 +52,7 @@ const Home = () => {
             <h2 className="h2-animation">
               Desarrollamos soluciones personalizadas
             </h2>
-          </Typography>
+          </Typography> */}
         </Container>
       </section>
 
