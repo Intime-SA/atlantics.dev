@@ -72,17 +72,21 @@ a {
 }
 
 .typography-animation {
-  background: linear-gradient(270deg, #a7ffff 42.86%, #89fcff 50%);
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent; /* Hacer el color del texto transparente */
   text-decoration: none;
+
+  color: #a7ffff;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Jaro", sans-serif;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: gainsboro;
 }
 h1 {
   color: gainsboro;
@@ -102,6 +106,7 @@ h1 {
   background: transparent;
   animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
   margin-bottom: 5rem;
+  margin: 5rem;
 }
 .profile-card1 {
   margin-top: 25rem;
@@ -133,11 +138,18 @@ h1 {
   background-size: 180%;
   box-shadow: 0 4px 8px #fff;
 }
+.profile-card1 h1:hover,
+.profile-card2 h1:hover,
+.profile-card1 h2:hover,
+.profile-card2 h2:hover {
+  color: black;
+}
 
 .profile-card2:hover {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o-sin-t%C3%ADtulo.svg?alt=media&token=027d323f-f2fd-4e65-bff7-d9774f6b8490");
   background-size: 180%;
   box-shadow: 0 4px 8px #fff;
+  color: gainsboro;
 }
 
 .profile-card1 img {
@@ -151,7 +163,6 @@ h1 {
 .profile-card1 h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
-  color: #333;
   text-align: center;
 }
 
@@ -173,7 +184,6 @@ h1 {
 .profile-card2 h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
-  color: #333;
   text-align: center;
 }
 
@@ -274,8 +284,11 @@ h1 {
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   /* Añadir posición relativa al contenedor */
-  top: -330px;
   z-index: 0;
+}
+.MuiBox-root .css-13q4n6n {
+  bottom: 500px;
+  height: auto;
 }
 .pre2-container {
   height: 60vh;
@@ -400,6 +413,13 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.componentPesos h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #a7ffff;
 }
 
 #componentPeso3 {
@@ -537,6 +557,11 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .profile-card1,
+  .profile-card2 {
+    margin: 0px;
+    margin-bottom: 5rem;
+  }
   .fontRubikMonoOne2 {
     text-align: center;
     font-size: 3vh;

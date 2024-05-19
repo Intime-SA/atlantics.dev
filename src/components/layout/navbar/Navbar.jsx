@@ -128,26 +128,13 @@ function DrawerAppBar(props) {
               <Typography
                 key={item}
                 sx={{
-                  fontFamily: "'Jaro', sans-serif",
                   fontSize: "2rem",
                   position: "relative",
                   overflow: "hidden",
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    top: "0",
-                    left: "-100%",
-                    color: "#1976d2", // Cambia a tu color deseado
-                  },
-                  "&:hover::before": {
-                    left: "0",
-                  },
                 }}
               >
                 <Link id="asd123" class="typography-animation">
-                  {item}
+                  <h2>{item}</h2>
                 </Link>
               </Typography>
             ))}
@@ -207,9 +194,6 @@ function DrawerAppBar(props) {
 
             width: "100%",
             height: "200vh",
-            background: "rgb(2,0,36)",
-            backgroundImage:
-              "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
           }}
         >
           <div class="card card2">
@@ -289,7 +273,9 @@ function DrawerAppBar(props) {
                   </span>
                 </div>
                 <div>
-                  <h2>Integraciones con plataformas de Pago y Envio.</h2>
+                  <h2 style={{ textAlign: "right" }}>
+                    Integraciones con plataformas de Pago y Envio.
+                  </h2>
                 </div>
               </div>
               <div className="componentPesos">
@@ -313,7 +299,9 @@ function DrawerAppBar(props) {
                   </span>
                 </div>
                 <div>
-                  <h2>Acceso a informacion clave del negocio</h2>
+                  <h2 style={{ textAlign: "right" }}>
+                    Acceso a informacion clave del negocio
+                  </h2>
                 </div>
               </div>
               <div className="componentPesos">
