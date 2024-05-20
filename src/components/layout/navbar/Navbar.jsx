@@ -334,7 +334,7 @@ function DrawerAppBar(props) {
           <div class="cards-container">
             <div class="cardJobs2">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/desk.png?alt=media&token=c12ca57e-dacf-42da-8237-4b052d01b449"
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/kaury123.png?alt=media&token=b6370eae-f1db-407e-8f9d-407d2060f614"
                 alt="Project 1"
                 width="600px"
                 style={{ padding: 0, margin: 0 }}
@@ -351,7 +351,60 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
-        <div class="pre-container4"></div>
+        <div class="pre-container4">
+          <div class="icon2" id="webservice">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/png-transparent-amazon-logo-cloud-computing-amazon-web-services-web-hosting-service-computer-servers-internet-hosting-service-computer-hardware-information-technology-removebg-preview.png?alt=media&token=c56ce276-6446-4167-a453-9eeade9278fd"
+              alt="Icono grande"
+            />
+          </div>
+          <div class="icon" id="lineasIcon">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__2_-removebg-preview.png?alt=media&token=f0059d3c-c996-4d45-b6b2-59a2a9f3e1ad"
+              alt="Icono grande"
+            />
+          </div>
+          <div class="cards-container">
+            <div class="cardJobs2" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzaINT.png?alt=media&token=0432bad0-f742-4d3e-9704-09323466237e"
+                alt="Project 1"
+                width="600px"
+                style={{ padding: 0, margin: 0 }}
+              />
+            </div>
+            <div class="cardJobs" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzasv2.png?alt=media&token=c67c7fb7-5171-476f-bb65-5b5e8b6066fd"
+                alt="Project 1"
+                width="200px"
+                style={{ padding: 0, margin: 0 }}
+                sizes="contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="pre-container5">
+          <div class="cards-container">
+            <div class="cardJobs2" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2desktop.png?alt=media&token=0b3cdb21-cf43-4e4b-91c0-c0288b7361d6"
+                alt="Project 1"
+                width="600px"
+                style={{ padding: 0, margin: 0 }}
+              />
+            </div>
+            <div class="cardJobs" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2.png?alt=media&token=28eaee81-c3f6-4326-9d90-e4faa1d76c60https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
+                alt="Project 1"
+                width="200px"
+                style={{ padding: 0, margin: 0 }}
+                sizes="contain"
+              />
+            </div>
+          </div>
+        </div>
         <Footer />
       </Box>
     </Box>

@@ -91,6 +91,9 @@ h3 {
 h1 {
   color: gainsboro;
 }
+.typography-animation h2 {
+  size: 0.5rem;
+}
 
 .profile-card1,
 .profile-card2 {
@@ -200,6 +203,7 @@ h1 {
 }
 
 #asd123 {
+  font-size: 1vw;
   position: relative; /* Establecer posición relativa para el subrayado */
   /* Color inicial del texto */
   transition: color 0.3s; /* Transición suave para el cambio de color del texto */
@@ -281,7 +285,7 @@ h1 {
   background-color: #212020;
   background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
 
-  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
   position: relative;
   /* Añadir posición relativa al contenedor */
   z-index: 0;
@@ -554,6 +558,38 @@ h1 {
 .css-1c6cu7h-MuiPaper-root-MuiAppBar-root {
   padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
   width: 100vw;
+}
+#lineasIcon img {
+  position: absolute;
+  animation: none;
+  top: 850px;
+  width: 40vw;
+}
+
+#webservice img {
+  top: 150px;
+}
+
+.pre-container5 {
+  height: 200vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+
+  background-color: #212020;
+  background-image: linear-gradient(225deg, #212020 35%, #2ea093 100%);
+
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  top: -100px;
+  /* Añadir posición relativa al contenedor */
+  z-index: 0;
+}
+
+#center {
+  margin-top: 30rem;
 }
 
 @media only screen and (max-width: 768px) {

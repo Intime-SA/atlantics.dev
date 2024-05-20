@@ -50,7 +50,7 @@ export default function CardsService2() {
             sx={{ fontWeight: 600 }}
           >
             Transacciones rápidas y seguras. Mejora la experiencia del cliente,
-            con seguridad y adaptandote a la nueva Era.
+            aumenta la seguridad y agiliza tiempos.
           </Typography>
         </CardContent>
       </CardActionArea>
