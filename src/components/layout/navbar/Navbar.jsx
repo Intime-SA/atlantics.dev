@@ -330,7 +330,7 @@ function DrawerAppBar(props) {
               alt="Icono grande"
             />
           </div>
-          <div>
+          <div style={{ marginBottom: isMobile ? "20rem" : "0rem" }}>
             <h3 className="titulosTrabajos">
               SISTEMA DE ADMINISTRACION DE VENTAS / STOCK + E-COMMERCE
             </h3>
