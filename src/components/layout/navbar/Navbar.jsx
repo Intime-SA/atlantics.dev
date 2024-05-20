@@ -177,7 +177,8 @@ function DrawerAppBar(props) {
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
 
           /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
-
+          padding: "0px",
+          margin: "0px",
           minHeight: "100vh",
           minWidth: "100vw", // Ajusta la altura según sea necesario
         }}
@@ -434,7 +435,7 @@ function DrawerAppBar(props) {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzasv2.png?alt=media&token=c67c7fb7-5171-476f-bb65-5b5e8b6066fd"
                 alt="Project 1"
-                width="200px"
+                width="250px"
                 style={{ padding: 0, margin: 0 }}
                 sizes="contain"
               />
@@ -470,12 +471,12 @@ function DrawerAppBar(props) {
           </div>
         </div>
         <div class="pre-container5">
-          <div>
+          <div style={{ marginRight: "20px", gap: "50px" }}>
             <h3 className="titulosTrabajos">
               SISTEMA DE PEDIDOS / VENDEDORES - DISTRIBUIDORA
             </h3>
             <Link
-              style={{ textAlign: "right" }}
+              style={{ textAlign: "right", margin: "1rem" }}
               to="https://www.instagram.com/alimentosnaturalesmdq/"
             >
               <h4 id="asd1232">@alimentosnaturalesmdp</h4>
@@ -525,6 +526,7 @@ function DrawerAppBar(props) {
                     ? "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
                     : "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2.png?alt=media&token=28eaee81-c3f6-4326-9d90-e4faa1d76c60https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
                 }
+                np
                 alt="Project 1"
                 width="200px"
                 style={{ padding: 0, margin: 0 }}
