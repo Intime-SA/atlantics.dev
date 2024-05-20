@@ -21,7 +21,7 @@ export default function CardsService2() {
   return (
     <Card
       sx={{
-        width: isMobile ? "350px" : "auto",
+        width: isMobile ? "95%" : "auto",
         borderRadius: "40px",
         boxShadow: "none",
         height: isMobile ? "60vh" : "auto",
