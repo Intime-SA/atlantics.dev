@@ -82,7 +82,13 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -276,11 +282,13 @@ h1 {
   z-index: 0;
 }
 .pre-container4 {
-  height: 200vh;
+  height: 250vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 0rem;
   background-size: cover;
   background-color: #212020;
   background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
@@ -520,6 +528,21 @@ h1 {
   justify-content: center;
 }
 
+.titulosTrabajos {
+  margin-top: 450px;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+.checklist {
+  font-size: 0.7em;
+  margin-top: 35vh; /* Reduce la fuente un 30% */
+}
+.checklist2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 0.5rem;
+}
+
 @keyframes suspend {
   0% {
     transform: scale(1); /* Tamaño normal */
@@ -548,7 +571,7 @@ h1 {
 
   width: 10vw; /* Ajusta el tamaño inicial del segundo icono según sea necesario */
   top: 60vh;
-  left: 10vw;
+  left: 4vw;
   z-index: 1; /* Asegura que esté por encima de otros elementos si es necesario */
 }
 .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.css-hyum1k-MuiToolbar-root {
@@ -571,7 +594,7 @@ h1 {
 }
 
 .pre-container5 {
-  height: 200vh;
+  height: 300vh;
 
   display: flex;
   flex-direction: column;
@@ -593,6 +616,42 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .webs {
+    font-size: 1vw;
+    position: relative; /* Establecer posición relativa para el subrayado */
+    /* Color inicial del texto */
+    transition: color 0.3s; /* Transición suave para el cambio de color del texto */
+  }
+
+  .webs::before {
+    content: ""; /* Agregar un elemento pseudo ::before para crear el subrayado */
+    position: absolute; /* Establecer posición absoluta para el subrayado */
+    bottom: 0; /* Colocar el subrayado al fondo del elemento */
+    left: 0; /* Iniciar desde la izquierda */
+    width: 0; /* Inicialmente sin ancho */
+    height: 2px; /* Grosor del subrayado */
+    background-color: #c0dbdb; /* Color del subrayado */
+    transition: width 0.3s; /* Transición suave para el ancho del subrayado */
+    display: block; /* Asegurar que el pseudo-elemento se comporte como un bloque */
+  }
+
+  .webs:hover::before {
+    width: 100%; /* Aumentar el ancho del subrayado al 100% */
+  }
+
+  .titulosTrabajos {
+    margin-left: 1rem;
+  }
+  .checklist {
+    margin-top: 10vh;
+    margin: 1rem;
+  }
+  .checklist {
+    margin: 1rem;
+  }
+  .icon img {
+    display: none;
+  }
   .profile-card1,
   .profile-card2 {
     margin: 0px;
@@ -616,6 +675,13 @@ h1 {
 
   .cardJobs {
     right: 0px;
+    width: 350px;
+    height: auto;
+    margin-top: 0px;
+    top: -60px;
+  }
+  .cardJobs img {
+    width: 350px;
   }
 
   .cardJobs:hover img {

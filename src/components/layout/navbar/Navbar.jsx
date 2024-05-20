@@ -22,11 +22,16 @@ import CardsServices from "./cards/CardsServices";
 import CardsService2 from "./cards/CardsService2";
 import CardsService3 from "./cards/CardsService3";
 import Footer from "./footer/Footer";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const drawerWidth = 240;
 const navItems = ["Inicio", "Staff", "Servicios", "Contacto"];
 
 function DrawerAppBar(props) {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   /*   const { window } = props;
    */ const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -325,12 +330,17 @@ function DrawerAppBar(props) {
               alt="Icono grande"
             />
           </div>
-          <div class="icon">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Brown_Minimalist_Store_Highlight_Covers__1_-removebg-preview.png?alt=media&token=881cee28-6dea-412d-9e63-4a98259baa9d"
-              alt="Icono grande"
-            />
+          <div>
+            <h3 className="titulosTrabajos">
+              SISTEMA DE ADMINISTRACION DE VENTAS / STOCK + E-COMMERCE
+            </h3>
+            <Link to="https://www.mayoristakaurymdp.com">
+              <h4 id="asd123" class="typography-animation">
+                www.mayoristakaurymdp.com
+              </h4>
+            </Link>
           </div>
+
           <div class="cards-container">
             <div class="cardJobs2">
               <img
@@ -352,19 +362,40 @@ function DrawerAppBar(props) {
           </div>
         </div>
         <div class="pre-container4">
+          <h3
+            className="titulosTrabajos"
+            style={{
+              marginTop: "25rem",
+              fontSize: "2rem",
+            }}
+          >
+            SISTEMA DE COBRANZAS BANCARIAS
+          </h3>
+          <Link to="https://www.invertimeonline.com">
+            <h4
+              id="asd123"
+              class="typography-animation"
+              style={{ textAlign: "right" }}
+            >
+              www.invertimeonline.com
+            </h4>
+          </Link>
+
           <div class="icon2" id="webservice">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/png-transparent-amazon-logo-cloud-computing-amazon-web-services-web-hosting-service-computer-servers-internet-hosting-service-computer-hardware-information-technology-removebg-preview.png?alt=media&token=c56ce276-6446-4167-a453-9eeade9278fd"
               alt="Icono grande"
             />
           </div>
+
           <div class="icon" id="lineasIcon">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__2_-removebg-preview.png?alt=media&token=f0059d3c-c996-4d45-b6b2-59a2a9f3e1ad"
               alt="Icono grande"
             />
           </div>
-          <div class="cards-container">
+
+          <div class="cards-container" style={{}}>
             <div class="cardJobs2" id="center">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzaINT.png?alt=media&token=0432bad0-f742-4d3e-9704-09323466237e"
@@ -382,9 +413,70 @@ function DrawerAppBar(props) {
                 sizes="contain"
               />
             </div>
+            <div>
+              <div class="checklist">
+                <h4 class="checklist2">Automatización de cobranzas</h4>
+
+                <ul>
+                  <li>Integración con servicios web de bancos</li>
+                  <li>Generación automática de solicitudes de cobro</li>
+                  <li>Seguimiento de pagos y conciliación bancaria</li>
+                </ul>
+                <br />
+                <h4 class="checklist2">Gestión de facturas electrónicas</h4>
+                <ul>
+                  <li>Emisión de facturas electrónicas</li>
+                  <li>Envío automático de facturas a clientes</li>
+                  <li>Validación de facturas según normativa vigente</li>
+                </ul>
+                <h4 class="checklist2">Reportes y análisis</h4>
+                <ul>
+                  <li>Generación de reportes de cobranza</li>
+                  <li>Análisis de datos de pago y rendimiento</li>
+                  <li>
+                    Exportación de datos a formatos compatibles (Excel, PDF)
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="pre-container5">
+          <div>
+            <h3 className="titulosTrabajos">
+              SISTEMA DE PEDIDOS / VENDEDORES - DISTRIBUIDORA
+            </h3>
+            <Link to="https://www.instagram.com/alimentosnaturalesmdq/">
+              <h4 style={{ color: "#02CAF5", margin: "1rem" }}>Pagina WEB</h4>
+            </Link>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Arturo+Alio+3198,+Mar+del+Plata,+Argentina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h4>
+                {" "}
+                <span
+                  style={{ margin: "1rem" }}
+                  class="material-symbols-outlined"
+                >
+                  pin_drop
+                </span>
+                Arturo Alio 3198, Mar del Plata, Argentina
+              </h4>
+            </a>
+            <a href="tel:+542234543960">
+              <h4>
+                <span
+                  style={{ margin: "1rem" }}
+                  class="material-symbols-outlined"
+                >
+                  call
+                </span>
+                0223 454-3960
+              </h4>
+            </a>
+          </div>
           <div class="cards-container">
             <div class="cardJobs2" id="center">
               <img
@@ -394,6 +486,7 @@ function DrawerAppBar(props) {
                 style={{ padding: 0, margin: 0 }}
               />
             </div>
+
             <div class="cardJobs" id="center">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2.png?alt=media&token=28eaee81-c3f6-4326-9d90-e4faa1d76c60https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
