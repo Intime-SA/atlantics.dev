@@ -229,6 +229,27 @@ h1 {
 #asd123:hover::before {
   width: 100%; /* Aumentar el ancho del subrayado al 100% */
 }
+#asd1232 {
+  font-size: 5vw;
+  position: relative; /* Establecer posición relativa para el subrayado */
+  /* Color inicial del texto */
+  transition: color 0.3s; /* Transición suave para el cambio de color del texto */
+}
+
+#asd1232::before {
+  content: ""; /* Agregar un elemento pseudo ::before para crear el subrayado */
+  position: absolute; /* Establecer posición absoluta para el subrayado */
+  bottom: 0; /* Colocar el subrayado al fondo del elemento */
+  left: 0; /* Iniciar desde la izquierda */
+  width: 0; /* Inicialmente sin ancho */
+  height: 2px; /* Grosor del subrayado */
+  background-color: #c0dbdb; /* Color del subrayado */
+  transition: width 0.3s; /* Transición suave para el ancho del subrayado */
+}
+
+#asd1232:hover::before {
+  width: 100%; /* Aumentar el ancho del subrayado al 100% */
+}
 
 .container {
   height: 200vh;
@@ -616,6 +637,9 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  #asd1232 h4 {
+    text-align: left;
+  }
   .webs {
     font-size: 1vw;
     position: relative; /* Establecer posición relativa para el subrayado */
@@ -675,10 +699,13 @@ h1 {
 
   .cardJobs {
     right: 0px;
-    width: 350px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
     height: auto;
     margin-top: 0px;
     top: -60px;
+    max-width: 340px;
   }
   .cardJobs img {
     width: 350px;
@@ -757,5 +784,9 @@ h1 {
   .css-1c6cu7h-MuiPaper-root-MuiAppBar-root {
     padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
     width: 100vw;
+  }
+  .pre-container3,
+  .pre-container4 {
+    height: 350vh;
   }
 }

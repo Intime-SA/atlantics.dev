@@ -335,7 +335,7 @@ function DrawerAppBar(props) {
               SISTEMA DE ADMINISTRACION DE VENTAS / STOCK + E-COMMERCE
             </h3>
             <Link to="https://www.mayoristakaurymdp.com">
-              <h4 id="asd123" class="typography-animation">
+              <h4 id="asd1232" class="typography-animation">
                 www.mayoristakaurymdp.com
               </h4>
             </Link>
@@ -354,8 +354,8 @@ function DrawerAppBar(props) {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd1232mobile.png?alt=media&token=2c97c53a-8c9a-416d-bf9d-30779cf25f94"
                 alt="Project 1"
-                width="200px"
-                style={{ padding: 0, margin: 0 }}
+                width="300px"
+                style={{ padding: 0, margin: 0, objectFit: "contain" }}
                 sizes="contain"
               />
             </div>
@@ -373,13 +373,39 @@ function DrawerAppBar(props) {
           </h3>
           <Link to="https://www.invertimeonline.com">
             <h4
-              id="asd123"
+              id="asd1232"
               class="typography-animation"
               style={{ textAlign: "right" }}
             >
               www.invertimeonline.com
             </h4>
           </Link>
+          {isMobile && (
+            <div class="checklist">
+              <h4 class="checklist2">Automatización de cobranzas</h4>
+
+              <ul>
+                <li>Integración con servicios web de bancos</li>
+                <li>Generación automática de solicitudes de cobro</li>
+                <li>Seguimiento de pagos y conciliación bancaria</li>
+              </ul>
+              <br />
+              <h4 class="checklist2">Gestión de facturas electrónicas</h4>
+              <ul>
+                <li>Emisión de facturas electrónicas</li>
+                <li>Envío automático de facturas a clientes</li>
+                <li>Validación de facturas según normativa vigente</li>
+              </ul>
+              <h4 class="checklist2">Reportes y análisis</h4>
+              <ul>
+                <li>Generación de reportes de cobranza</li>
+                <li>Análisis de datos de pago y rendimiento</li>
+                <li>
+                  Exportación de datos a formatos compatibles (Excel, PDF)
+                </li>
+              </ul>
+            </div>
+          )}
 
           <div class="icon2" id="webservice">
             <img
@@ -414,30 +440,32 @@ function DrawerAppBar(props) {
               />
             </div>
             <div>
-              <div class="checklist">
-                <h4 class="checklist2">Automatización de cobranzas</h4>
+              {!isMobile && (
+                <div class="checklist">
+                  <h4 class="checklist2">Automatización de cobranzas</h4>
 
-                <ul>
-                  <li>Integración con servicios web de bancos</li>
-                  <li>Generación automática de solicitudes de cobro</li>
-                  <li>Seguimiento de pagos y conciliación bancaria</li>
-                </ul>
-                <br />
-                <h4 class="checklist2">Gestión de facturas electrónicas</h4>
-                <ul>
-                  <li>Emisión de facturas electrónicas</li>
-                  <li>Envío automático de facturas a clientes</li>
-                  <li>Validación de facturas según normativa vigente</li>
-                </ul>
-                <h4 class="checklist2">Reportes y análisis</h4>
-                <ul>
-                  <li>Generación de reportes de cobranza</li>
-                  <li>Análisis de datos de pago y rendimiento</li>
-                  <li>
-                    Exportación de datos a formatos compatibles (Excel, PDF)
-                  </li>
-                </ul>
-              </div>
+                  <ul>
+                    <li>Integración con servicios web de bancos</li>
+                    <li>Generación automática de solicitudes de cobro</li>
+                    <li>Seguimiento de pagos y conciliación bancaria</li>
+                  </ul>
+                  <br />
+                  <h4 class="checklist2">Gestión de facturas electrónicas</h4>
+                  <ul>
+                    <li>Emisión de facturas electrónicas</li>
+                    <li>Envío automático de facturas a clientes</li>
+                    <li>Validación de facturas según normativa vigente</li>
+                  </ul>
+                  <h4 class="checklist2">Reportes y análisis</h4>
+                  <ul>
+                    <li>Generación de reportes de cobranza</li>
+                    <li>Análisis de datos de pago y rendimiento</li>
+                    <li>
+                      Exportación de datos a formatos compatibles (Excel, PDF)
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -450,7 +478,7 @@ function DrawerAppBar(props) {
               style={{ textAlign: "right" }}
               to="https://www.instagram.com/alimentosnaturalesmdq/"
             >
-              <h4 id="asd123">@alimentosnaturalesmdp</h4>
+              <h4 id="asd1232">@alimentosnaturalesmdp</h4>
             </Link>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Arturo+Alio+3198,+Mar+del+Plata,+Argentina"
