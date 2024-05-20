@@ -699,9 +699,10 @@ h1 {
 
   .cardJobs {
     right: 0px;
-    width: 95vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: auto;
     margin-top: 0px;
     top: -60px;
@@ -713,7 +714,6 @@ h1 {
 
   .cardJobs:hover img {
     left: 500px;
-    transform: scale(1.1);
   }
   .grupoCards {
     display: flex;
