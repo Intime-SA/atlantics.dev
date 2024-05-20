@@ -446,8 +446,11 @@ function DrawerAppBar(props) {
             <h3 className="titulosTrabajos">
               SISTEMA DE PEDIDOS / VENDEDORES - DISTRIBUIDORA
             </h3>
-            <Link to="https://www.instagram.com/alimentosnaturalesmdq/">
-              <h4 style={{ color: "#02CAF5", margin: "1rem" }}>Pagina WEB</h4>
+            <Link
+              style={{ textAlign: "right" }}
+              to="https://www.instagram.com/alimentosnaturalesmdq/"
+            >
+              <h4 id="asd123">@alimentosnaturalesmdp</h4>
             </Link>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Arturo+Alio+3198,+Mar+del+Plata,+Argentina"

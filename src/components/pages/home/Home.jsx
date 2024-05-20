@@ -38,7 +38,7 @@ const Home = () => {
           >
             <h1 className="fontRubikMonoOne">Software Factory</h1>
           </Typography>
-          {/*           <Typography
+          <Typography
             variant="body1"
             style={{
               fontFamily: "'Jaro', sans-serif",
@@ -50,9 +50,9 @@ const Home = () => {
             gutterBottom
           >
             <h2 className="h2-animation">
-              Desarrollamos soluciones personalizadas
+              Your trusted partners in transformative times
             </h2>
-          </Typography> */}
+          </Typography>
         </Container>
       </section>
 
