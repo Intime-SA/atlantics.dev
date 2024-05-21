@@ -141,7 +141,7 @@ h2 {
 }
 
 .h2-animation {
-  max-width: 45vw;
+  max-width: 10vw;
   animation: slideInFromRightAndGrowWithFade 2s ease-out forwards; /* 2s delay */
   font-weight: 600;
   color: #a7ffff;

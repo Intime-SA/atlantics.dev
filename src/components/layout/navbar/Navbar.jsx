@@ -29,7 +29,6 @@ const drawerWidth = 240;
 const navItems = [
   { nombre: "Inicio", url: "/" },
   { nombre: "Staff", url: "/staff" },
-  { nombre: "Servicios", url: "/servicios" },
   { nombre: "Contacto", url: "/contacto" },
 ];
 

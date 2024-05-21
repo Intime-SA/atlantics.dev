@@ -182,6 +182,7 @@ h2 {
 
 .fotoTeam {
   width: 20vw;
+  height: 20vw;
   margin: 1rem;
   border-radius: 50%;
   background-color: white; /* Fondo blanco */

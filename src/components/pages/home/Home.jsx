@@ -46,6 +46,8 @@ const Home = () => {
               color: "#1976d2",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)", // Agregar sombreado al texto
               marginTop: "1rem",
+              width: isMobile ? "50vw" : "30vw",
+              maxWidth: "500px",
             }}
             gutterBottom
           >
