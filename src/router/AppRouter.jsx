@@ -4,6 +4,7 @@ import { routes } from "./routes";
 import Login from "../components/pages/login/Login";
 import Register from "../components/pages/register/Register";
 import ForgotPassword from "../components/pages/forgotPassword/ForgotPassword";
+import Staff from "../components/pages/forgotPassword/staff/Staff";
 
 const AppRouter = () => {
   return (
@@ -13,6 +14,8 @@ const AppRouter = () => {
           <Route key={id} path={path} element={<Element />} />
         ))}
       </Route>
+
+      <Route path="/staff" element={<Staff />} />
 
       {/* Login */}
       <Route path="/login" element={<Login />} />

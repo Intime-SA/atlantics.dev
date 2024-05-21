@@ -26,7 +26,12 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const drawerWidth = 240;
-const navItems = ["Inicio", "Staff", "Servicios", "Contacto"];
+const navItems = [
+  { nombre: "Inicio", url: "/" },
+  { nombre: "Staff", url: "/staff" },
+  { nombre: "Servicios", url: "/servicios" },
+  { nombre: "Contacto", url: "/contacto" },
+];
 
 function DrawerAppBar(props) {
   const theme = useTheme();
@@ -41,7 +46,7 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      {/*       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
       <Divider />
@@ -54,7 +59,7 @@ function DrawerAppBar(props) {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Box>
   );
 
@@ -131,15 +136,15 @@ function DrawerAppBar(props) {
           >
             {navItems.map((item) => (
               <Typography
-                key={item}
+                key={item.nombre}
                 sx={{
                   fontSize: "2rem",
                   position: "relative",
                   overflow: "hidden",
                 }}
               >
-                <Link id="asd123" class="typography-animation">
-                  <h2>{item}</h2>
+                <Link to={item.url} id="asd123" class="typography-animation">
+                  <h2>{item.nombre}</h2>
                 </Link>
               </Typography>
             ))}
@@ -183,7 +188,6 @@ function DrawerAppBar(props) {
           minWidth: "100vw", // Ajusta la altura según sea necesario
         }}
       >
-        <Toolbar />
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <Home />
         </div>
