@@ -149,6 +149,7 @@ const Staff = () => {
             srcset=""
             className="fotoTeam"
           />
+
           <h1>Ramiro Martin Arce</h1>
           <div>
             <h2>
@@ -198,6 +199,62 @@ const Staff = () => {
               Actualmente, está persiguiendo la certificación #CTD en
               DigitalHouse para fortalecer sus habilidades en infraestructura de
               micro-servicios.
+            </h3>
+          </div>
+        </div>
+        <div className="integrante">
+          <div style={{ width: "100%", textAlign: "right" }}>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
+              alt="Rodrigo Silva"
+              className="fotoTeam"
+            />
+          </div>
+          <h1>Rodrigo Silva</h1>
+
+          <div>
+            <h2>
+              Front-End Developer @ atlantics.dev | UI/UX Designer | JavaScript
+              | React | CSS | HTML | Agile Methodologies | LegalTech
+            </h2>
+          </div>
+          <div>
+            <br />
+            <br />
+            <h3>
+              Rodrigo Silva es un apasionado desarrollador de software
+              especializado en Front-End, con una sólida base en diseño de
+              interfaces de usuario y experiencia de usuario. Actualmente,
+              reside en Byron Bay, Australia, donde se encuentra expandiendo los
+              horizontes comerciales
+              <br />
+              <br />
+              Rodrigo comenzó su carrera estudiando abogacía y software, una
+              combinación poco convencional que le permitió desarrollar una
+              perspectiva única en el campo de la tecnología, especialmente en
+              el sector de LegalTech. Tras completar su educación, decidió
+              seguir su pasión por el desarrollo web y se especializó en el
+              desarrollo Front-End.
+              <br />
+              <br />
+              En su rol actual como{" "}
+              <strong>Front-End Developer en @atlantics.dev</strong>, Rodrigo se
+              encarga de la creación y optimización de interfaces de usuario
+              atractivas y funcionales. Su habilidad se trata de transformar
+              ideas y requisitos en productos digitales efectivos y
+              estéticamente agradables.
+              <br />
+              <br />
+              Su experiencia incluye el uso de tecnologías y herramientas
+              modernas como{" "}
+              <strong>React, JavaScript, CSS, y HTML, nodeJS</strong>, así como
+              metodologías ágiles para garantizar la entrega oportuna y
+              eficiente de proyectos. Rodrigo también tiene un profundo interés
+              en la intersección de la tecnología y el derecho, explorando cómo
+              las soluciones digitales pueden mejorar el acceso y la
+              administración de servicios legales y validaciones impositivas.
+              <br />
+              <br />
             </h3>
           </div>
         </div>
