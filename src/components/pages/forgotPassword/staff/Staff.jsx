@@ -203,7 +203,9 @@ const Staff = () => {
           </div>
         </div>
         <div className="integrante">
-          <div style={{ width: "100%", textAlign: "right" }}>
+          <div
+            style={{ width: "100%", textAlign: "right", marginTop: "15rem" }}
+          >
             <img
               src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
               alt="Rodrigo Silva"
