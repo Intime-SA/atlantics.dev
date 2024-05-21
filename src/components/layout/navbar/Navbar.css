@@ -511,8 +511,9 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
   width: 80%;
+  margin-top: 12rem;
 }
 
 .container2 {
