@@ -67,17 +67,19 @@ const Contacto = () => {
             // Opcional: bordes redondeados
           }}
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
-            alt="logo"
-            srcset=""
-            style={{
-              width: "5rem",
-              height: "5rem",
-              margin: "5px",
-              padding: "0px",
-            }}
-          />
+          <Link to="/">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
+              alt="logo"
+              srcset=""
+              style={{
+                width: "5rem",
+                height: "5rem",
+                margin: "5px",
+                padding: "0px",
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             component="div"

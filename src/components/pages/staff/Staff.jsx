@@ -54,17 +54,19 @@ const Staff = () => {
             // Opcional: bordes redondeados
           }}
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
-            alt="logo"
-            srcset=""
-            style={{
-              width: "5rem",
-              height: "5rem",
-              margin: "5px",
-              padding: "0px",
-            }}
-          />
+          <Link to="/">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
+              alt="logo"
+              srcset=""
+              style={{
+                width: "5rem",
+                height: "5rem",
+                margin: "5px",
+                padding: "0px",
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             component="div"
@@ -153,8 +155,7 @@ const Staff = () => {
           <div>
             <h2>
               CEO & cofunder @ atlantics.dev | Project Coordinator | DevOps
-              Specialist | Cloud Solutions | Java | Node.js | React | Typescript
-              | Docker | Manager Databases | Pipeline Automatio
+              Specialist | Cloud Solutions | Scrum Master | Manager Databases
             </h2>
           </div>
           <div>
@@ -205,6 +206,58 @@ const Staff = () => {
           <div
             style={{ width: "100%", textAlign: "right", marginTop: "15rem" }}
           >
+            <img
+              src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1721865600&v=beta&t=A-iOrBcYjU4vqvD2FnBuGlNZg1IgO4IsADSFBcUXxxw"
+              alt="Ingeniero de Software"
+              className="fotoTeam"
+            />
+            <h1 style={{ color: "white" }}>Federico Larrea</h1>
+            <div>
+              <h2>Software Engineer & DevOps Arquitec en @atlantics.dev</h2>
+            </div>
+            <h3>
+              Mercado Libre
+              <br />
+              Argentina
+              <br />
+              <br />
+            </h3>
+          </div>
+
+          <div>
+            <br />
+            <br />
+
+            <h3>
+              Federico Larrea es un apasionado ingeniero de sistemas
+              especializado en base de datos, con una sólida experiencia en el
+              mantenimiento de grandes conjuntos de datos. Actualmente, reside
+              en Buenos Aires, Argentina, donde se encuentra actualmente
+              prestando servicios en <strong>Mercado Libre</strong>
+              .
+              <br />
+              <br />
+              En su rol actual como{" "}
+              <strong>
+                Software Engineer & DevOps Arquitec en @atlantics.dev
+              </strong>
+              , Federico se encarga de la creación y optimización de
+              infraestructura. Sus principales habilidades se basan en
+              automatizar todos los procesos de entrega continua a clientes
+              (CD/CI)
+              <br />
+              <br />
+              Federico maneja una amplia variedad de tecnologías y herramientas
+              modernas. Es experto en Elixir, .NET, React y SQL Server, lo que
+              le permite abordar proyectos complejos y garantizar su correcto
+              funcionamiento y escalabilidad. Además
+              <br />
+              <br />
+            </h3>
+          </div>
+        </div>
+        <div className="integrante">
+          <div style={{ width: "100%", marginTop: "15rem" }}>
             <img
               src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
               alt="Rodrigo Silva"

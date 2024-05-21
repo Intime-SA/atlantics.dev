@@ -44,21 +44,23 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      {/*       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+    <Box
+      className="drawer"
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", height: "100vh" }}
+    >
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.nombre} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText />{" "}
-              <Link style={{ fontFamily: '"Danfo", serif' }}>{item}</Link>
+              <Link to={item.url}>
+                <h2>{item.nombre}</h2>
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
-      </List> */}
+      </List>
     </Box>
   );
 
@@ -108,17 +110,19 @@ function DrawerAppBar(props) {
             // Opcional: bordes redondeados
           }}
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
-            alt="logo"
-            srcset=""
-            style={{
-              width: "5rem",
-              height: "5rem",
-              margin: "5px",
-              padding: "0px",
-            }}
-          />
+          <Link to="/">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
+              alt="logo"
+              srcset=""
+              style={{
+                width: "5rem",
+                height: "5rem",
+                margin: "5px",
+                padding: "0px",
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             component="div"
@@ -130,7 +134,7 @@ function DrawerAppBar(props) {
             sx={{
               display: "flex",
               justifyContent: "space-around",
-              width: "40%",
+              width: isMobile ? "100%" : "40%",
             }}
           >
             {navItems.map((item) => (
@@ -147,11 +151,20 @@ function DrawerAppBar(props) {
                 </Link>
               </Typography>
             ))}
+
+            {isMobile && (
+              <div>
+                <Button onClick={() => handleDrawerToggle()}>
+                  <span class="material-symbols-outlined">menu</span>
+                </Button>
+              </div>
+            )}
           </Box>
         </Toolbar>
       </AppBar>
       <nav>
         <Drawer
+          className="drawer"
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -164,6 +177,9 @@ function DrawerAppBar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#212020",
+              backgroundImage:
+                "linear-gradient(315deg, #212020 32%, #30638a 100%)",
             },
           }}
         >
