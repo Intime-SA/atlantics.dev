@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
 import "./Staff.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 
 const Staff = () => {
   const theme = useTheme();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const navItems = [
@@ -232,8 +236,8 @@ const Staff = () => {
               Federico Larrea es un apasionado ingeniero de sistemas
               especializado en base de datos, con una sólida experiencia en el
               mantenimiento de grandes conjuntos de datos. Actualmente, reside
-              en Buenos Aires, Argentina, donde se encuentra actualmente
-              prestando servicios en <strong>Mercado Libre</strong>
+              en Buenos Aires, Argentina, donde se encuentra prestando servicios
+              en <strong>Mercado Libre</strong>
               .
               <br />
               <br />

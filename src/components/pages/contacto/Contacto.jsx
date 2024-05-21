@@ -13,6 +13,10 @@ const Contacto = () => {
     correoElectronico: "",
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({

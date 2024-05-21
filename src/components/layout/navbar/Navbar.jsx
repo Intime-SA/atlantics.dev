@@ -67,6 +67,10 @@ function DrawerAppBar(props) {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
