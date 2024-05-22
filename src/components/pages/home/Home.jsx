@@ -4,6 +4,7 @@ import "./Home.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
+
 const Home = () => {
   const theme = useTheme();
 
@@ -36,7 +37,7 @@ const Home = () => {
               marginTop: "5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne">Software Factory</h1>
+            <h1>Software Factory</h1>
           </Typography>
           <Typography
             variant="body1"

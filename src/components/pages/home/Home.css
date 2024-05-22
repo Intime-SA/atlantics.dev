@@ -50,6 +50,7 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent; /* Hacer el color del texto transparente */
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2 {

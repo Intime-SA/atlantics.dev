@@ -1,4 +1,6 @@
-    /* Ejemplo atributos centrados */
+@import '_fonts.scss';
+
+  /* Ejemplo atributos centrados */
 
 @mixin flex-center {
     display: flex;
@@ -15,14 +17,14 @@ font-family: $font-1;
 font-family: $font-2;
 }
 
-@mixin font2 {
-    font-family: $font-2;
-    }
-
 @mixin font3 {
     font-family: $font-3;
     }
 
-@mixin font2 {
+@mixin font4 {
     font-family: $font-4;
+    }
+
+@mixin font5 {
+    font-family: $font-5;
     }
