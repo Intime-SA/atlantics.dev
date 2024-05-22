@@ -11,7 +11,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import "./CardsServices.css";
+import '../../../layout/css/styles.css';
 
 export default function CardsServices() {
   const theme = useTheme();
@@ -37,7 +37,6 @@ export default function CardsServices() {
   ] 
 
   return (
-<<<<<<< HEAD
     <>
     {objetoCards.map((card,index)=>(
       <Card 
@@ -53,20 +52,6 @@ export default function CardsServices() {
         <CardMedia
           component="img"
           image= {card.imagen}
-=======
-    <Card
-      sx={{
-        width: isMobile ? "95%" : "auto",
-        borderRadius: "40px",
-        boxShadow: "none",
-        height: isMobile ? "60vh" : "auto",
-      }}
-    >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/chatgpt.jpg?alt=media&token=c52d79d2-91f4-4dfd-ae66-f2b03cc58122"
->>>>>>> a9605e6f98a7fad0fce64e1fb03c2181beb1ad83
           alt="green iguana"
           height={isMobile ? "150px" : "450px"}
         />

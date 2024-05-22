@@ -1,0 +1,61 @@
+/* Definir variables para luego crear los mixin */
+
+$font-1: 'Chakra Petch', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+$font-3: 'Poppins', sans-serif;
+$font-4: 'Quicksand', sans-serif;
+$font-5: 'Chakra Petch', sans-serif;
+
+// Colores
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gainsboro: #dcdcdc;
+$color-light-blue: #a7ffff;
+
+// Fuentes
+$font-family-monospace: "Rubik Mono One", monospace;
+$font-family-sans-serif: "Chakra Petch", sans-serif;
+
+// Animaciones
+$animation-duration: 3s;
+
+// Otros
+$border-radius: 50px;
+$color-dark-gray: #333333;
+
+$font-family: "Chakra Petch", sans-serif;
+$color-background-left: #f0f0f0;
+$color-background-right: #e0e0e0;
+$color-gradient-start: #ffffff;
+$color-gradient-end: #00bcff;
+$color-text: gainsboro;
+
+
+/* NUEVO */
+
+$title-font: "Rubik Mono One", monospace;
+$background-color-start: rgb(2, 0, 36);
+$background-color-mid: rgba(36, 29, 73, 1);
+$background-color-end: rgba(0, 212, 255, 1);
+
+
+// Variables
+$font-Rubik-Mono-One: "Rubik Mono One", monospace;
+$gradient-colors: (
+  #ffffff 0,
+  #ffffff 7.14%,
+  #fdffff 14.29%,
+  #ebffff 21.43%,
+  #d7ffff 28.57%,
+  #c1ffff 35.71%,
+  #a7ffff 42.86%,
+  #89fcff 50%,
+  #66f1fe 57.14%,
+  #3be7fe 64.29%,
+  #00deff 71.43%,
+  #00d5ff 78.57%,
+  #00ccff 85.71%,
+  #00c4ff 92.86%,
+  #00bcff 100%
+);
+

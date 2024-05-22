@@ -1,0 +1,33 @@
+@keyframes slideInAndGrow {
+    from {
+      transform: translateX(-100%) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRightAndGrow {
+    from {
+      transform: translateX(100%) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRightAndGrowWithFade {
+    from {
+      transform: translateX(100%) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+  

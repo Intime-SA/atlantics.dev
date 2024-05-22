@@ -1,0 +1,177 @@
+@import "./animations/animations.scss";
+@import "./components/components";
+@import "./components/contact-form";
+@import "./components/home-container";
+@import "./components/_media-queries.scss";
+@import "./components/_mixin.scss";
+@import "./components/_typography.scss";
+@import "./components/_variables.scss";
+
+
+// Keyframes
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Styles
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fontRubikMonoOne {
+  font-family: $font-Rubik-Mono-One;
+  background: linear-gradient(135deg, $gradient-colors);
+  @include typography-animation;
+}
+
+.card {
+  position: absolute;
+  width: 40vw;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Cambiado para afectar solo la transformación */
+  animation: slideInAndGrow 3s ease-out forwards;
+  margin-bottom: 5rem;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.2);
+  }
+}
+
+.card1, .card2, .card3 {
+  top: 0;
+  left: 0;
+  transform: none;
+  background-color: transparent;
+}
+
+.grupoCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0rem;
+}
+
+.typography-animation {
+  font-size: 50%;
+}
+
+.profile-card1,
+.profile-card2 {
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
+  margin-bottom: 5rem;
+}
+
+.profile-card1 {
+  margin-top: 25rem;
+}
+
+.profile-card1:hover,
+.profile-card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: 120%; /* Ajusta el tamaño de la imagen al 120% del contenedor */
+}
+
+.profile-card1 img,
+.profile-card2 img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+}
+
+.profile-card1 h1,
+.profile-card2 h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-card1 h2,
+.profile-card2 h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+}
+
+.pre-container5 {
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-color: #212020;
+  background-image: linear-gradient(225deg, #212020 35%, #2ea093 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  top: -100px;
+  z-index: 0;
+}
+
+
+
+
+
+/* NUEVO */
+
+body {
+    zoom: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Reduce la escala del contenido al 90% */
+  }
+  
+  html {
+    background: $background-color-start;
+    background-image: linear-gradient(
+      90deg,
+      $background-color-start 0%,
+      $background-color-mid 35%,
+      $background-color-end 100%
+    );
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }

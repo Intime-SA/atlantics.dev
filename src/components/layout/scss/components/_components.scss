@@ -1,0 +1,39 @@
+.left-component {
+    background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
+    padding: 20px;
+}
+
+.right-component {
+background-color: #e0e0e0; /* Color de fondo para la sección derecha */
+padding: 20px;
+}
+
+.section-animation {
+width: 90vw;
+display: flex;
+justify-content: flex-end;
+margin-top: 50vh;
+font-weight: 600;
+
+@keyframes slideInAndGrow {
+    from {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    }
+}
+
+animation: slideInAndGrow 1s ease-out forwards;
+margin-right: 5rem;
+}
+
+.section-animation {
+width: "90vw";
+display: "flex";
+justify-content: "flex-end";
+margin-top: "50vh";
+font-weight: 600;
+}

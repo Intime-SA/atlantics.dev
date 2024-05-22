@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../../firebaseConfig"; // Ajusta la ruta según sea necesario
-import "./Contacto.css";
 import { addDoc, collection } from "firebase/firestore";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import '../../layout/css/styles.css';
 
 const Contacto = () => {
   const [formData, setFormData] = useState({

@@ -10,7 +10,7 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import "./CardsServices.css";
+import '../../../layout/css/styles.css';
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function CardsService2() {

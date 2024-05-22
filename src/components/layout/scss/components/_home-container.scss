@@ -1,0 +1,19 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 70% 30%;
+    height: 200vh;
+    width: 100vw;
+  }
+
+  
+  /* NUEVO */
+
+/* .home-container {
+  display: flex;
+  justify-content: center;  70% para la izquierda, 30% para la derecha 
+  height: 100vh;
+  width: 100vw;
+}
+*/
+  

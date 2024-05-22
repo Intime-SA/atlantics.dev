@@ -1,6 +1,371 @@
 @charset "UTF-8";
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRightAndGrow {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRightAndGrowWithFade {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+.left-component {
+  background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
+  padding: 20px;
+}
+
+.right-component {
+  background-color: #e0e0e0; /* Color de fondo para la sección derecha */
+  padding: 20px;
+}
+
+.section-animation {
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50vh;
+  font-weight: 600;
+  animation: slideInAndGrow 1s ease-out forwards;
+  margin-right: 5rem;
+}
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.section-animation {
+  width: "90vw";
+  display: "flex";
+  justify-content: "flex-end";
+  margin-top: "50vh";
+  font-weight: 600;
+}
+
+.contact-form-container {
+  background: transparent;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+.contact-form-container .div50 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form-container .datosEmpresa {
+  margin-top: 7rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-direction: column;
+}
+.contact-form-container .contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.contact-form-container .contact-form h2 {
+  font-size: 1.5rem;
+}
+.contact-form-container .contact-form h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.contact-form-container .contact-form input {
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form-container .contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-form-container .contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 70% 30%;
+  height: 200vh;
+  width: 100vw;
+}
+
+/* NUEVO */
+/* .home-container {
+  display: flex;
+  justify-content: center;  70% para la izquierda, 30% para la derecha 
+  height: 100vh;
+  width: 100vw;
+}
+*/
+@media only screen and (max-width: 768px) {
+  .fontRubikMonoOne {
+    font-size: 70%;
+  }
+  .typography-animation {
+    font-size: 50%;
+  }
+}
 /* Definir variables para luego crear los mixin */
+/* NUEVO */
 /* Ejemplo atributos centrados */
 /* Ejemplo para utilizar con fuentes y tamaños */
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: gainsboro;
+}
+
+h1,
+h2 {
+  background: linear-gradient(270deg, #ffffff 0, #00bcff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* NUEVO */
+h2, h3, h4, h5, h6, p, li, ul {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: gainsboro;
+}
+
+h1 {
+  background: linear-gradient(135deg, #ffffff 0, #ffffff 7.14%, #fdffff 14.29%, #ebffff 21.43%, #d7ffff 28.57%, #c1ffff 35.71%, #a7ffff 42.86%, #89fcff 50%, #66f1fe 57.14%, #3be7fe 64.29%, #00deff 71.43%, #00d5ff 78.57%, #00ccff 85.71%, #00c4ff 92.86%, #00bcff 100%);
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: #a7ffff;
+}
+
+.fontRubikMonoOne {
+  font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(135deg, #ffffff 0, #ffffff 7.14%, #fdffff 14.29%, #ebffff 21.43%, #d7ffff 28.57%, #c1ffff 35.71%, #a7ffff 42.86%, #89fcff 50%, #66f1fe 57.14%, #3be7fe 64.29%, #00deff 71.43%, #00d5ff 78.57%, #00ccff 85.71%, #00c4ff 92.86%, #00bcff 100%);
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent;
+  margin-top: 10rem;
+  margin-left: 0rem;
+}
+
+.typography-animation {
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+  text-decoration: none;
+  font-weight: 600;
+  color: #a7ffff;
+}
+
+/* Definir variables para luego crear los mixin */
+/* NUEVO */
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fontRubikMonoOne {
+  font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(135deg, #ffffff 0, #ffffff 7.14%, #fdffff 14.29%, #ebffff 21.43%, #d7ffff 28.57%, #c1ffff 35.71%, #a7ffff 42.86%, #89fcff 50%, #66f1fe 57.14%, #3be7fe 64.29%, #00deff 71.43%, #00d5ff 78.57%, #00ccff 85.71%, #00c4ff 92.86%, #00bcff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  position: absolute;
+  width: 40vw;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Cambiado para afectar solo la transformación */
+  animation: slideInAndGrow 3s ease-out forwards;
+  margin-bottom: 5rem;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.2);
+}
+
+.card1, .card2, .card3 {
+  top: 0;
+  left: 0;
+  transform: none;
+  background-color: transparent;
+}
+
+.grupoCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0rem;
+}
+
+.typography-animation {
+  font-size: 50%;
+}
+
+.profile-card1,
+.profile-card2 {
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
+  margin-bottom: 5rem;
+}
+
+.profile-card1 {
+  margin-top: 25rem;
+}
+
+.profile-card1:hover,
+.profile-card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: 120%; /* Ajusta el tamaño de la imagen al 120% del contenedor */
+}
+
+.profile-card1 img,
+.profile-card2 img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+}
+
+.profile-card1 h1,
+.profile-card2 h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-card1 h2,
+.profile-card2 h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+}
+
+.pre-container5 {
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-color: #212020;
+  background-image: linear-gradient(225deg, #212020 35%, #2ea093 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  top: -100px;
+  z-index: 0;
+}
+
+/* NUEVO */
+body {
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Reduce la escala del contenido al 90% */
+}
+
+html {
+  background: rgb(2, 0, 36);
+  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(36, 29, 73) 35%, rgb(0, 212, 255) 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 /*# sourceMappingURL=styles.css.map */

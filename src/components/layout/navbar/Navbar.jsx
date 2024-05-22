@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Home from "../../pages/home/Home";
-import "./Navbar.css";
+import '../css/styles.css';
 import { Card } from "@mui/material";
 import CardsServices from "./cards/CardsServices";
 import CardsService2 from "./cards/CardsService2";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
-import "./Staff.css";
+import "../../layout/css/styles.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
