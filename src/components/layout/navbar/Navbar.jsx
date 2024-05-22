@@ -22,11 +22,20 @@ import CardsServices from "./cards/CardsServices";
 import CardsService2 from "./cards/CardsService2";
 import CardsService3 from "./cards/CardsService3";
 import Footer from "./footer/Footer";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const drawerWidth = 240;
-const navItems = ["Inicio", "Staff", "Servicios", "Contacto"];
+const navItems = [
+  { nombre: "Inicio", url: "/" },
+  { nombre: "Staff", url: "/staff" },
+  { nombre: "Contacto", url: "/contacto" },
+];
 
 function DrawerAppBar(props) {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   /*   const { window } = props;
    */ const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -35,17 +44,19 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+    <Box
+      className="drawer"
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", height: "100vh" }}
+    >
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.nombre} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText />{" "}
-              <Link style={{ fontFamily: '"Danfo", serif' }}>{item}</Link>
+              <Link to={item.url}>
+                <h2>{item.nombre}</h2>
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -54,6 +65,10 @@ function DrawerAppBar(props) {
   );
 
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -99,17 +114,19 @@ function DrawerAppBar(props) {
             // Opcional: bordes redondeados
           }}
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
-            alt="logo"
-            srcset=""
-            style={{
-              width: "5rem",
-              height: "5rem",
-              margin: "5px",
-              padding: "0px",
-            }}
-          />
+          <Link to="/">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
+              alt="logo"
+              srcset=""
+              style={{
+                width: "5rem",
+                height: "5rem",
+                margin: "5px",
+                padding: "0px",
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             component="div"
@@ -121,41 +138,37 @@ function DrawerAppBar(props) {
             sx={{
               display: "flex",
               justifyContent: "space-around",
-              width: "40%",
+              width: isMobile ? "100%" : "40%",
             }}
           >
             {navItems.map((item) => (
               <Typography
-                key={item}
+                key={item.nombre}
                 sx={{
-                  fontFamily: "'Jaro', sans-serif",
                   fontSize: "2rem",
                   position: "relative",
                   overflow: "hidden",
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    top: "0",
-                    left: "-100%",
-                    color: "#1976d2", // Cambia a tu color deseado
-                  },
-                  "&:hover::before": {
-                    left: "0",
-                  },
                 }}
               >
-                <Link id="asd123" class="typography-animation">
-                  {item}
+                <Link to={item.url} id="asd123" class="typography-animation">
+                  <h2>{item.nombre}</h2>
                 </Link>
               </Typography>
             ))}
+
+            {isMobile && (
+              <div>
+                <Button onClick={() => handleDrawerToggle()}>
+                  <span class="material-symbols-outlined">menu</span>
+                </Button>
+              </div>
+            )}
           </Box>
         </Toolbar>
       </AppBar>
       <nav>
         <Drawer
+          className="drawer"
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -168,6 +181,9 @@ function DrawerAppBar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#212020",
+              backgroundImage:
+                "linear-gradient(315deg, #212020 32%, #30638a 100%)",
             },
           }}
         >
@@ -185,12 +201,12 @@ function DrawerAppBar(props) {
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
 
           /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
-
+          padding: "0px",
+          margin: "0px",
           minHeight: "100vh",
           minWidth: "100vw", // Ajusta la altura según sea necesario
         }}
       >
-        <Toolbar />
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <Home />
         </div>
@@ -207,9 +223,6 @@ function DrawerAppBar(props) {
 
             width: "100%",
             height: "200vh",
-            background: "rgb(2,0,36)",
-            backgroundImage:
-              "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
           }}
         >
           <div class="card card2">
@@ -289,7 +302,9 @@ function DrawerAppBar(props) {
                   </span>
                 </div>
                 <div>
-                  <h2>Integraciones con plataformas de Pago y Envio.</h2>
+                  <h2 style={{ textAlign: "right" }}>
+                    Integraciones con plataformas de Pago y Envio.
+                  </h2>
                 </div>
               </div>
               <div className="componentPesos">
@@ -313,7 +328,9 @@ function DrawerAppBar(props) {
                   </span>
                 </div>
                 <div>
-                  <h2>Acceso a informacion clave del negocio</h2>
+                  <h2 style={{ textAlign: "right" }}>
+                    Acceso a informacion clave del negocio
+                  </h2>
                 </div>
               </div>
               <div className="componentPesos">
@@ -337,16 +354,21 @@ function DrawerAppBar(props) {
               alt="Icono grande"
             />
           </div>
-          <div class="icon">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Brown_Minimalist_Store_Highlight_Covers__1_-removebg-preview.png?alt=media&token=881cee28-6dea-412d-9e63-4a98259baa9d"
-              alt="Icono grande"
-            />
+          <div style={{ marginBottom: isMobile ? "20rem" : "0rem" }}>
+            <h3 className="titulosTrabajos">
+              SISTEMA DE ADMINISTRACION DE VENTAS / STOCK + E-COMMERCE
+            </h3>
+            <Link to="https://www.mayoristakaurymdp.com">
+              <h4 id="asd1232" class="typography-animation">
+                www.mayoristakaurymdp.com
+              </h4>
+            </Link>
           </div>
+
           <div class="cards-container">
             <div class="cardJobs2">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/desk.png?alt=media&token=c12ca57e-dacf-42da-8237-4b052d01b449"
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/kaury123.png?alt=media&token=b6370eae-f1db-407e-8f9d-407d2060f614"
                 alt="Project 1"
                 width="600px"
                 style={{ padding: 0, margin: 0 }}
@@ -356,6 +378,179 @@ function DrawerAppBar(props) {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd1232mobile.png?alt=media&token=2c97c53a-8c9a-416d-bf9d-30779cf25f94"
                 alt="Project 1"
+                width="300px"
+                style={{ padding: 0, margin: 0, objectFit: "contain" }}
+                sizes="contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="pre-container4">
+          <h3
+            className="titulosTrabajos"
+            style={{
+              marginTop: "25rem",
+              fontSize: "2rem",
+            }}
+          >
+            SISTEMA DE COBRANZAS BANCARIAS
+          </h3>
+          <Link to="https://www.invertimeonline.com">
+            <h4
+              id="asd1232"
+              class="typography-animation"
+              style={{ textAlign: "right" }}
+            >
+              www.invertimeonline.com
+            </h4>
+          </Link>
+          {isMobile && (
+            <div class="checklist">
+              <h4 class="checklist2">Automatización de cobranzas</h4>
+
+              <ul>
+                <li>Integración con servicios web de bancos</li>
+                <li>Generación automática de solicitudes de cobro</li>
+                <li>Seguimiento de pagos y conciliación bancaria</li>
+              </ul>
+              <br />
+              <h4 class="checklist2">Gestión de facturas electrónicas</h4>
+              <ul>
+                <li>Emisión de facturas electrónicas</li>
+                <li>Envío automático de facturas a clientes</li>
+                <li>Validación de facturas según normativa vigente</li>
+              </ul>
+              <h4 class="checklist2">Reportes y análisis</h4>
+              <ul>
+                <li>Generación de reportes de cobranza</li>
+                <li>Análisis de datos de pago y rendimiento</li>
+                <li>
+                  Exportación de datos a formatos compatibles (Excel, PDF)
+                </li>
+              </ul>
+            </div>
+          )}
+
+          <div class="icon2" id="webservice">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/png-transparent-amazon-logo-cloud-computing-amazon-web-services-web-hosting-service-computer-servers-internet-hosting-service-computer-hardware-information-technology-removebg-preview.png?alt=media&token=c56ce276-6446-4167-a453-9eeade9278fd"
+              alt="Icono grande"
+            />
+          </div>
+
+          <div class="icon" id="lineasIcon">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__2_-removebg-preview.png?alt=media&token=f0059d3c-c996-4d45-b6b2-59a2a9f3e1ad"
+              alt="Icono grande"
+            />
+          </div>
+
+          <div class="cards-container" style={{}}>
+            <div class="cardJobs2" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzaINT.png?alt=media&token=0432bad0-f742-4d3e-9704-09323466237e"
+                alt="Project 1"
+                width="600px"
+                style={{ padding: 0, margin: 0 }}
+              />
+            </div>
+            <div class="cardJobs" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzasv2.png?alt=media&token=c67c7fb7-5171-476f-bb65-5b5e8b6066fd"
+                alt="Project 1"
+                width="250px"
+                style={{ padding: 0, margin: 0 }}
+                sizes="contain"
+              />
+            </div>
+            <div>
+              {!isMobile && (
+                <div class="checklist">
+                  <h4 class="checklist2">Automatización de cobranzas</h4>
+
+                  <ul>
+                    <li>Integración con servicios web de bancos</li>
+                    <li>Generación automática de solicitudes de cobro</li>
+                    <li>Seguimiento de pagos y conciliación bancaria</li>
+                  </ul>
+                  <br />
+                  <h4 class="checklist2">Gestión de facturas electrónicas</h4>
+                  <ul>
+                    <li>Emisión de facturas electrónicas</li>
+                    <li>Envío automático de facturas a clientes</li>
+                    <li>Validación de facturas según normativa vigente</li>
+                  </ul>
+                  <h4 class="checklist2">Reportes y análisis</h4>
+                  <ul>
+                    <li>Generación de reportes de cobranza</li>
+                    <li>Análisis de datos de pago y rendimiento</li>
+                    <li>
+                      Exportación de datos a formatos compatibles (Excel, PDF)
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div class="pre-container5">
+          <div style={{ marginRight: "20px", gap: "50px" }}>
+            <h3 className="titulosTrabajos">
+              SISTEMA DE PEDIDOS / VENDEDORES - DISTRIBUIDORA
+            </h3>
+            <Link
+              style={{ textAlign: "right", margin: "1rem" }}
+              to="https://www.instagram.com/alimentosnaturalesmdq/"
+            >
+              <h4 id="asd1232">@alimentosnaturalesmdp</h4>
+            </Link>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Arturo+Alio+3198,+Mar+del+Plata,+Argentina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h4>
+                {" "}
+                <span
+                  style={{ margin: "1rem" }}
+                  class="material-symbols-outlined"
+                >
+                  pin_drop
+                </span>
+                Arturo Alio 3198, Mar del Plata, Argentina
+              </h4>
+            </a>
+            <a href="tel:+542234543960">
+              <h4>
+                <span
+                  style={{ margin: "1rem" }}
+                  class="material-symbols-outlined"
+                >
+                  call
+                </span>
+                0223 454-3960
+              </h4>
+            </a>
+          </div>
+          <div class="cards-container">
+            <div class="cardJobs2" id="center">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2desktop.png?alt=media&token=0b3cdb21-cf43-4e4b-91c0-c0288b7361d6"
+                alt="Project 1"
+                width="600px"
+                style={{ padding: 0, margin: 0 }}
+              />
+            </div>
+
+            <div class="cardJobs" id="center">
+              <img
+                src={
+                  isMobile
+                    ? "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
+                    : "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2.png?alt=media&token=28eaee81-c3f6-4326-9d90-e4faa1d76c60https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
+                }
+                np
+                alt="Project 1"
                 width="200px"
                 style={{ padding: 0, margin: 0 }}
                 sizes="contain"
@@ -363,7 +558,6 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
-        <div class="pre-container4"></div>
         <Footer />
       </Box>
     </Box>

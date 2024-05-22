@@ -1,0 +1,241 @@
+.contact-form-container {
+  background: transparent;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.div50 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.datosEmpresa {
+  margin-top: 7rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.contact-form h2 {
+  font-size: 1.5rem; /* Ajusta según tu diseño */
+}
+
+.contact-form h3 {
+  font-size: 1rem; /* Ajusta según tu diseño */
+  margin-bottom: 5px;
+}
+
+.contact-form input {
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Ajusta según tu diseño */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Ajusta según tu diseño */
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 70% 30%; /* 70% para la izquierda, 30% para la derecha */
+  height: 200vh;
+  width: "100vw";
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: gainsboro;
+}
+
+.left-component {
+  background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
+  padding: 20px;
+}
+
+.right-component {
+  background-color: #e0e0e0; /* Color de fondo para la sección derecha */
+  padding: 20px;
+}
+
+h1 {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+}
+
+h2 {
+  background: linear-gradient(
+    270deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent; /* Hacer el color del texto transparente */
+}
+
+.section-animation {
+  width: "90vw";
+  display: "flex";
+  justify-content: "flex-end";
+  margin-top: "50vh";
+}
+
+@media only screen and (max-width: 768px) {
+  .fontRubikMonoOne {
+    font-size: 70%;
+  }
+}
+
+.fontRubikMonoOne {
+  font-family: "Rubik Mono One", monospace;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0,
+    #ffffff 7.14%,
+    #fdffff 14.29%,
+    #ebffff 21.43%,
+    #d7ffff 28.57%,
+    #c1ffff 35.71%,
+    #a7ffff 42.86%,
+    #89fcff 50%,
+    #66f1fe 57.14%,
+    #3be7fe 64.29%,
+    #00deff 71.43%,
+    #00d5ff 78.57%,
+    #00ccff 85.71%,
+    #00c4ff 92.86%,
+    #00bcff 100%
+  );
+  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  background-clip: text;
+  color: transparent;
+  margin-top: 10rem;
+  margin-left: 0rem;
+}
+
+@keyframes slideInAndGrow {
+  from {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.section-animation {
+  animation: slideInAndGrow 1s ease-out forwards;
+  margin-right: "5rem";
+}
+
+/* src/App.css */
+@keyframes slideInFromRightAndGrow {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.typography-animation {
+  animation: slideInFromRightAndGrow 1s ease-out forwards;
+}
+
+@keyframes slideInFromRightAndGrowWithFade {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.h2-animation {
+  max-width: 45vw;
+  animation: slideInFromRightAndGrowWithFade 2s ease-out forwards; /* 2s delay */
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column;
+  }
+  .div50 {
+    width: 100vw;
+  }
+  .div50 img {
+    display: none;
+  }
+}

@@ -21,7 +21,7 @@ export default function CardsService2() {
   return (
     <Card
       sx={{
-        width: isMobile ? "350px" : "auto",
+        width: isMobile ? "95%" : "auto",
         borderRadius: "40px",
         boxShadow: "none",
         height: isMobile ? "60vh" : "auto",
@@ -30,7 +30,7 @@ export default function CardsService2() {
       <CardActionArea>
         <CardMedia
           component="img"
-          image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here..png?alt=media&token=194ea975-be00-4e3a-bd35-52ae11d98b56"
+          image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here.%20(1).png?alt=media&token=5c091fac-6f1f-47bf-931f-033a5f1aabfb"
           alt="green iguana"
           height={isMobile ? "150px" : "250px"}
         />
@@ -50,7 +50,7 @@ export default function CardsService2() {
             sx={{ fontWeight: 600 }}
           >
             Transacciones rápidas y seguras. Mejora la experiencia del cliente,
-            con seguridad y adaptandote a la nueva Era.
+            aumenta la seguridad y agiliza tiempos.
           </Typography>
         </CardContent>
       </CardActionArea>

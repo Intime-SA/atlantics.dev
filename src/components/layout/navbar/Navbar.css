@@ -31,7 +31,6 @@ a {
 
 .card:hover {
   transform: translateY(-10px) scale(1.2);
-  z-index: 1;
 }
 
 /* Animación de entrada */
@@ -72,20 +71,33 @@ a {
 }
 
 .typography-animation {
-  background: linear-gradient(270deg, #a7ffff 42.86%, #89fcff 50%);
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent; /* Hacer el color del texto transparente */
   text-decoration: none;
+
+  color: #a7ffff;
 }
 
 h1,
 h2,
-h3 {
-  font-family: "Jaro", sans-serif;
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: gainsboro;
 }
 h1 {
   color: gainsboro;
+}
+.typography-animation h2 {
+  size: 0.5rem;
 }
 
 .profile-card1,
@@ -102,6 +114,7 @@ h1 {
   background: transparent;
   animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
   margin-bottom: 5rem;
+  margin: 5rem;
 }
 .profile-card1 {
   margin-top: 25rem;
@@ -133,11 +146,18 @@ h1 {
   background-size: 180%;
   box-shadow: 0 4px 8px #fff;
 }
+.profile-card1 h1:hover,
+.profile-card2 h1:hover,
+.profile-card1 h2:hover,
+.profile-card2 h2:hover {
+  color: black;
+}
 
 .profile-card2:hover {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o-sin-t%C3%ADtulo.svg?alt=media&token=027d323f-f2fd-4e65-bff7-d9774f6b8490");
   background-size: 180%;
   box-shadow: 0 4px 8px #fff;
+  color: gainsboro;
 }
 
 .profile-card1 img {
@@ -151,7 +171,6 @@ h1 {
 .profile-card1 h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
-  color: #333;
   text-align: center;
 }
 
@@ -173,7 +192,6 @@ h1 {
 .profile-card2 h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
-  color: #333;
   text-align: center;
 }
 
@@ -190,6 +208,7 @@ h1 {
 }
 
 #asd123 {
+  font-size: 1vw;
   position: relative; /* Establecer posición relativa para el subrayado */
   /* Color inicial del texto */
   transition: color 0.3s; /* Transición suave para el cambio de color del texto */
@@ -207,6 +226,27 @@ h1 {
 }
 
 #asd123:hover::before {
+  width: 100%; /* Aumentar el ancho del subrayado al 100% */
+}
+#asd1232 {
+  font-size: 5vw;
+  position: relative; /* Establecer posición relativa para el subrayado */
+  /* Color inicial del texto */
+  transition: color 0.3s; /* Transición suave para el cambio de color del texto */
+}
+
+#asd1232::before {
+  content: ""; /* Agregar un elemento pseudo ::before para crear el subrayado */
+  position: absolute; /* Establecer posición absoluta para el subrayado */
+  bottom: 0; /* Colocar el subrayado al fondo del elemento */
+  left: 0; /* Iniciar desde la izquierda */
+  width: 0; /* Inicialmente sin ancho */
+  height: 2px; /* Grosor del subrayado */
+  background-color: #c0dbdb; /* Color del subrayado */
+  transition: width 0.3s; /* Transición suave para el ancho del subrayado */
+}
+
+#asd1232:hover::before {
   width: 100%; /* Aumentar el ancho del subrayado al 100% */
 }
 
@@ -262,20 +302,25 @@ h1 {
   z-index: 0;
 }
 .pre-container4 {
-  height: 200vh;
+  height: 250vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 0rem;
   background-size: cover;
   background-color: #212020;
   background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
 
-  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
   position: relative;
   /* Añadir posición relativa al contenedor */
-  top: -330px;
   z-index: 0;
+}
+.MuiBox-root .css-13q4n6n {
+  bottom: 500px;
+  height: auto;
 }
 .pre2-container {
   height: 60vh;
@@ -300,7 +345,6 @@ h1 {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  gap: 20px;
 }
 
 .cards-container {
@@ -310,7 +354,7 @@ h1 {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  gap: 20px;
+
   background-size: cover;
   background-color: transparent;
 
@@ -402,6 +446,13 @@ h1 {
   align-items: center;
 }
 
+.componentPesos h2 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #a7ffff;
+}
+
 #componentPeso3 {
   transform: rotate(0deg);
   font-size: 10vw;
@@ -460,8 +511,9 @@ h1 {
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
   width: 80%;
+  margin-top: 12rem;
 }
 
 .container2 {
@@ -496,6 +548,21 @@ h1 {
   justify-content: center;
 }
 
+.titulosTrabajos {
+  margin-top: 450px;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+.checklist {
+  font-size: 0.7em;
+  margin-top: 35vh; /* Reduce la fuente un 30% */
+}
+.checklist2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 0.5rem;
+}
+
 @keyframes suspend {
   0% {
     transform: scale(1); /* Tamaño normal */
@@ -524,7 +591,7 @@ h1 {
 
   width: 10vw; /* Ajusta el tamaño inicial del segundo icono según sea necesario */
   top: 60vh;
-  left: 10vw;
+  left: 4vw;
   z-index: 1; /* Asegura que esté por encima de otros elementos si es necesario */
 }
 .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.css-hyum1k-MuiToolbar-root {
@@ -535,8 +602,93 @@ h1 {
   padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
   width: 100vw;
 }
+#lineasIcon img {
+  position: absolute;
+  animation: none;
+  top: 850px;
+  width: 40vw;
+}
+
+#webservice img {
+  top: 150px;
+}
+
+.pre-container5 {
+  height: 300vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+
+  background-color: #212020;
+  background-image: linear-gradient(225deg, #212020 35%, #2ea093 100%);
+
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  top: -100px;
+  /* Añadir posición relativa al contenedor */
+  z-index: 0;
+}
+
+#center {
+  margin-top: 30rem;
+}
+
+.css-1oqqzyl-MuiContainer-root {
+  max-width: 100%;
+}
+
+.drawer {
+  background-color: #212020;
+  background-image: linear-gradient(315deg, #212020 32%, #30638a 100%);
+}
 
 @media only screen and (max-width: 768px) {
+  #asd1232 h4 {
+    text-align: left;
+    right: 20px;
+    width: 10%;
+  }
+  .webs {
+    font-size: 1vw;
+    position: relative; /* Establecer posición relativa para el subrayado */
+    /* Color inicial del texto */
+    transition: color 0.3s; /* Transición suave para el cambio de color del texto */
+  }
+
+  .webs::before {
+    content: ""; /* Agregar un elemento pseudo ::before para crear el subrayado */
+    position: absolute; /* Establecer posición absoluta para el subrayado */
+    bottom: 0; /* Colocar el subrayado al fondo del elemento */
+    left: 0; /* Iniciar desde la izquierda */
+    width: 0; /* Inicialmente sin ancho */
+    height: 2px; /* Grosor del subrayado */
+    background-color: #c0dbdb; /* Color del subrayado */
+    transition: width 0.3s; /* Transición suave para el ancho del subrayado */
+    display: block; /* Asegurar que el pseudo-elemento se comporte como un bloque */
+  }
+
+  .webs:hover::before {
+    width: 100%; /* Aumentar el ancho del subrayado al 100% */
+  }
+
+  .titulosTrabajos {
+    margin-left: 1rem;
+  }
+  .checklist {
+    margin-top: 10vh;
+    margin: 1rem;
+  }
+
+  .icon img {
+    display: none;
+  }
+  .profile-card1,
+  .profile-card2 {
+    margin: 0px;
+    margin-bottom: 5rem;
+  }
   .fontRubikMonoOne2 {
     text-align: center;
     font-size: 3vh;
@@ -555,11 +707,35 @@ h1 {
 
   .cardJobs {
     right: 0px;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 0px;
+    top: -60px;
+    max-width: 340px;
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+  .cardJobs img {
+    width: 350px;
   }
 
   .cardJobs:hover img {
     left: 500px;
-    transform: scale(1.1);
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+  .cardJobs,
+  .cardJobs:hover,
+  .cardJobs img,
+  .cardJobs:hover img {
+    transition: none !important; /* Eliminar todas las transiciones */
+    animation: none !important; /* Eliminar todas las animaciones */
+    transform: none !important; /* Restablecer transformaciones */
   }
   .grupoCards {
     display: flex;
@@ -630,5 +806,9 @@ h1 {
   .css-1c6cu7h-MuiPaper-root-MuiAppBar-root {
     padding: 0 !important; /* !important para asegurarte de que el padding se sobrescriba */
     width: 100vw;
+  }
+  .pre-container3,
+  .pre-container4 {
+    height: 350vh;
   }
 }
