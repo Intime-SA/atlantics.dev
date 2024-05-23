@@ -220,7 +220,6 @@ function DrawerAppBar(props) {
             justifyContent: "center",
             flexDirection: "column",
             zoom: "0.9",
-
             width: "100%",
             height: "200vh",
           }}
@@ -228,12 +227,12 @@ function DrawerAppBar(props) {
           <div class="card card2">
             <CardsServices />
           </div>
-           <div class="card card1">
+           {/* <div class="card card1">
             <CardsService2 />
           </div>
           <div class="card card3">
             <CardsService3 />
-          </div>
+          </div> */}
         </div>
 
         <div className="grupoCardsPadre">

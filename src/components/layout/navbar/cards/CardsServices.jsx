@@ -12,6 +12,8 @@ import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import '../../../layout/css/styles.css';
+import '../../scss/components/_variables.scss'
+
 
 export default function CardsServices() {
   const theme = useTheme();
