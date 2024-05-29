@@ -37,11 +37,10 @@ export default function CardsService3() {
         />
         <CardContent sx={{ padding: "2rem" }}>
           <Typography
-            className="title"
+            className="title-cardservice"
             gutterBottom
             variant="h5"
             component="div"
-            style={{ fontFamily: "'Jaro', sans-serif", color: "#1976D2" }}
           >
             Integraciones Mercado Pago
           </Typography>

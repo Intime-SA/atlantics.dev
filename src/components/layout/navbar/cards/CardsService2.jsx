@@ -36,11 +36,10 @@ export default function CardsService2() {
         />
         <CardContent sx={{ padding: "2rem" }}>
           <Typography
-            className="title"
+            className="title-cardservice"
             gutterBottom
             variant="h5"
             component="div"
-            style={{ fontFamily: "'Jaro', sans-serif", color: "#1976D2" }}
           >
             QR y Gateway de pagos
           </Typography>
