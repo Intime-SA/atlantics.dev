@@ -1,4 +1,60 @@
+
+
+/* Titulo y subtitlo */
 .title-cardservice {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
   color: #1976D2;
+  padding: 2rem;
+}
+
+.subtitle-cardservice{
+  font-weight: 600;
+}
+
+/* Propiedades Imagen general */
+.img-cardservice3 {
+  object-fit: cover;
+}
+
+.img-cardservice1 {
+  height: 450px;
+}
+
+
+/* Estilos comunes para el componente Card */
+.card-services-style {
+  border-radius: 40px;
+  box-shadow: none;
+}
+
+
+/*  -----------MEDIA QUERIES------------*/
+/* Estilos específicos para teléfonos móviles */
+@media (max-width: 600px) {
+  .card-services-style {
+    width: 95%;
+    height: 60vh;
+  }
+  .img-cardservice2, .img-cardservice3, .img-cardservice1{
+    height: 150px;
+  }
+}
+
+/* Estilos específicos para tabletas pequeñas */
+@media (min-width: 601px) and (max-width: 768px) {
+  .card-services-style {
+    width: 95%;
+    height: 60vh;
+  }
+}
+
+/* Estilos específicos para pantallas más grandes (por defecto) */
+@media (min-width: 769px) {
+  .card-services-style {
+    width: auto;
+    height: auto;
+  }
+  .img-cardservice2, .img-cardservice3 {
+    height: 250px;
+  }
 }

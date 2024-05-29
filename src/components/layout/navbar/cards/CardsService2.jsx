@@ -19,22 +19,15 @@ export default function CardsService2() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Card
-      sx={{
-        width: isMobile ? "95%" : "auto",
-        borderRadius: "40px",
-        boxShadow: "none",
-        height: isMobile ? "60vh" : "auto",
-      }}
-    >
+    <Card className="card-services-style">
       <CardActionArea>
         <CardMedia
+          className="img-cardservice2"
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Write%20a%20sort%20subtitle%20here.%20(1).png?alt=media&token=5c091fac-6f1f-47bf-931f-033a5f1aabfb"
           alt="green iguana"
-          height={isMobile ? "150px" : "250px"}
         />
-        <CardContent sx={{ padding: "2rem" }}>
+        <CardContent>
           <Typography
             className="title-cardservice"
             gutterBottom
@@ -44,9 +37,9 @@ export default function CardsService2() {
             QR y Gateway de pagos
           </Typography>
           <Typography
+            className="subtitle-cardservice"
             variant="body2"
             color="text.secondary"
-            sx={{ fontWeight: 600 }}
           >
             Transacciones rápidas y seguras. Mejora la experiencia del cliente,
             aumenta la seguridad y agiliza tiempos.

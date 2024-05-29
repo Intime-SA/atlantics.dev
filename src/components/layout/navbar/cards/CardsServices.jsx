@@ -19,22 +19,15 @@ export default function CardsServices() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Card
-      sx={{
-        width: isMobile ? "95%" : "auto",
-        borderRadius: "40px",
-        boxShadow: "none",
-        height: isMobile ? "60vh" : "auto",
-      }}
-    >
+    <Card className="card-services-style">
       <CardActionArea>
         <CardMedia
+          className="img-cardservice1"
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/chatgpt.jpg?alt=media&token=c52d79d2-91f4-4dfd-ae66-f2b03cc58122"
           alt="green iguana"
-          height={isMobile ? "150px" : "450px"}
         />
-        <CardContent sx={{ padding: "2rem" }}>
+        <CardContent>
           <Typography
             className="title-cardservice"
             gutterBottom
@@ -44,9 +37,9 @@ export default function CardsServices() {
             WhatsApp Bot
           </Typography>
           <Typography
+            className="subtitle-cardservice"
             variant="body2"
             color="text.secondary"
-            sx={{ fontWeight: 600 }}
           >
             Comunicación instantánea y automatización para tu negocio. Servicio
             personalizado disponbile las 24 horas.

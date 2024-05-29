@@ -18,24 +18,15 @@ export default function CardsService3() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Card
-      className=""
-      sx={{
-        width: isMobile ? "95%" : "auto",
-        borderRadius: "40px",
-        height: isMobile ? "100vh" : "auto",
-        boxShadow: "none",
-      }}
-    >
+    <Card className="card-services-style">
       <CardActionArea>
         <CardMedia
+          className="img-cardservice3"
           component="img"
           image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/mp.png?alt=media&token=cb1cce98-f6a1-4366-8a52-98471cbd8212"
           alt="green iguana"
-          sx={{ objectFit: "cover", size: "cover" }}
-          height={isMobile ? "150px" : "250px"}
         />
-        <CardContent sx={{ padding: "2rem" }}>
+        <CardContent>
           <Typography
             className="title-cardservice"
             gutterBottom
@@ -45,9 +36,9 @@ export default function CardsService3() {
             Integraciones Mercado Pago
           </Typography>
           <Typography
+            className="subtitle-cardservice"
             variant="body2"
             color="text.secondary"
-            sx={{ fontWeight: 600 }}
           >
             Conecta con Mercado Pago y tene el control de tu negocio.
             Integracion facil, rapido y seguro.
