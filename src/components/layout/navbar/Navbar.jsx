@@ -249,7 +249,7 @@ function DrawerAppBar(props) {
             </div>
             <div class="profile-card2">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/CambioUrl.png?alt=media&token=191540f4-4037-4a12-83ba-882cba7b5c10"
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/pepo.png?alt=media&token=927b2dd1-e3dc-4a5e-a894-a145db7ee772"
                 alt="Ramiro Martin Arce"
               />
               <h1>Ramiro Martin Arce</h1>

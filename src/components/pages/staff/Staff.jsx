@@ -263,7 +263,7 @@ const Staff = () => {
         <div className="integrante">
           <div style={{ width: "100%", marginTop: "15rem" }}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/pepo.png?alt=media&token=927b2dd1-e3dc-4a5e-a894-a145db7ee772"
               alt="Rodrigo Silva"
               className="fotoTeam"
             />
