@@ -149,7 +149,7 @@ const Staff = () => {
       <div className="equipo">
         <div className="integrante">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/CambioUrl.png?alt=media&token=191540f4-4037-4a12-83ba-882cba7b5c10"
+            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
             alt="logoRama"
             srcset=""
             className="fotoTeam"
