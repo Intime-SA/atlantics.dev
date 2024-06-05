@@ -544,11 +544,7 @@ function DrawerAppBar(props) {
 
             <div class="cardJobs" id="center">
               <img
-                src={
-                  isMobile
-                    ? "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
-                    : "https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2.png?alt=media&token=28eaee81-c3f6-4326-9d90-e4faa1d76c60https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
-                }
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
                 np
                 alt="Project 1"
                 width="200px"
