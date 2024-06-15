@@ -10,18 +10,15 @@ body {
   box-sizing: border-box; /* Reduce la escala del contenido al 90% */
 }
 html {
-  background: rgb(2, 0, 36);
-  background-image: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(36, 29, 73, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-color: #2d5676;
+  background-image: linear-gradient(315deg, #212020 32%, #30638a 1500%);
+  background-size: cover; /* Ajusta la propiedad background-size */
+
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100%; /* Asegúrate de que el contenedor html ocupe toda la altura de la ventana */
 }

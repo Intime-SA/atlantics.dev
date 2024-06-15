@@ -12,6 +12,7 @@ import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import "./CardsServices.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Link } from "react-router-dom";
 
 export default function CardsService3() {
   const theme = useTheme();
@@ -27,34 +28,36 @@ export default function CardsService3() {
         boxShadow: "none",
       }}
     >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/mp.png?alt=media&token=cb1cce98-f6a1-4366-8a52-98471cbd8212"
-          alt="green iguana"
-          sx={{ objectFit: "cover", size: "cover" }}
-          height={isMobile ? "150px" : "250px"}
-        />
-        <CardContent sx={{ padding: "2rem" }}>
-          <Typography
-            className="title"
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={{ fontFamily: "'Jaro', sans-serif", color: "#1976D2" }}
-          >
-            Integraciones Mercado Pago
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{ fontWeight: 600 }}
-          >
-            Conecta con Mercado Pago y tene el control de tu negocio.
-            Integracion facil, rapido y seguro.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <Link to="https://mp.atlantics.dev">
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            image="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/mp.png?alt=media&token=cb1cce98-f6a1-4366-8a52-98471cbd8212"
+            alt="green iguana"
+            sx={{ objectFit: "cover", size: "cover" }}
+            height={isMobile ? "150px" : "250px"}
+          />
+          <CardContent sx={{ padding: "2rem" }}>
+            <Typography
+              className="title"
+              gutterBottom
+              variant="h5"
+              component="div"
+              style={{ fontFamily: "'Jaro', sans-serif", color: "#1976D2" }}
+            >
+              Integraciones Mercado Pago
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ fontWeight: 600 }}
+            >
+              Conecta con Mercado Pago y tene el control de tu negocio.
+              Integracion facil, rapido y seguro.
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
     </Card>
   );
 }

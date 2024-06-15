@@ -196,10 +196,9 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          background: "rgb(2,0,36)",
+          backgroundColor: "#2d5676",
           backgroundImage:
-            "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,29,73,1) 35%, rgba(0,212,255,1) 100%)",
-
+            "linear-gradient(315deg, #212020 32%, #30638a 1000%)",
           /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
           padding: "0px",
           margin: "0px",
@@ -368,7 +367,7 @@ function DrawerAppBar(props) {
           <div class="cards-container">
             <div class="cardJobs2">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/kaury123.png?alt=media&token=b6370eae-f1db-407e-8f9d-407d2060f614"
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/1.png?alt=media&token=abfcf2f5-844d-42d6-8915-e5bce9119bb9"
                 alt="Project 1"
                 width="600px"
                 style={{ padding: 0, margin: 0 }}
