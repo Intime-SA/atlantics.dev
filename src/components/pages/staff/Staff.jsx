@@ -149,7 +149,7 @@ const Staff = () => {
       <div className="equipo">
         <div className="integrante">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/CambioUrl.png?alt=media&token=191540f4-4037-4a12-83ba-882cba7b5c10"
+            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
             alt="logoRama"
             srcset=""
             className="fotoTeam"
@@ -263,7 +263,7 @@ const Staff = () => {
         <div className="integrante">
           <div style={{ width: "100%", marginTop: "15rem" }}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd123.png?alt=media&token=a7dc2811-30cb-4713-b737-670e26f40437"
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/pepo.png?alt=media&token=927b2dd1-e3dc-4a5e-a894-a145db7ee772"
               alt="Rodrigo Silva"
               className="fotoTeam"
             />
