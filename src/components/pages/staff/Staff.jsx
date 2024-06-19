@@ -50,9 +50,6 @@ const Staff = () => {
             width: "100%",
             display: "flex",
             justifyContent: "flex-start",
-            backgroundColor: isScrolled
-              ? "rgba(255, 255, 255, 0.3)"
-              : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
             // Opcional: bordes redondeados
