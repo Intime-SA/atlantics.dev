@@ -15,7 +15,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function CardsService2() {
   const theme = useTheme();
-
+  
+  //esto va?
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (

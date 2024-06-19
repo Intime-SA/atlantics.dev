@@ -17,7 +17,7 @@ export default function CardsServices() {
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
+  //ISMOBILE sigue siendo operativo?
   return (
     <Card className="card-services-style">
       <CardActionArea>
