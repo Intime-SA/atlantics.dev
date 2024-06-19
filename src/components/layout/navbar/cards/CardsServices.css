@@ -2,13 +2,20 @@
 
 /* Titulo y subtitlo */
 .title-cardservice {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-  color: #1976D2;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 2rem !important;
+  color: #212325;
   padding: 2rem;
 }
 
 .subtitle-cardservice{
-  font-weight: 600;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  color: #212325 !important;
+  font-size: 1.1rem !important;
+  margin: 0.5rem !important;
 }
 
 /* Propiedades Imagen general */

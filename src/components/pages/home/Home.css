@@ -28,7 +28,7 @@ ul {
   padding: 20px;
 }
 
-h1 {
+/* h1 {
   background: linear-gradient(
     135deg,
     #ffffff 0,
@@ -47,10 +47,11 @@ h1 {
     #00c4ff 92.86%,
     #00bcff 100%
   );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
+  -webkit-background-clip: text; plicar el gradiente de fondo al texto 
   background-clip: text;
-  color: transparent; /* Hacer el color del texto transparente */
-}
+  color: transparent;  Hacer el color del texto transparente
+} 
+*/
 
 h2 {
   color: #a7ffff;
@@ -71,32 +72,10 @@ h2 {
 }
 
 
-
-
-
 .nuevaFuente {
-  font-family: "Roboto", sans-serif;
-    background: linear-gradient(
-    135deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  color: rgb(255,254,254);
   margin-top: 10rem;
   margin-left: 0rem;
 }
@@ -148,7 +127,8 @@ h2 {
   max-width: 10vw;
   animation: slideInFromRightAndGrowWithFade 2s ease-out forwards; /* 2s delay */
   font-weight: 600;
-  color: #a7ffff;
+  color: rgb(255,254,254);
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -787,8 +767,9 @@ h1 {
 
 #asd123 h2 {
   animation: slideInFromRightAndGrowWithFade 2s ease-out forwards; /* 2s delay */
-  font-weight: 900;
-  color: #a7ffff;
+  font-weight: 500;
+  color: rgb(255,254,254);
+  font-family: "Montserrat", sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
