@@ -279,9 +279,7 @@ h1 {
   padding: 20px;
   background-size: cover;
   background-color: #212020;
-  background-image: linear-gradient(315deg, #212020 32%, #30638a 100%);
-
-  clip-path: polygon(0% 0%, 100% 0, 120% 85%, 0% 100%);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/SOFTWARE%20FACTORY.gif?alt=media&token=653bb103-58d5-4538-9caa-26093d16e157);
   position: relative;
   top: 25vh; /* Añadir posición relativa al contenedor */
 }
@@ -294,8 +292,6 @@ h1 {
   padding: 20px;
   background-size: cover;
   background-color: #212020;
-  background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
-
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   /* Añadir posición relativa al contenedor */
@@ -330,7 +326,10 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-size: contain;
+  background-color: #212020;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/SOFTWARE%20FACTORY%20(1).gif?alt=media&token=c901dc76-4ad4-4b84-8f1f-c7d7f67f4572");
+
   position: relative;
   top: 500px; /* Añadir posición relativa al contenedor */
 }
@@ -622,8 +621,8 @@ h1 {
   background-size: cover;
 
   background-color: #212020;
-  background-image: linear-gradient(225deg, #212020 35%, #2ea093 100%);
 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/3.gif?alt=media&token=f00cab37-80dd-4662-8fd1-fd55aaf09eb2);
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   top: -100px;
@@ -642,6 +641,39 @@ h1 {
 .drawer {
   background-color: #212020;
   background-image: linear-gradient(315deg, #212020 32%, #30638a 100%);
+}
+
+/* Animación para que los íconos caigan de arriba hacia abajo */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para que los textos se desplacen de izquierda a derecha */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Aplica las animaciones a los elementos específicos */
+.icon-animation {
+  animation: dropDown 1s ease-out;
+}
+
+.text-animation {
+  animation: slideInRight 1s ease-out;
 }
 
 @media only screen and (max-width: 768px) {

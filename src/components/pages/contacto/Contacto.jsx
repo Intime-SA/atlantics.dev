@@ -4,6 +4,7 @@ import "./Contacto.css";
 import { addDoc, collection } from "firebase/firestore";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -28,8 +29,26 @@ const Contacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Agregar datos a Firestore
       await addDoc(collection(db, "atlantics.dev"), formData);
-      console.log("Datos enviados exitosamente");
+
+      // Enviar correo electrónico usando EmailJS
+      const templateParams = {
+        to_name: formData.nombreCompleto,
+        from_name: formData.nombreCompleto,
+        from_email: formData.correoElectronico,
+        from_phone: "", // Agrega el campo si tienes un teléfono
+        organizacion: `Organización: ${formData.organizacion}\nPágina Web: ${formData.paginaWeb}`,
+      };
+
+      await emailjs.send(
+        "service_yy53n6a", // Tu ID del servicio
+        "template_cycnwyi", // Tu ID de la plantilla
+        templateParams,
+        "HiZortCAfvLTjje7w" // Tu ID de usuario
+      );
+
+      console.log("Datos y correo enviados exitosamente");
       setFormData({
         nombreCompleto: "",
         organizacion: "",
@@ -37,16 +56,28 @@ const Contacto = () => {
         correoElectronico: "",
       });
     } catch (error) {
-      console.error("Error al enviar datos", error);
+      console.error("Error al enviar datos o correo", error);
     }
   };
+
   const navItems = [
     { nombre: "Inicio", url: "/" },
     { nombre: "Staff", url: "/staff" },
     { nombre: "Contacto", url: "/contacto" },
   ];
 
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Esto hace que la animación se active después de que el componente se monta
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Tiempo de retraso opcional antes de que la animación comience
+
+    return () => clearTimeout(timer); // Limpia el temporizador si el componente se desmonta
+  }, []);
 
   return (
     <div className="contact-form-container">
@@ -68,7 +99,6 @@ const Contacto = () => {
               : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            // Opcional: bordes redondeados
           }}
         >
           <Link to="/">
@@ -104,7 +134,12 @@ const Contacto = () => {
                 sx={{
                   fontSize: "2rem",
                   position: "relative",
-                  overflow: "hidden",
+                  opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
+                  transition:
+                    "opacity 2s ease-in-out, transform 1s ease-in-out", // Transición suave
+                  transform: isVisible
+                    ? "translateY(-10px)"
+                    : "translateY(50px)", // Desplazamiento vertical
                 }}
               >
                 <Link to={item.url} id="asd123" class="typography-animation">

@@ -208,7 +208,7 @@ const Staff = () => {
             style={{ width: "100%", textAlign: "right", marginTop: "15rem" }}
           >
             <img
-              src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1721865600&v=beta&t=A-iOrBcYjU4vqvD2FnBuGlNZg1IgO4IsADSFBcUXxxw"
+              src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1729123200&v=beta&t=8rdHfSBFx1BazjqjCmhnKo7Ejv10PbNxrgjATBD8HL4"
               alt="Ingeniero de Software"
               className="fotoTeam"
             />
