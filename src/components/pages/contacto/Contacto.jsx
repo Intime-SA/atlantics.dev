@@ -4,6 +4,7 @@ import "./Contacto.css";
 import { addDoc, collection } from "firebase/firestore";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -28,8 +29,26 @@ const Contacto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Agregar datos a Firestore
       await addDoc(collection(db, "atlantics.dev"), formData);
-      console.log("Datos enviados exitosamente");
+
+      // Enviar correo electrónico usando EmailJS
+      const templateParams = {
+        to_name: formData.nombreCompleto,
+        from_name: "Atalntics.Dev",
+        from_email: formData.correoElectronico,
+        from_phone: "", // Agrega el campo si tienes un teléfono
+        message: `Organización: ${formData.organizacion}\nPágina Web: ${formData.paginaWeb}`,
+      };
+
+      await emailjs.send(
+        "service_yy53n6a", // Tu ID del servicio
+        "template_cycnwyi", // Tu ID de la plantilla
+        templateParams,
+        "HiZortCAfvLTjje7w" // Tu ID de usuario
+      );
+
+      console.log("Datos y correo enviados exitosamente");
       setFormData({
         nombreCompleto: "",
         organizacion: "",
@@ -37,9 +56,10 @@ const Contacto = () => {
         correoElectronico: "",
       });
     } catch (error) {
-      console.error("Error al enviar datos", error);
+      console.error("Error al enviar datos o correo", error);
     }
   };
+
   const navItems = [
     { nombre: "Inicio", url: "/" },
     { nombre: "Staff", url: "/staff" },
@@ -68,7 +88,6 @@ const Contacto = () => {
               : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            // Opcional: bordes redondeados
           }}
         >
           <Link to="/">
