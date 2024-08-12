@@ -35,10 +35,10 @@ const Contacto = () => {
       // Enviar correo electrónico usando EmailJS
       const templateParams = {
         to_name: formData.nombreCompleto,
-        from_name: "Atalntics.Dev",
+        from_name: formData.nombreCompleto,
         from_email: formData.correoElectronico,
         from_phone: "", // Agrega el campo si tienes un teléfono
-        message: `Organización: ${formData.organizacion}\nPágina Web: ${formData.paginaWeb}`,
+        organizacion: `Organización: ${formData.organizacion}\nPágina Web: ${formData.paginaWeb}`,
       };
 
       await emailjs.send(
