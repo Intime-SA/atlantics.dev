@@ -621,6 +621,7 @@ h1 {
   background-size: cover;
 
   background-color: #212020;
+
   background-image: url(https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/3.gif?alt=media&token=f00cab37-80dd-4662-8fd1-fd55aaf09eb2);
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;

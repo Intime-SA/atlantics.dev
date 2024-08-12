@@ -234,7 +234,7 @@ function DrawerAppBar(props) {
           flexDirection: "column",
           backgroundImage:
             "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
-          backgroundSize: "contain", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundSize: isMobile ? "cover" : "150%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
           backgroundRepeat: "no-repeat",
           padding: "0px",
           margin: "0px",
@@ -270,7 +270,10 @@ function DrawerAppBar(props) {
             <CardsService3 />
           </div>
         </div> */}
-        <div className="grupoCardsPadre">
+        <div
+          className="grupoCardsPadre"
+          style={{ marginTop: isMobile ? "1000px" : "0" }}
+        >
           <div className="grupoCards">
             <div class="profile-card1" id="a1">
               <img
