@@ -643,6 +643,39 @@ h1 {
   background-image: linear-gradient(315deg, #212020 32%, #30638a 100%);
 }
 
+/* Animación para que los íconos caigan de arriba hacia abajo */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para que los textos se desplacen de izquierda a derecha */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Aplica las animaciones a los elementos específicos */
+.icon-animation {
+  animation: dropDown 1s ease-out;
+}
+
+.text-animation {
+  animation: slideInRight 1s ease-out;
+}
+
 @media only screen and (max-width: 768px) {
   #asd1232 h4 {
     text-align: left;

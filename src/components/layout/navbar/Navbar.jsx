@@ -24,6 +24,7 @@ import CardsService3 from "./cards/CardsService3";
 import Footer from "./footer/Footer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import AnimatedDiv from "./AnimateDiv";
 
 const drawerWidth = 240;
 const navItems = [
@@ -99,6 +100,18 @@ function DrawerAppBar(props) {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const iconAnimation = {
+    initial: { opacity: 0, y: -100 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: "easeOut" },
+  };
+
+  const textAnimation = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: "easeOut" },
+  };
 
   return (
     <Box
@@ -295,7 +308,7 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
-        <div class="pre-container">
+        <div className="pre-container">
           <div
             style={{
               width: "100%",
@@ -303,7 +316,6 @@ function DrawerAppBar(props) {
               justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
-
               fontSize: "1.5rem",
             }}
           >
@@ -323,66 +335,92 @@ function DrawerAppBar(props) {
                 alignItems: "center",
               }}
             >
-              <div className="componentPesos">
-                <div>
-                  <span
-                    id="componentPeso"
-                    style={{
-                      fontSize: "10vw",
-                      color: "#a7ffff",
-                      width: "5rem",
-                      marginRight: "5rem",
-                    }}
-                    class="material-symbols-outlined"
-                  >
-                    attach_money
-                  </span>
+              <AnimatedDiv animation={iconAnimation}>
+                <div className="componentPesos">
+                  <div>
+                    <span
+                      id="componentPeso"
+                      style={{
+                        fontSize: "10vw",
+                        color: "#a7ffff",
+                        width: "5rem",
+                        marginRight: "5rem",
+                      }}
+                      className="material-symbols-outlined"
+                    >
+                      attach_money
+                    </span>
+                  </div>
+                  <div>
+                    <AnimatedDiv animation={textAnimation}>
+                      <h2 style={{ textAlign: "right" }}>
+                        Integraciones con plataformas de Pago y Envio.
+                      </h2>
+                    </AnimatedDiv>
+                  </div>
                 </div>
-                <div>
-                  <h2 style={{ textAlign: "right" }}>
-                    Integraciones con plataformas de Pago y Envio.
-                  </h2>
+              </AnimatedDiv>
+
+              <AnimatedDiv animation={textAnimation}>
+                <div className="componentPesos">
+                  <div>
+                    <h2>Servicio disponible 24hs! Sin intermediarios!</h2>
+                  </div>
+                  <div className="highlight-circle">
+                    <AnimatedDiv animation={iconAnimation}>
+                      <span
+                        id="componentPeso2"
+                        className="material-symbols-outlined"
+                      >
+                        cloud
+                      </span>
+                    </AnimatedDiv>
+                  </div>
                 </div>
-              </div>
-              <div className="componentPesos">
-                <div>
-                  <h2>Servicio disponible 24hs! Sin intermediarios!</h2>
+              </AnimatedDiv>
+
+              <AnimatedDiv animation={iconAnimation}>
+                <div className="componentPesos">
+                  <div>
+                    <span
+                      style={{ width: "5rem", marginRight: "5rem" }}
+                      id="componentPeso3"
+                      className="material-symbols-outlined"
+                    >
+                      monitoring
+                    </span>
+                  </div>
+                  <div>
+                    <AnimatedDiv animation={textAnimation}>
+                      <h2 style={{ textAlign: "right", marginLeft: "5rem" }}>
+                        Acceso a informacion clave del negocio
+                      </h2>
+                    </AnimatedDiv>
+                  </div>
                 </div>
-                <div class="highlight-circle">
-                  <span id="componentPeso2" class="material-symbols-outlined">
-                    cloud
-                  </span>
+              </AnimatedDiv>
+
+              <AnimatedDiv animation={textAnimation}>
+                <div className="componentPesos">
+                  <div>
+                    <h2>Aplicaciones integradas a sus sistemas</h2>
+                  </div>
+                  <div className="highlight-circle">
+                    <AnimatedDiv animation={iconAnimation}>
+                      <span
+                        id="componentPeso2"
+                        className="material-symbols-outlined"
+                      >
+                        <span className="material-symbols-outlined">
+                          qr_code_2
+                        </span>
+                      </span>
+                    </AnimatedDiv>
+                  </div>
                 </div>
-              </div>
-              <div className="componentPesos">
-                <div>
-                  <span
-                    style={{ width: "5rem", marginRight: "5rem" }}
-                    id="componentPeso3"
-                    class="material-symbols-outlined"
-                  >
-                    monitoring
-                  </span>
-                </div>
-                <div>
-                  <h2 style={{ textAlign: "right" }}>
-                    Acceso a informacion clave del negocio
-                  </h2>
-                </div>
-              </div>
-              <div className="componentPesos">
-                <div>
-                  <h2>Aplicaciones integradas a sus sistemas</h2>
-                </div>
-                <div class="highlight-circle">
-                  <span id="componentPeso2" class="material-symbols-outlined">
-                    <span class="material-symbols-outlined">qr_code_2</span>
-                  </span>
-                </div>
-              </div>
+              </AnimatedDiv>
             </div>
           </div>
-          <div class="container2"></div>
         </div>
         <div class="container">
           <div class="icon2">
