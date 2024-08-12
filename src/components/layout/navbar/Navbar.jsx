@@ -88,29 +88,60 @@ function DrawerAppBar(props) {
   const container = undefined;
   /*     window !== undefined ? () => window().document.body : undefined;
    */
+
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    // Añadir un pequeño retraso para la animación
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500); // Ajusta el tiempo de retraso
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Box
-      sx={{ display: "flex", width: "100vw", padding: "0px", margin: "0px" }}
+      sx={{
+        display: "flex",
+        width: "0vw",
+        padding: "0px",
+        margin: "0px",
+        justifyContent: "center",
+        width: "50vw",
+      }}
     >
-      <CssBaseline />
       <AppBar
         component="nav"
         sx={{
           display: "flex",
           justifyContent: "center",
           backgroundColor: "transparent",
+          width: "40vw",
+          borderRadius: "50px",
+          marginTop: "3rem",
+          position: "fixed", // Fija la toolbar en una posición
+          top: "0%", // Centra verticalmente
+          left: "30%", // Centra horizontalmente
+          transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
         <Toolbar
           style={{
-            width: "100%",
+            height: "8vh",
+            width: "80vw",
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "center",
             backgroundColor: isScrolled
               ? "rgba(255, 255, 255, 0.3)"
               : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
+            borderRadius: "40px",
+            position: "fixed", // Fija la toolbar en una posición
+            top: "50%", // Centra verticalmente
+            left: "0%",
+
             // Opcional: bordes redondeados
           }}
         >
@@ -134,36 +165,41 @@ function DrawerAppBar(props) {
           >
             {" "}
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: isMobile ? "100%" : "40%",
-            }}
-          >
-            {navItems.map((item) => (
-              <Typography
-                key={item.nombre}
-                sx={{
-                  fontSize: "2rem",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <Link to={item.url} id="asd123" class="typography-animation">
-                  <h2>{item.nombre}</h2>
-                </Link>
-              </Typography>
-            ))}
+          {isVisible && (
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+                width: isMobile ? "100%" : "40%",
+              }}
+            >
+              {navItems.map((item) => (
+                <Typography
+                  key={item.nombre}
+                  sx={{
+                    fontSize: "2rem",
+                    position: "relative",
+                    opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
+                    transition:
+                      "opacity 2s ease-in-out, transform 2s ease-in-out",
+                    transform: isVisible ? "translateY(0)" : "translateY(10px)", // Desplazamiento vertical más leve
+                  }}
+                >
+                  <Link to={item.url} id="asd123">
+                    <h2>{item.nombre}</h2>
+                  </Link>
+                </Typography>
+              ))}
 
-            {isMobile && (
-              <div>
-                <Button onClick={() => handleDrawerToggle()}>
-                  <span class="material-symbols-outlined">menu</span>
-                </Button>
-              </div>
-            )}
-          </Box>
+              {isMobile && (
+                <div>
+                  <Button onClick={() => handleDrawerToggle()}>
+                    <span class="material-symbols-outlined">menu</span>
+                  </Button>
+                </div>
+              )}
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
       <nav>
@@ -196,20 +232,20 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundColor: "#2d5676",
           backgroundImage:
-            "linear-gradient(315deg, #212020 32%, #30638a 1000%)",
-          /* backgroundImage: `url('../../../../fondo-section2.jpg')` */ // Reemplaza con la URL de tu imagen
+            "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
+          backgroundSize: "contain", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundRepeat: "no-repeat",
           padding: "0px",
           margin: "0px",
           minHeight: "100vh",
-          minWidth: "100vw", // Ajusta la altura según sea necesario
+          minWidth: "100vw",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+        {/*         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <Home />
-        </div>
-        <div
+        </div> */}
+        {/*         <div
           className="grupoCardsProfile"
           style={{
             margin: "0px",
@@ -233,8 +269,7 @@ function DrawerAppBar(props) {
           <div class="card card3">
             <CardsService3 />
           </div>
-        </div>
-
+        </div> */}
         <div className="grupoCardsPadre">
           <div className="grupoCards">
             <div class="profile-card1" id="a1">

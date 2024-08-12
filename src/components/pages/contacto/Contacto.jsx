@@ -66,7 +66,18 @@ const Contacto = () => {
     { nombre: "Contacto", url: "/contacto" },
   ];
 
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Esto hace que la animación se active después de que el componente se monta
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Tiempo de retraso opcional antes de que la animación comience
+
+    return () => clearTimeout(timer); // Limpia el temporizador si el componente se desmonta
+  }, []);
 
   return (
     <div className="contact-form-container">
@@ -123,7 +134,12 @@ const Contacto = () => {
                 sx={{
                   fontSize: "2rem",
                   position: "relative",
-                  overflow: "hidden",
+                  opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
+                  transition:
+                    "opacity 2s ease-in-out, transform 1s ease-in-out", // Transición suave
+                  transform: isVisible
+                    ? "translateY(-10px)"
+                    : "translateY(50px)", // Desplazamiento vertical
                 }}
               >
                 <Link to={item.url} id="asd123" class="typography-animation">

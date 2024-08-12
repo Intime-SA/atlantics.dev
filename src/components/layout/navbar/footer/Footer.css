@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #1e3231;
+  background-color: transparent;
   color: #ffffff;
   height: 16vh;
   display: flex;
@@ -11,6 +11,12 @@
   bottom: 0;
   width: 100vw;
   z-index: 1;
+  backdrop-filter: blur(0px); /* Inicialmente sin blur */
+  transition: backdrop-filter 0.3s ease; /* Transición suave */
+}
+
+.footer-container.scroll-blur {
+  backdrop-filter: blur(10px); /* Ajusta el nivel de blur según prefieras */
 }
 
 .logo {
