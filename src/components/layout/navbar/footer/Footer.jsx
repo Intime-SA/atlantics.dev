@@ -36,9 +36,8 @@ const Footer = () => {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "0 20px",
-        height: "10.1vh",
+        height: "4.5vh",
         zIndex: 1,
-        width: "101%",
       }}
     >
       <img

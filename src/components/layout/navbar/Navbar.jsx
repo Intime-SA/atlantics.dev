@@ -23,6 +23,10 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AnimatedDiv from "./AnimateDiv";
 import { FontStyles } from "../../styles/styles";
+import { NavbarStyles } from "../../styles/styles";
+import { LogoAtlantic } from "../../styles/styles";
+import { NavComponent } from "../../styles/styles";
+import { NavBox } from "../../styles/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -111,62 +115,34 @@ function DrawerAppBar(props) {
     transition: { duration: 0.8, ease: "easeOut" },
   };
 
+  const getBackgroundColor = (isScrolled) => 
+    isScrolled ? "rgba(255, 255, 255, 0.3)" : "transparent";
+  
+  const getBackdropFilter = (isScrolled) => 
+    isScrolled ? "blur(10px)" : "none";
+  
   return (
     <Box
-      sx={{
-        display: "flex",
-        width: "0vw",
-        padding: "0px",
-        margin: "0px",
-        justifyContent: "center",
-        width: "50vw",
-      }}
+      sx={NavBox}
     >
       <AppBar
         component="nav"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "transparent",
-          width: "40vw",
-          borderRadius: "50px",
-          marginTop: "3rem",
-          position: "fixed", // Fija la toolbar en una posición
-          top: "0%", // Centra verticalmente
-          left: "30%", // Centra horizontalmente
-          transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
+        sx={NavComponent}
+      >
+      <Toolbar
+        style={{
+          ...NavbarStyles,
+          backgroundColor: getBackgroundColor(isScrolled),
+          backdropFilter: getBackdropFilter(isScrolled),
+          WebkitBackdropFilter: getBackdropFilter(isScrolled),
         }}
       >
-        <Toolbar
-          style={{
-            height: "8vh",
-            width: "80vw",
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: isScrolled
-              ? "rgba(255, 255, 255, 0.3)"
-              : "transparent", // Fondo semitransparente cuando se desplaza
-            backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
-            WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            borderRadius: "40px",
-            position: "fixed", // Fija la toolbar en una posición
-            top: "50%", // Centra verticalmente
-            left: "0%",
-
-            // Opcional: bordes redondeados
-          }}
-        >
-          <Link to="/">
+        <Link to="/">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
               alt="logo"
               srcset=""
-              style={{
-                width: "5rem",
-                height: "5rem",
-                margin: "5px",
-                padding: "0px",
-              }}
+              style={LogoAtlantic}
             />
           </Link>
           <Typography
@@ -243,8 +219,8 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage:
-            "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
+          // backgroundImage:
+          //  "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&//token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')", 
           backgroundSize: isMobile ? "cover" : "135%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
           backgroundRepeat: "no-repeat",
           padding: "0px",
@@ -283,7 +259,12 @@ function DrawerAppBar(props) {
         </div> */}
         <div
           className="grupoCardsPadre"
-          style={{ marginTop: isMobile ? "1000px" : "0" }}
+          style={{ 
+            marginTop: isMobile ? "1000px" : "0",
+            background: 'rgb(58,96,115)',
+            background: 'radial-gradient(circle, rgba(58,96,115,1) 25%, rgba(0,0,0,1) 60%)',
+            height: '200vh',
+           }}
         >
           <div className="grupoCards">
             <div class="profile-card1" id="a1">
