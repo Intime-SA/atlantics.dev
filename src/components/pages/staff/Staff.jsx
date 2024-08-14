@@ -13,6 +13,7 @@ const Staff = () => {
   }, []);
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const navItems = [
     { nombre: "Inicio", url: "/" },
     { nombre: "Staff", url: "/staff" },
@@ -43,13 +44,13 @@ const Staff = () => {
           display: "flex",
           justifyContent: "center",
           backgroundColor: "transparent",
+          width: "100%",
         }}
       >
         <Toolbar
           style={{
-            width: "100%",
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "space-around",
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
             // Opcional: bordes redondeados
@@ -68,35 +69,41 @@ const Staff = () => {
               }}
             />
           </Link>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            {" "}
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: "40%",
-            }}
-          >
-            {navItems.map((item) => (
-              <Typography
-                key={item.nombre}
-                sx={{
-                  fontSize: "2rem",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <Link to={item.url} id="asd123" class="typography-animation">
-                  <h2>{item.nombre}</h2>
-                </Link>
-              </Typography>
-            ))}
-          </Box>
+          {isMobile ? (
+            <Link
+              to="/"
+              style={{
+                textAlign: "right",
+                color: "white",
+                fontFamily: '"Rubik Mono One", monospace',
+              }}
+            >
+              Contacto
+            </Link>
+          ) : (
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+                width: "40%",
+              }}
+            >
+              {navItems.map((item) => (
+                <Typography
+                  key={item.nombre}
+                  sx={{
+                    fontSize: "2rem",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Link to={item.url} id="asd123" class="typography-animation">
+                    <h2>{item.nombre}</h2>
+                  </Link>
+                </Typography>
+              ))}
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
       <section
