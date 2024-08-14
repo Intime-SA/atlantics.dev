@@ -71,7 +71,7 @@ const Staff = () => {
           </Link>
           {isMobile ? (
             <Link
-              to="/"
+              to="/contacto"
               style={{
                 textAlign: "right",
                 color: "white",
