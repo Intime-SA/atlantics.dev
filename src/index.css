@@ -10,7 +10,8 @@ body {
   box-sizing: border-box; /* Reduce la escala del contenido al 90% */
 }
 html {
-  background-color: #010001;
+  background-color: #101010;
+
   background-size: cover; /* Ajusta la propiedad background-size */
 
   margin: 0px;
