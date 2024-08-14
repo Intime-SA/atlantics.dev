@@ -279,7 +279,13 @@ h1 {
   padding: 20px;
   background-size: cover;
   background-color: #212020;
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/SOFTWARE%20FACTORY.gif?alt=media&token=653bb103-58d5-4538-9caa-26093d16e157);
+  background-color: #212020;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/SOFTWARE%20FACTORY.gif?alt=media&token=653bb103-58d5-4538-9caa-26093d16e157");
   position: relative;
   top: 25vh; /* Añadir posición relativa al contenedor */
 }

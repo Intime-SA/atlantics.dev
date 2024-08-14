@@ -245,9 +245,11 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage:
-            "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
-          backgroundSize: isMobile ? "cover" : "150%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundImage: `
+  linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(73, 72, 69, 0.5)
+ 100%),
+  url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')`,
+          backgroundSize: isMobile ? "cover" : "contain", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
           backgroundRepeat: "no-repeat",
           padding: "0px",
           margin: "0px",
