@@ -260,7 +260,7 @@ const Staff = () => {
         <div className="integrante">
           <div style={{ width: "100%", marginTop: "15rem" }}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/pepo.png?alt=media&token=927b2dd1-e3dc-4a5e-a894-a145db7ee772"
+              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/RodrigoSilva.jpeg?alt=media&token=005632f0-c198-4bae-98c9-e99a5d5a5393"
               alt="Rodrigo Silva"
               className="fotoTeam"
             />

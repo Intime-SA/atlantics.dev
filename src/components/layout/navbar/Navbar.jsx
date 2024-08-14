@@ -18,13 +18,11 @@ import { Link } from "react-router-dom";
 import Home from "../../pages/home/Home";
 import "./Navbar.css";
 import { Card } from "@mui/material";
-import CardsServices from "./cards/CardsServices";
-import CardsService2 from "./cards/CardsService2";
-import CardsService3 from "./cards/CardsService3";
 import Footer from "./footer/Footer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AnimatedDiv from "./AnimateDiv";
+import { FontStyles } from "../../styles/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -245,11 +243,9 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage: `
-  linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(73, 72, 69, 0.5)
- 100%),
-  url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')`,
-          backgroundSize: isMobile ? "cover" : "contain", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundImage:
+            "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
+          backgroundSize: isMobile ? "cover" : "135%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
           backgroundRepeat: "no-repeat",
           padding: "0px",
           margin: "0px",
@@ -292,21 +288,21 @@ function DrawerAppBar(props) {
           <div className="grupoCards">
             <div class="profile-card1" id="a1">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/pepo.png?alt=media&token=927b2dd1-e3dc-4a5e-a894-a145db7ee772"
+                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/RodrigoSilva.jpeg?alt=media&token=005632f0-c198-4bae-98c9-e99a5d5a5393"
                 alt="Rodrigo Silva"
               />
-              <h1>Rodrigo Silva</h1>
-              <h2>CTO - Cofounder</h2>
-              <h3>Full-Stack Developer</h3>
+              <h1 style={FontStyles}>Rodrigo Silva</h1>
+              <h2 style={FontStyles}>CTO - Cofounder</h2>
+              <h3 style={FontStyles}>Full-Stack Developer</h3>
             </div>
             <div class="profile-card2">
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
                 alt="Ramiro Martin Arce"
               />
-              <h1>Ramiro Martin Arce</h1>
-              <h2>CEO - Cofounder</h2>
-              <h3>Business Analyst</h3>
+              <h1 style={FontStyles}>Ramiro Martin Arce</h1>
+              <h2 style={FontStyles}>CEO - Cofounder</h2>
+              <h3 style={FontStyles}>Business Analyst</h3>
             </div>
           </div>
         </div>

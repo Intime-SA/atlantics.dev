@@ -36,7 +36,7 @@ const Home = () => {
               marginTop: "5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne">Software Factory</h1>
+            <h1 className="nuevaFuente">Software Factory</h1>
           </Typography>
           <Typography
             variant="body1"

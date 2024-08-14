@@ -93,48 +93,15 @@ ul {
 }
 
 h1 {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
+  background: white;
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent; /* Hacer el color del texto transparente */
 }
 
 h2 {
-  background: linear-gradient(
-    270deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
+  background: white;
+  font-weight: 400;
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
   color: transparent; /* Hacer el color del texto transparente */
