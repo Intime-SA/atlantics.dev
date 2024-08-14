@@ -73,12 +73,12 @@ const Staff = () => {
             <Link
               to="/contacto"
               style={{
-                textAlign: "right",
+                textAlign: "center",
                 color: "white",
                 fontFamily: '"Rubik Mono One", monospace',
               }}
             >
-              Contacto
+              Contact
             </Link>
           ) : (
             <Box
