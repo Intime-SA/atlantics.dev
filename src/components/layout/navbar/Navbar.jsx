@@ -23,14 +23,8 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AnimatedDiv from "./AnimateDiv";
 import { FontStyles } from "../../styles/styles";
-<<<<<<< HEAD
-import { NavbarStyles } from "../../styles/styles";
-import { LogoAtlantic } from "../../styles/styles";
-import { NavComponent } from "../../styles/styles";
-import { NavBox } from "../../styles/styles";
-=======
 import { useNavigate } from "react-router-dom";
->>>>>>> f829ca18c6327157503ea58246b60f92da4f7afc
+import { NavComponent } from "../../styles/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -275,7 +269,7 @@ function DrawerAppBar(props) {
           className="grupoCardsPadre"
           style={{ 
             marginTop: isMobile ? "1000px" : "0",
-            background: 'rgb(58,96,115)',
+            /* background: 'rgb(58,96,115)', */
             background: 'radial-gradient(circle, rgba(58,96,115,1) 25%, rgba(0,0,0,1) 60%)',
             height: '200vh',
            }}
