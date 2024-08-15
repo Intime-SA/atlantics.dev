@@ -23,10 +23,14 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import AnimatedDiv from "./AnimateDiv";
 import { FontStyles } from "../../styles/styles";
+<<<<<<< HEAD
 import { NavbarStyles } from "../../styles/styles";
 import { LogoAtlantic } from "../../styles/styles";
 import { NavComponent } from "../../styles/styles";
 import { NavBox } from "../../styles/styles";
+=======
+import { useNavigate } from "react-router-dom";
+>>>>>>> f829ca18c6327157503ea58246b60f92da4f7afc
 
 const drawerWidth = 240;
 const navItems = [
@@ -37,6 +41,16 @@ const navItems = [
 
 function DrawerAppBar(props) {
   const theme = useTheme();
+
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const isMobile = window.innerWidth <= 768; // Puedes ajustar el valor según tu necesidad
+
+    if (isMobile) {
+      navigate("/staff");
+    }
+  }, []);
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   /*   const { window } = props;

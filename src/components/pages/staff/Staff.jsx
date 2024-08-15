@@ -1,5 +1,12 @@
 import React, { useEffect } from "react";
-import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import "./Staff.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -13,6 +20,7 @@ const Staff = () => {
   }, []);
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const navItems = [
     { nombre: "Inicio", url: "/" },
     { nombre: "Staff", url: "/staff" },
@@ -20,6 +28,10 @@ const Staff = () => {
   ];
 
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +47,17 @@ const Staff = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    // Añadir un pequeño retraso para la animación
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500); // Ajusta el tiempo de retraso
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container maxWidth="lg" className="home-container">
       <AppBar
@@ -43,15 +66,31 @@ const Staff = () => {
           display: "flex",
           justifyContent: "center",
           backgroundColor: "transparent",
+          width: "40vw",
+          borderRadius: "50px",
+          marginTop: "3rem",
+          position: "fixed", // Fija la toolbar en una posición
+          top: "0%", // Centra verticalmente
+          left: "30%", // Centra horizontalmente
+          transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
         <Toolbar
           style={{
-            width: "100%",
+            height: "8vh",
+            width: "80vw",
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "center",
+            backgroundColor: isScrolled
+              ? "rgba(255, 255, 255, 0.3)"
+              : "transparent", // Fondo semitransparente cuando se desplaza
             backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
+            borderRadius: "40px",
+            position: "fixed", // Fija la toolbar en una posición
+            top: "50%", // Centra verticalmente
+            left: "0%",
+
             // Opcional: bordes redondeados
           }}
         >
@@ -75,28 +114,44 @@ const Staff = () => {
           >
             {" "}
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: "40%",
-            }}
-          >
-            {navItems.map((item) => (
-              <Typography
-                key={item.nombre}
-                sx={{
-                  fontSize: "2rem",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <Link to={item.url} id="asd123" class="typography-animation">
-                  <h2>{item.nombre}</h2>
-                </Link>
-              </Typography>
-            ))}
-          </Box>
+          {isVisible && (
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-around",
+                width: isMobile ? "100%" : "40%",
+              }}
+            >
+              {navItems.map((item) => (
+                <Typography
+                  key={item.nombre}
+                  sx={{
+                    fontSize: "2rem",
+                    position: "relative",
+                    opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
+                    transition:
+                      "opacity 2s ease-in-out, transform 2s ease-in-out",
+                    transform: isVisible ? "translateY(0)" : "translateY(10px)", // Desplazamiento vertical más leve
+                  }}
+                >
+                  <Link to={item.url} id="asd123">
+                    <h2>{item.nombre}</h2>
+                  </Link>
+                </Typography>
+              ))}
+
+              {isMobile && (
+                <div>
+                  <Link to="/contacto" style={{ color: "white" }}>
+                    <h2 style={{ marginLeft: "5rem" }} className="h2-animation">
+                      {" "}
+                      Contact
+                    </h2>
+                  </Link>
+                </div>
+              )}
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
       <section
@@ -106,10 +161,19 @@ const Staff = () => {
           borderRadius: "50px",
           marginBottom: "5rem",
           marginTop: "1rem",
-          height: "40%",
+          height: "30%",
         }}
       >
-        <Container maxWidth="md">
+        <Container
+          maxWidth="md"
+          style={{
+            width: "100vw",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
           <Typography
             variant="h1"
             component="h1"
@@ -133,15 +197,51 @@ const Staff = () => {
               color: "#1976d2",
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.3)", // Agregar sombreado al texto
               marginTop: "1rem",
+              width: "100%",
             }}
             gutterBottom
           >
-            <h2 className="h2-animation">
+            <h2 className="h2-animation" style={{ width: "100%" }}>
               "A motivated team, united by a common purpose, is the most
               powerful creative force..."
             </h2>
           </Typography>
         </Container>
+      </section>
+      <section>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: isMobile ? "25rem" : "1rem",
+          }}
+        >
+          <span
+            style={{
+              fontSize: "600%",
+              color: "white",
+              animation: "float 2s ease-in-out infinite",
+            }}
+            className="material-symbols-outlined"
+          >
+            keyboard_double_arrow_down
+          </span>
+        </div>
+        <style>
+          {`
+          @keyframes float {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.2);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+        `}
+        </style>
       </section>
       <div className="equipo">
         <div className="integrante">
