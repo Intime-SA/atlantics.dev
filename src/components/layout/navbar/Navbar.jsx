@@ -24,6 +24,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import AnimatedDiv from "./AnimateDiv";
 import { FontStyles } from "../../styles/styles";
 import { useNavigate } from "react-router-dom";
+import { wrap } from "framer-motion";
+import MyCarousel from "./MyCarousel";
 
 const drawerWidth = 240;
 const navItems = [
@@ -109,55 +111,6 @@ function DrawerAppBar(props) {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const containerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "15rem",
-  };
-
-  const cardsContainerStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "2rem",
-    justifyContent: "space-around",
-    padding: "2rem",
-  };
-
-  const cardStyle = {
-    backgroundColor: "#1a1a1a",
-    borderRadius: "15px",
-    padding: "5rem",
-    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-between",
-    flex: "1 1 45%",
-    minWidth: "300px",
-    maxWidth: "500px",
-    height: "100%",
-  };
-
-  const iconContainerStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: "1.5rem",
-  };
-
-  const cardIconStyle = {
-    fontSize: "4rem",
-    color: "#a7ffff",
-  };
-
-  const cardTextStyle = {
-    fontSize: "1.5rem",
-    color: "white",
-    textAlign: "left",
-  };
 
   return (
     <Box
@@ -454,7 +407,10 @@ function DrawerAppBar(props) {
             </div>
           </div>
         </div>
-        <div className="pre-container">
+        <div
+          className="pre-container"
+          style={{ backgroundColor: "#101010 !important" }}
+        >
           <div
             style={{
               width: "100%",
@@ -463,76 +419,21 @@ function DrawerAppBar(props) {
               flexDirection: "column",
               alignItems: "center",
               fontSize: "1.5rem",
+              marginBottom: "20rem",
             }}
           >
-            <h2 className="fontRubikMonoOne2">
+            <h2 className="fontRubikMonoOne2" style={{ marginTop: "25rem" }}>
               DESARROLLO
               <br />
-              eCommerce
+              eCOMERCE
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIO</span>
+              <br />
             </h2>
-            <h3></h3>
 
-            <div style={containerStyle}>
-              <div style={cardsContainerStyle}>
-                <div style={cardStyle}>
-                  <div style={iconContainerStyle}>
-                    <span
-                      id="componentPeso"
-                      className="material-symbols-outlined"
-                      style={cardIconStyle}
-                    >
-                      attach_money
-                    </span>
-                  </div>
-                  <div>
-                    <h2 style={cardTextStyle}>
-                      Integraciones con plataformas de Correo, Pagos y Gestion.
-                    </h2>
-                  </div>
-                </div>
-
-                <div style={cardStyle}>
-                  <div style={iconContainerStyle}>
-                    <span
-                      id="componentPeso2"
-                      className="material-symbols-outlined"
-                      style={cardIconStyle}
-                    >
-                      cloud
-                    </span>
-                  </div>
-                  <div>
-                    <h2 style={cardTextStyle}>
-                      Servicio disponible 24/7. ¡Sin comisiones % sobre Ventas!
-                    </h2>
-                  </div>
-                </div>
-
-                <div style={cardStyle}>
-                  <div style={iconContainerStyle}>
-                    {" "}
-                    <span
-                      id="componentPeso3"
-                      className="material-symbols-outlined"
-                      style={cardIconStyle}
-                    >
-                      monitoring
-                    </span>
-                  </div>
-                  <div>
-                    <h2 style={cardTextStyle}>
-                      Reportes y funciones a pedido del cliente. 100%
-                      Customizable
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MyCarousel />
           </div>
         </div>
-
         <Footer />
       </Box>
     </Box>
