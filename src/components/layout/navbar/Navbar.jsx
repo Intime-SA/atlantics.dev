@@ -110,16 +110,53 @@ function DrawerAppBar(props) {
     return () => clearTimeout(timer);
   }, []);
 
-  const iconAnimation = {
-    initial: { opacity: 0, y: -100 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: "easeOut" },
+  const containerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "15rem",
   };
 
-  const textAnimation = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.8, ease: "easeOut" },
+  const cardsContainerStyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "2rem",
+    justifyContent: "space-around",
+    padding: "2rem",
+  };
+
+  const cardStyle = {
+    backgroundColor: "#1a1a1a",
+    borderRadius: "15px",
+    padding: "5rem",
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flex: "1 1 45%",
+    minWidth: "300px",
+    maxWidth: "500px",
+    height: "100%",
+  };
+
+  const iconContainerStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "1.5rem",
+  };
+
+  const cardIconStyle = {
+    fontSize: "4rem",
+    color: "#a7ffff",
+  };
+
+  const cardTextStyle = {
+    fontSize: "1.5rem",
+    color: "white",
+    textAlign: "left",
   };
 
   return (
@@ -211,7 +248,6 @@ function DrawerAppBar(props) {
                   </Link>
                 </Typography>
               ))}
-
               {isMobile && (
                 <div>
                   <Button onClick={() => handleDrawerToggle()}>
@@ -219,6 +255,34 @@ function DrawerAppBar(props) {
                   </Button>
                 </div>
               )}
+              <div
+                style={{
+                  width: "1%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              ></div>
+              <Button>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo-removebg-preview.png?alt=media&token=42352698-e9e7-4f9c-9f6f-fc268b44a25a"
+                  alt=""
+                  style={{
+                    width: "50px",
+                    borderRadius: "80%",
+                  }}
+                />
+              </Button>
+              <Button>
+                <img
+                  style={{
+                    width: "50px",
+                    borderRadius: "80%",
+                  }}
+                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__1_-removebg-preview%20(2).png?alt=media&token=0c0069c6-87fa-45c6-8334-5991b5a577ff"
+                  alt=""
+                  srcset=""
+                />
+              </Button>{" "}
             </Box>
           )}
         </Toolbar>
@@ -253,6 +317,7 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
+          alignItems: "center",
           backgroundImage: isVisible
             ? "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')"
             : "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')",
@@ -287,9 +352,10 @@ function DrawerAppBar(props) {
               <h1
                 style={{
                   fontFamily: '"Montserrat", sans-serif',
+                  fontWeight: "900",
                 }}
               >
-                ATLANTICS .dev
+                ATLANTICS<span style={{ fontWeight: "300" }}>.dev</span>
               </h1>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
@@ -399,316 +465,73 @@ function DrawerAppBar(props) {
               fontSize: "1.5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne2">
-              Armamos tu
+            <h2 className="fontRubikMonoOne2">
+              DESARROLLO
               <br />
-              e-Commerce
+              eCommerce
               <br />
-              <span style={{ color: "#AFFFFF" }}>PROPIO</span>
-            </h1>
+              <span style={{ color: "#00D1FF" }}>PROPIO</span>
+            </h2>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <AnimatedDiv animation={iconAnimation}>
-                <div className="componentPesos">
-                  <div>
+            <div style={containerStyle}>
+              <div style={cardsContainerStyle}>
+                <div style={cardStyle}>
+                  <div style={iconContainerStyle}>
                     <span
                       id="componentPeso"
-                      style={{
-                        fontSize: "10vw",
-                        color: "#a7ffff",
-                        width: "5rem",
-                        marginRight: "5rem",
-                      }}
                       className="material-symbols-outlined"
+                      style={cardIconStyle}
                     >
                       attach_money
                     </span>
                   </div>
                   <div>
-                    <AnimatedDiv animation={textAnimation}>
-                      <h2 style={{ textAlign: "right" }}>
-                        Integraciones con plataformas de Pago y Envio.
-                      </h2>
-                    </AnimatedDiv>
+                    <h2 style={cardTextStyle}>
+                      Integraciones con plataformas de Correo, Pagos y ORM.
+                    </h2>
                   </div>
                 </div>
-              </AnimatedDiv>
 
-              <AnimatedDiv animation={textAnimation}>
-                <div className="componentPesos">
-                  <div>
-                    <h2>Servicio disponible 24hs! Sin intermediarios!</h2>
-                  </div>
-                  <div className="highlight-circle">
-                    <AnimatedDiv animation={iconAnimation}>
-                      <span
-                        id="componentPeso2"
-                        className="material-symbols-outlined"
-                      >
-                        cloud
-                      </span>
-                    </AnimatedDiv>
-                  </div>
-                </div>
-              </AnimatedDiv>
-
-              <AnimatedDiv animation={iconAnimation}>
-                <div className="componentPesos">
-                  <div>
+                <div style={cardStyle}>
+                  <div style={iconContainerStyle}>
                     <span
-                      style={{ width: "5rem", marginRight: "5rem" }}
+                      id="componentPeso2"
+                      className="material-symbols-outlined"
+                      style={cardIconStyle}
+                    >
+                      cloud
+                    </span>
+                  </div>
+                  <div>
+                    <h2 style={cardTextStyle}>
+                      Servicio disponible 24/7. ¡Sin comisiones % sobre Ventas!
+                    </h2>
+                  </div>
+                </div>
+
+                <div style={cardStyle}>
+                  <div style={iconContainerStyle}>
+                    {" "}
+                    <span
                       id="componentPeso3"
                       className="material-symbols-outlined"
+                      style={cardIconStyle}
                     >
                       monitoring
                     </span>
                   </div>
                   <div>
-                    <AnimatedDiv animation={textAnimation}>
-                      <h2 style={{ textAlign: "right", marginLeft: "5rem" }}>
-                        Acceso a informacion clave del negocio
-                      </h2>
-                    </AnimatedDiv>
+                    <h2 style={cardTextStyle}>
+                      Reportes y funciones a pedido del cliente. 100%
+                      Customizable
+                    </h2>
                   </div>
                 </div>
-              </AnimatedDiv>
-
-              <AnimatedDiv animation={textAnimation}>
-                <div className="componentPesos">
-                  <div>
-                    <h2>Aplicaciones integradas a sus sistemas</h2>
-                  </div>
-                  <div className="highlight-circle">
-                    <AnimatedDiv animation={iconAnimation}>
-                      <span
-                        id="componentPeso2"
-                        className="material-symbols-outlined"
-                      >
-                        <span className="material-symbols-outlined">
-                          qr_code_2
-                        </span>
-                      </span>
-                    </AnimatedDiv>
-                  </div>
-                </div>
-              </AnimatedDiv>
+              </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="icon2">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Brown_Minimalist_Store_Highlight_Covers-removebg-preview.png?alt=media&token=8cbdbe5b-2f89-43e2-a01f-bedf6ce60a2b"
-              alt="Icono grande"
-            />
-          </div>
-          <div style={{ marginBottom: isMobile ? "20rem" : "0rem" }}>
-            <h3 className="titulosTrabajos">
-              SISTEMA DE ADMINISTRACION DE VENTAS / STOCK + E-COMMERCE
-            </h3>
-            <Link to="https://www.mayoristakaurymdp.com">
-              <h4 id="asd1232" class="typography-animation">
-                www.mayoristakaurymdp.com
-              </h4>
-            </Link>
-          </div>
 
-          <div class="cards-container">
-            <div class="cardJobs2">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/1.png?alt=media&token=abfcf2f5-844d-42d6-8915-e5bce9119bb9"
-                alt="Project 1"
-                width="600px"
-                style={{ padding: 0, margin: 0 }}
-              />
-            </div>
-            <div class="cardJobs">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/asd1232mobile.png?alt=media&token=2c97c53a-8c9a-416d-bf9d-30779cf25f94"
-                alt="Project 1"
-                width="300px"
-                style={{ padding: 0, margin: 0, objectFit: "contain" }}
-                sizes="contain"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="pre-container4">
-          <h3
-            className="titulosTrabajos"
-            style={{
-              marginTop: "25rem",
-              fontSize: "2rem",
-            }}
-          >
-            SISTEMA DE COBRANZAS BANCARIAS
-          </h3>
-          <Link to="https://www.invertimeonline.com">
-            <h4
-              id="asd1232"
-              class="typography-animation"
-              style={{ textAlign: "right" }}
-            >
-              www.invertimeonline.com
-            </h4>
-          </Link>
-          {isMobile && (
-            <div class="checklist">
-              <h4 class="checklist2">Automatización de cobranzas</h4>
-
-              <ul>
-                <li>Integración con servicios web de bancos</li>
-                <li>Generación automática de solicitudes de cobro</li>
-                <li>Seguimiento de pagos y conciliación bancaria</li>
-              </ul>
-              <br />
-              <h4 class="checklist2">Gestión de facturas electrónicas</h4>
-              <ul>
-                <li>Emisión de facturas electrónicas</li>
-                <li>Envío automático de facturas a clientes</li>
-                <li>Validación de facturas según normativa vigente</li>
-              </ul>
-              <h4 class="checklist2">Reportes y análisis</h4>
-              <ul>
-                <li>Generación de reportes de cobranza</li>
-                <li>Análisis de datos de pago y rendimiento</li>
-                <li>
-                  Exportación de datos a formatos compatibles (Excel, PDF)
-                </li>
-              </ul>
-            </div>
-          )}
-
-          <div class="icon2" id="webservice">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/png-transparent-amazon-logo-cloud-computing-amazon-web-services-web-hosting-service-computer-servers-internet-hosting-service-computer-hardware-information-technology-removebg-preview.png?alt=media&token=c56ce276-6446-4167-a453-9eeade9278fd"
-              alt="Icono grande"
-            />
-          </div>
-
-          <div class="icon" id="lineasIcon">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__2_-removebg-preview.png?alt=media&token=f0059d3c-c996-4d45-b6b2-59a2a9f3e1ad"
-              alt="Icono grande"
-            />
-          </div>
-
-          <div class="cards-container" style={{}}>
-            <div class="cardJobs2" id="center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzaINT.png?alt=media&token=0432bad0-f742-4d3e-9704-09323466237e"
-                alt="Project 1"
-                width="600px"
-                style={{ padding: 0, margin: 0 }}
-              />
-            </div>
-            <div class="cardJobs" id="center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/cobranzasv2.png?alt=media&token=c67c7fb7-5171-476f-bb65-5b5e8b6066fd"
-                alt="Project 1"
-                width="250px"
-                style={{ padding: 0, margin: 0 }}
-                sizes="contain"
-              />
-            </div>
-            <div>
-              {!isMobile && (
-                <div class="checklist">
-                  <h4 class="checklist2">Automatización de cobranzas</h4>
-
-                  <ul>
-                    <li>Integración con servicios web de bancos</li>
-                    <li>Generación automática de solicitudes de cobro</li>
-                    <li>Seguimiento de pagos y conciliación bancaria</li>
-                  </ul>
-                  <br />
-                  <h4 class="checklist2">Gestión de facturas electrónicas</h4>
-                  <ul>
-                    <li>Emisión de facturas electrónicas</li>
-                    <li>Envío automático de facturas a clientes</li>
-                    <li>Validación de facturas según normativa vigente</li>
-                  </ul>
-                  <h4 class="checklist2">Reportes y análisis</h4>
-                  <ul>
-                    <li>Generación de reportes de cobranza</li>
-                    <li>Análisis de datos de pago y rendimiento</li>
-                    <li>
-                      Exportación de datos a formatos compatibles (Excel, PDF)
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-        <div class="pre-container5">
-          <div style={{ marginRight: "20px", gap: "50px" }}>
-            <h3 className="titulosTrabajos">
-              SISTEMA DE PEDIDOS / VENDEDORES - DISTRIBUIDORA
-            </h3>
-            <Link
-              style={{ textAlign: "right", margin: "1rem" }}
-              to="https://www.instagram.com/alimentosnaturalesmdq/"
-            >
-              <h4 id="asd1232">@alimentosnaturalesmdp</h4>
-            </Link>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Arturo+Alio+3198,+Mar+del+Plata,+Argentina"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h4>
-                {" "}
-                <span
-                  style={{ margin: "1rem" }}
-                  class="material-symbols-outlined"
-                >
-                  pin_drop
-                </span>
-                Arturo Alio 3198, Mar del Plata, Argentina
-              </h4>
-            </a>
-            <a href="tel:+542234543960">
-              <h4>
-                <span
-                  style={{ margin: "1rem" }}
-                  class="material-symbols-outlined"
-                >
-                  call
-                </span>
-                0223 454-3960
-              </h4>
-            </a>
-          </div>
-          <div class="cards-container">
-            <div class="cardJobs2" id="center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales2desktop.png?alt=media&token=0b3cdb21-cf43-4e4b-91c0-c0288b7361d6"
-                alt="Project 1"
-                width="600px"
-                style={{ padding: 0, margin: 0 }}
-              />
-            </div>
-
-            <div class="cardJobs" id="center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/alimentosNaturales.png?alt=media&token=621f3624-4377-4440-9331-9bf7dbe976a3"
-                np
-                alt="Project 1"
-                width="200px"
-                style={{ padding: 0, margin: 0 }}
-                sizes="contain"
-              />
-            </div>
-          </div>
-        </div>
         <Footer />
       </Box>
     </Box>

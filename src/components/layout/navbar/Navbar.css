@@ -470,7 +470,7 @@ h1 {
 .fontRubikMonoOne2 {
   text-align: center;
   font-size: 10vh;
-  font-family: "Rubik Mono One", monospace;
+  font-family: "Montserrat", sans-serif;
   background: white;
   -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
   background-clip: text;
@@ -478,6 +478,7 @@ h1 {
   margin-bottom: 5rem;
   width: 80%;
   margin-top: 12rem;
+  font-weight: 900;
 }
 
 .container2 {
@@ -633,12 +634,42 @@ h1 {
 }
 
 /* Aplica las animaciones a los elementos específicos */
-.icon-animation {
-  animation: dropDown 1s ease-out;
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 300px;
+  max-width: 500px;
 }
 
-.text-animation {
-  animation: slideInRight 1s ease-out;
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.card-icon {
+  font-size: 4rem;
+  color: #a7ffff;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  color: white;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
