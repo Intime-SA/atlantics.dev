@@ -5,6 +5,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify"; // Importar ToastContainer y toast
+import "react-toastify/dist/ReactToastify.css"; // Importar estilos
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -42,13 +44,16 @@ const Contacto = () => {
       };
 
       await emailjs.send(
-        "service_yy53n6a", // Tu ID del servicio
+        "service_375g9fs", // Tu ID del servicio
         "template_cycnwyi", // Tu ID de la plantilla
         templateParams,
         "HiZortCAfvLTjje7w" // Tu ID de usuario
       );
 
-      console.log("Datos y correo enviados exitosamente");
+      // Mostrar notificación de éxito
+      toast.success("Correo enviado exitosamente");
+
+      // Limpiar formulario
       setFormData({
         nombreCompleto: "",
         organizacion: "",
@@ -57,6 +62,7 @@ const Contacto = () => {
       });
     } catch (error) {
       console.error("Error al enviar datos o correo", error);
+      toast.error("Error al enviar el correo");
     }
   };
 
@@ -67,7 +73,6 @@ const Contacto = () => {
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -225,6 +230,17 @@ const Contacto = () => {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
