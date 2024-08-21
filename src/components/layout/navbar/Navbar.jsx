@@ -472,6 +472,7 @@ function DrawerAppBar(props) {
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIO</span>
             </h2>
+            <h3></h3>
 
             <div style={containerStyle}>
               <div style={cardsContainerStyle}>
@@ -487,7 +488,7 @@ function DrawerAppBar(props) {
                   </div>
                   <div>
                     <h2 style={cardTextStyle}>
-                      Integraciones con plataformas de Correo, Pagos y ORM.
+                      Integraciones con plataformas de Correo, Pagos y Gestion.
                     </h2>
                   </div>
                 </div>
