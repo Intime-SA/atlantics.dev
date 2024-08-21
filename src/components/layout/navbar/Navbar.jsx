@@ -105,7 +105,7 @@ function DrawerAppBar(props) {
     // Añadir un pequeño retraso para la animación
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500); // Ajusta el tiempo de retraso
+    }, 5000); // Ajusta el tiempo de retraso
 
     return () => clearTimeout(timer);
   }, []);
@@ -150,7 +150,7 @@ function DrawerAppBar(props) {
       >
         <Toolbar
           style={{
-            height: "8vh",
+            height: "10vh",
             width: "80vw",
             display: "flex",
             justifyContent: "center",
@@ -169,12 +169,11 @@ function DrawerAppBar(props) {
         >
           <Link to="/">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/00000altanticdev-removebg-preview.png?alt=media&token=933ef3e7-fc96-48ac-bd20-8a43858dceab"
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
               alt="logo"
               srcset=""
               style={{
-                width: "5rem",
-                height: "5rem",
+                width: "12rem",
                 margin: "5px",
                 padding: "0px",
               }}
@@ -254,9 +253,10 @@ function DrawerAppBar(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage:
-            "url('https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo.gif?alt=media&token=5870d9bc-0679-4630-bb2d-eedd8b96dbb3')",
-          backgroundSize: isMobile ? "cover" : "135%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundImage: isVisible
+            ? "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')"
+            : "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download.gif?alt=media&token=ee0d5587-8525-4597-8483-e49ba2968954')",
+          backgroundSize: isMobile ? "cover" : "100%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
           backgroundRepeat: "no-repeat",
           padding: "0px",
           margin: "0px",
@@ -292,6 +292,12 @@ function DrawerAppBar(props) {
             <CardsService3 />
           </div>
         </div> */}
+        <div
+          className="grupoCardsPadre"
+          style={{ marginTop: isMobile ? "1000px" : "1500px" }}
+        >
+          <div className="grupoCards"></div>
+        </div>
         <div
           className="grupoCardsPadre"
           style={{ marginTop: isMobile ? "1000px" : "0" }}
