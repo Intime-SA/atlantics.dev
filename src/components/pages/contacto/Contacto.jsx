@@ -110,6 +110,7 @@ const Contacto = () => {
                 width: "5rem",
                 height: "5rem",
                 margin: "5px",
+                marginLeft: "10px",
                 padding: "0px",
               }}
             />
