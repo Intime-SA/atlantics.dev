@@ -17,7 +17,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Home from "../../pages/home/Home";
 import "./Navbar.css";
-import { Card } from "@mui/material";
+import { Card, FormControlLabel, Switch, Tooltip } from "@mui/material";
 import Footer from "./footer/Footer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -215,27 +215,29 @@ function DrawerAppBar(props) {
                   justifyContent: "center",
                 }}
               ></div>
-              <Button>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo-removebg-preview.png?alt=media&token=42352698-e9e7-4f9c-9f6f-fc268b44a25a"
-                  alt=""
-                  style={{
-                    width: "50px",
-                    borderRadius: "80%",
-                  }}
-                />
-              </Button>
-              <Button>
-                <img
-                  style={{
-                    width: "50px",
-                    borderRadius: "80%",
-                  }}
-                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__1_-removebg-preview%20(2).png?alt=media&token=0c0069c6-87fa-45c6-8334-5991b5a577ff"
-                  alt=""
-                  srcset=""
-                />
-              </Button>{" "}
+
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo-removebg-preview.png?alt=media&token=42352698-e9e7-4f9c-9f6f-fc268b44a25a"
+                alt=""
+                style={{
+                  width: "50px",
+                  borderRadius: "80%",
+                }}
+              />
+
+              <Tooltip title="Language">
+                <FormControlLabel control={<Switch checked={false} />} />
+              </Tooltip>
+
+              <img
+                style={{
+                  width: "50px",
+                  borderRadius: "80%",
+                }}
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__1_-removebg-preview%20(2).png?alt=media&token=0c0069c6-87fa-45c6-8334-5991b5a577ff"
+                alt=""
+                srcset=""
+              />
             </Box>
           )}
         </Toolbar>
@@ -423,13 +425,18 @@ function DrawerAppBar(props) {
             }}
           >
             <h2 className="fontRubikMonoOne2" style={{ marginTop: "25rem" }}>
-              DESARROLLO
+              DESARROLLAMOS <br />
+              TU
               <br />
-              eCOMERCE
+              TIENDA <span style={{ color: "#08FF08" }}>ONLINE</span>
               <br />
-              <span style={{ color: "#00D1FF" }}>PROPIO</span>
+              <span style={{ color: "#00D1FF" }}>PROPIA</span>
               <br />
             </h2>
+            <h6>
+              Potencia tu <strong>negocio digital</strong> sin intermediarios y
+              sin comisiones
+            </h6>
 
             <MyCarousel />
           </div>
