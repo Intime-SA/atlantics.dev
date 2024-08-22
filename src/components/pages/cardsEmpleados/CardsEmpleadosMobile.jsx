@@ -90,9 +90,9 @@ const CardsEmpleadosMobile = () => {
               alt="Rodrigo Silva"
               style={{ width: "50%", height: "auto" }}
             />
-            <h1 style={FontStyles}>Rodrigo Silva</h1>
-            <h2 style={FontStyles}>CTO - Cofounder</h2>
-            <h3 style={FontStyles}>Full-Stack Developer</h3>
+            <h1 style={FontStyles1}>Rodrigo Silva</h1>
+            <h2 style={FontStyles2}>CTO - Cofounder</h2>
+            <h3 style={FontStyles3}>Full-Stack Developer</h3>
             <p style={FontStyles}>
               Lidera la interfaz WEB de nuestros desarrollos, asegurando la
               innovación continua y las mejores prácticas del diseño de
@@ -158,9 +158,9 @@ const CardsEmpleadosMobile = () => {
               alt="Federico Larrea"
               style={{ width: "50%", height: "auto" }}
             />
-            <h1 style={FontStyles}>Federico Larrea</h1>
-            <h2 style={FontStyles}>COO - Consultant</h2>
-            <h3 style={FontStyles}>Engineer Mercado Libre</h3>
+            <h1 style={FontStyles1}>Federico Larrea</h1>
+            <h2 style={FontStyles2}>COO - Consultant</h2>
+            <h3 style={FontStyles3}>Engineer Mercado Libre</h3>
             <p style={FontStyles}>
               Supervisa las operaciones diarias, optimizando procesos y
               asegurando la eficiencia en cada aspecto de la infraestructura.
