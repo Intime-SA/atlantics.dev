@@ -100,6 +100,41 @@ h1 {
   size: 0.5rem;
 }
 
+.profile-card1mobile {
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  margin-bottom: 5rem;
+  margin: 5rem;
+}
+.profile-card1mobile img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+}
+
+.profile-card1mobile h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-card1mobile h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+}
+
 .profile-card1,
 .profile-card2 {
   border-radius: 25px;

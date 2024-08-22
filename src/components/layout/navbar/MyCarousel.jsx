@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { wrap } from "framer-motion";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MyCarousel = () => {
+  const theme = useTheme();
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallDesktop = useMediaQuery(theme.breakpoints.down("lg"));
+
   const cards = [
     {
       icon: "paid",
@@ -127,12 +134,14 @@ const MyCarousel = () => {
     fontSize: "7rem",
     marginBottom: "10px",
     color: "white",
+    wrap: "no-wrap",
   };
 
   const cardTextStyle = {
-    fontSize: "1.25rem",
+    fontSize: isSmallDesktop ? "0.8rem" : "1.25rem",
     textAlign: "center",
     color: "white",
+    width: "50%",
   };
 
   const cardIconStyle = {
