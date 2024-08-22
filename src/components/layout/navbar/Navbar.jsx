@@ -1,31 +1,31 @@
 import * as React from "react";
-import PropTypes from "prop-types";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
+
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
+
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Home from "../../pages/home/Home";
 import "./Navbar.css";
-import { Card, FormControlLabel, Switch, Tooltip } from "@mui/material";
+import { FormControlLabel, Switch, Tooltip } from "@mui/material";
 import Footer from "./footer/Footer";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import AnimatedDiv from "./AnimateDiv";
-import { FontStyles } from "../../styles/styles";
 import { useNavigate } from "react-router-dom";
-import { wrap } from "framer-motion";
 import MyCarousel from "./MyCarousel";
+import FooterSeccion from "./footer/FooterSeccion";
+import CardsEmpleados from "../../pages/cardsEmpleados/CardsEmpleados";
+import CardsEmpleadosMobile from "../../pages/cardsEmpleados/CardsEmpleadosMobile";
+import MobileCards from "./MobileCards";
 
 const drawerWidth = 240;
 const navItems = [
@@ -39,15 +39,17 @@ function DrawerAppBar(props) {
 
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  /*   React.useEffect(() => {
     const isMobile = window.innerWidth <= 768; // Puedes ajustar el valor según tu necesidad
 
     if (isMobile) {
       navigate("/staff");
     }
-  }, []);
+  }, []); */
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallDesktop = useMediaQuery(theme.breakpoints.down("lg"));
+
   /*   const { window } = props;
    */ const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -134,16 +136,18 @@ function DrawerAppBar(props) {
           marginTop: "3rem",
           position: "fixed", // Fija la toolbar en una posición
           top: "0%", // Centra verticalmente
-          left: "30%", // Centra horizontalmente
+          left: isMobile ? "38%" : "30%", // Centra horizontalmente
           transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
         <Toolbar
           style={{
             height: "10vh",
-            width: "80vw",
+            width: isMobile ? "50vw" : "80vw",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: isMobile ? "center" : "space-between",
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: "center",
             backgroundColor: isScrolled
               ? "rgba(255, 255, 255, 0.3)"
               : "transparent", // Fondo semitransparente cuando se desplaza
@@ -169,13 +173,7 @@ function DrawerAppBar(props) {
               }}
             />
           </Link>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            {" "}
-          </Typography>
+
           {isVisible && (
             <Box
               sx={{
@@ -201,43 +199,45 @@ function DrawerAppBar(props) {
                   </Link>
                 </Typography>
               ))}
-              {isMobile && (
+              {/*               {isMobile && (
                 <div>
                   <Button onClick={() => handleDrawerToggle()}>
                     <span class="material-symbols-outlined">menu</span>
                   </Button>
                 </div>
-              )}
-              <div
-                style={{
-                  width: "1%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              ></div>
+              )} */}
+              {/* {!isSmallDesktop && (
+                <div
+                  style={{
+                    width: "1%",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div></div>
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo-removebg-preview.png?alt=media&token=42352698-e9e7-4f9c-9f6f-fc268b44a25a"
+                    alt=""
+                    style={{
+                      width: "100%px",
+                    }}
+                  />
 
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo-removebg-preview.png?alt=media&token=42352698-e9e7-4f9c-9f6f-fc268b44a25a"
-                alt=""
-                style={{
-                  width: "50px",
-                  borderRadius: "80%",
-                }}
-              />
+                  <Tooltip title="Language">
+                    <FormControlLabel control={<Switch checked={false} />} />
+                  </Tooltip>
 
-              <Tooltip title="Language">
-                <FormControlLabel control={<Switch checked={false} />} />
-              </Tooltip>
-
-              <img
-                style={{
-                  width: "50px",
-                  borderRadius: "80%",
-                }}
-                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__1_-removebg-preview%20(2).png?alt=media&token=0c0069c6-87fa-45c6-8334-5991b5a577ff"
-                alt=""
-                srcset=""
-              />
+                  <img
+                    style={{
+                      width: "50px",
+                      borderRadius: "80%",
+                    }}
+                    src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o_sin_t%C3%ADtulo__1_-removebg-preview%20(2).png?alt=media&token=0c0069c6-87fa-45c6-8334-5991b5a577ff"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              )} */}
             </Box>
           )}
         </Toolbar>
@@ -273,144 +273,36 @@ function DrawerAppBar(props) {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          backgroundImage: isVisible
-            ? "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')"
-            : "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')",
-          backgroundSize: isMobile ? "cover" : "100%", // O "contain", dependiendo de cómo quieras que se ajuste la imagen
+          backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
-          padding: "0px",
-          margin: "0px",
+          padding: 0,
+          margin: 0,
           minHeight: "100vh",
           minWidth: "100vw",
+          backgroundImage: () => {
+            if (isVisible && isMobile) {
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(2).gif?alt=media&token=2046189a-9f33-4d48-a0aa-9661606c54cd')";
+            } else if (isVisible && !isMobile) {
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')";
+            } else if (!isVisible && isMobile) {
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')";
+            } else if (!isVisible && !isMobile) {
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')";
+            } else {
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(1).gif?alt=media&token=8fc95601-a534-48c2-aeb0-549075c482eb')";
+            }
+          },
         }}
       >
         <div
           className="grupoCardsPadre"
           style={{ marginTop: isMobile ? "1000px" : "1500px" }}
         ></div>
-        <div
-          className="grupoCardsPadre"
-          style={{
-            marginTop: isMobile ? "1000px" : "0",
-          }}
-        >
-          <div className="grupoCards">
-            <div style={{ flexDirection: "column-reverse" }}>
-              <h2
-                style={{
-                  fontFamily: '"Montserrat", sans-serif',
-                  fontSize: "500%",
-                }}
-              >
-                PROFESIONALES <br />
-              </h2>
-              <h1
-                style={{
-                  fontFamily: '"Montserrat", sans-serif',
-                  fontWeight: "900",
-                }}
-              >
-                ATLANTICS<span style={{ fontWeight: "300" }}>.dev</span>
-              </h1>
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div class="profile-card1" id="a1">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/RodrigoSilva.jpeg?alt=media&token=005632f0-c198-4bae-98c9-e99a5d5a5393"
-                  alt="Rodrigo Silva"
-                />
-                <h1 style={FontStyles}>Rodrigo Silva</h1>
-                <h2 style={FontStyles}>CTO - Cofounder</h2>
-                <h3 style={FontStyles}>Full-Stack Developer</h3>
-                <p style={FontStyles}>
-                  Lidera la interfaz WEB de nuestros desarrollos , asegurando la
-                  innovación continua y las mejores practicas del diseño de
-                  Aplicacion Interactivas con sistemas externos.
-                </p>
-                <a
-                  href="https://au.linkedin.com/in/rodrigo-silva-58508a30b"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    width: "80%",
-                  }}
-                >
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
-                    alt="pola"
-                    style={{ width: "30px", height: "auto" }}
-                  />
-                  <p>silva.rodrigo@atlantics.dev</p>
-                </a>
-              </div>
 
-              <div class="profile-card2">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
-                  alt="Ramiro Martin Arce"
-                />
-                <h1 style={FontStyles}>Ramiro Martin Arce</h1>
-                <h2 style={FontStyles}>CEO - Cofounder</h2>
-                <h3 style={FontStyles}>Business Analyst</h3>
-                <p style={FontStyles}>
-                  Dirige la visión estratégica de la empresa, define los
-                  objetivos comerciales y lidera el crecimiento y la expansión
-                  de la organizacion.
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/ramiro-martin-arce-3a7843ba/"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    width: "80%",
-                  }}
-                >
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
-                    alt="pola"
-                    style={{ width: "30px", height: "auto" }}
-                  />
-                  <p>arce.ramiro@atlantics.dev</p>
-                </a>
-              </div>
+        {isSmallDesktop ? <CardsEmpleadosMobile /> : <CardsEmpleados />}
 
-              <div class="profile-card1">
-                <img
-                  src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1729123200&v=beta&t=8rdHfSBFx1BazjqjCmhnKo7Ejv10PbNxrgjATBD8HL4"
-                  alt="Federico Larrea"
-                />
-                <h1 style={FontStyles}>Federico Larrea</h1>
-                <h2 style={FontStyles}>COO - Consultant</h2>
-                <h3 style={FontStyles}>Engineer Mercado Libre</h3>
-                <p style={FontStyles}>
-                  Supervisa las operaciones diarias, optimizando procesos y
-                  asegurando la eficiencia en cada aspecto de la infraestructura
-                  de nuestros servicios.
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/larreaf/?originalSubdomain=ar"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    width: "80%",
-                  }}
-                >
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
-                    alt="pola"
-                    style={{ width: "30px", height: "auto" }}
-                  />
-                  <p>larrea.federico@atlantics.dev</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
         <div
-          className="pre-container"
+          className="mambo22"
           style={{ backgroundColor: "#101010 !important" }}
         >
           <div
@@ -422,13 +314,13 @@ function DrawerAppBar(props) {
               alignItems: "center",
               fontSize: "1.5rem",
               marginBottom: "20rem",
+              padding: "0px",
+              margin: "0px",
+              height: "1500px",
             }}
           >
-            <h2 className="fontRubikMonoOne2" style={{ marginTop: "25rem" }}>
-              DESARROLLAMOS <br />
-              TU
-              <br />
-              TIENDA <span style={{ color: "#08FF08" }}>ONLINE</span>
+            <h2 className="fontRubikMonoOne2" style={{ marginTop: "10rem" }}>
+              TIENDA <span style={{ color: "#08FF08" }}>ON</span>LINE
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIA</span>
               <br />
@@ -438,9 +330,12 @@ function DrawerAppBar(props) {
               sin comisiones
             </h6>
 
-            <MyCarousel />
+            {isMobile ? <MobileCards /> : <MyCarousel />}
           </div>
         </div>
+
+        <FooterSeccion />
+
         <Footer />
       </Box>
     </Box>
@@ -448,4 +343,3 @@ function DrawerAppBar(props) {
 }
 
 export default DrawerAppBar;
-

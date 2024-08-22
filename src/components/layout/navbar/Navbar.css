@@ -100,6 +100,41 @@ h1 {
   size: 0.5rem;
 }
 
+.profile-card1mobile {
+  border-radius: 25px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  margin-bottom: 5rem;
+  margin: 5rem;
+}
+.profile-card1mobile img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra marcada */
+}
+
+.profile-card1mobile h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-card1mobile h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+}
+
 .profile-card1,
 .profile-card2 {
   border-radius: 25px;
@@ -257,15 +292,6 @@ h1 {
   padding: 20px;
   background-size: cover;
   background-color: #06090a;
-  background-image: linear-gradient(
-    0deg,
-    #06090a 0%,
-    #aa6f6f 50%,
-    #080707 100%
-  );
-
-  clip-path: polygon(-20% 15%, 100% 0, 120% 80%, 0% 100%);
-  position: relative; /* Añadir posición relativa al contenedor */
 }
 .pre-container {
   height: 2000px;
@@ -289,8 +315,23 @@ h1 {
     #41aed0 73%,
     #101010 94%
   );
+}
+.mambo22 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-size: cover;
+  background-image: linear-gradient(
+    0deg,
+    #101010 46%,
+    #41aed0 73%,
+    #101010 94%
+  );
 
-  position: relative; /* Añadir posición relativa al contenedor */
+  background-color: #101010;
 }
 .pre-container3 {
   height: 200vh;
@@ -301,7 +342,6 @@ h1 {
   padding: 20px;
   background-size: cover;
   background-color: #0f100f;
-  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   /* Añadir posición relativa al contenedor */
   z-index: 0;
@@ -318,7 +358,6 @@ h1 {
   background-color: #212020;
   background-image: linear-gradient(615deg, #212020 32%, #30638a 100%);
 
-  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
   position: relative;
   /* Añadir posición relativa al contenedor */
   z-index: 0;
@@ -592,7 +631,6 @@ h1 {
   background-color: #212020;
 
   background-image: url(https://firebasestorage.googleapis.com/v0/b/amomiambo.appspot.com/o/3.gif?alt=media&token=f00cab37-80dd-4662-8fd1-fd55aaf09eb2);
-  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   position: relative;
   top: -100px;
   /* Añadir posición relativa al contenedor */
