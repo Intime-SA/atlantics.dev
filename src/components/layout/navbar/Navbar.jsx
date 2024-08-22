@@ -26,6 +26,7 @@ import { FontStyles } from "../../styles/styles";
 import { useNavigate } from "react-router-dom";
 import { wrap } from "framer-motion";
 import MyCarousel from "./MyCarousel";
+import FooterSeccion from "./footer/FooterSeccion";
 
 const drawerWidth = 240;
 const navItems = [
@@ -410,7 +411,7 @@ function DrawerAppBar(props) {
           </div>
         </div>
         <div
-          className="pre-container"
+          className="mambo22"
           style={{ backgroundColor: "#101010 !important" }}
         >
           <div
@@ -422,13 +423,13 @@ function DrawerAppBar(props) {
               alignItems: "center",
               fontSize: "1.5rem",
               marginBottom: "20rem",
+              padding: "0px",
+              margin: "0px",
+              height: "1500px",
             }}
           >
-            <h2 className="fontRubikMonoOne2" style={{ marginTop: "25rem" }}>
-              DESARROLLAMOS <br />
-              TU
-              <br />
-              TIENDA <span style={{ color: "#08FF08" }}>ONLINE</span>
+            <h2 className="fontRubikMonoOne2" style={{ marginTop: "10rem" }}>
+              TIENDA <span style={{ color: "#08FF08" }}>ON</span>LINE
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIA</span>
               <br />
@@ -441,6 +442,9 @@ function DrawerAppBar(props) {
             <MyCarousel />
           </div>
         </div>
+
+        <FooterSeccion />
+
         <Footer />
       </Box>
     </Box>
