@@ -99,6 +99,27 @@ function DrawerAppBar(props) {
     };
   }, []);
 
+  const [isScrolled2, setIsScrolled2] = React.useState(false);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setIsScrolled2(true);
+      } else {
+        setIsScrolled2(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const container = undefined;
   /*     window !== undefined ? () => window().document.body : undefined;
    */
@@ -113,6 +134,9 @@ function DrawerAppBar(props) {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const words = "Your trusted partners in transformative times".split(" ");
+  console.log(words);
 
   return (
     <Box
@@ -130,18 +154,23 @@ function DrawerAppBar(props) {
         sx={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "transparent",
+          backgroundImage:
+            "linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%)",
           width: "40vw",
           borderRadius: "50px",
-          marginTop: "3rem",
+          marginTop: isMobile ? "10rem" : "3rem",
           position: "fixed", // Fija la toolbar en una posición
-          top: "0%", // Centra verticalmente
-          left: isMobile ? "38%" : "30%", // Centra horizontalmente
+          top: isScrolled && isMobile ? "-15%" : "0%",
+          left: isMobile ? "45%" : "30%", // Centra horizontalmente
           transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
         <Toolbar
           style={{
+            backgroundImage:
+              isScrolled &&
+              "linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%)",
+
             height: "10vh",
             width: isMobile ? "50vw" : "80vw",
             display: "flex",
@@ -161,18 +190,41 @@ function DrawerAppBar(props) {
             // Opcional: bordes redondeados
           }}
         >
-          <Link to="/">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
-              alt="logo"
-              srcset=""
-              style={{
-                width: "12rem",
-                margin: "5px",
-                padding: "0px",
-              }}
-            />
-          </Link>
+          {isVisible && (
+            <div>
+              <Link to="/">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
+                  alt="logo"
+                  srcSet=""
+                  className="logo-img"
+                  style={{
+                    width: isScrolled && isMobile ? "8rem" : "16rem",
+                  }}
+                />
+              </Link>
+              {!isScrolled && isMobile && (
+                <Typography
+                  variant="body1"
+                  className={`text-container ${
+                    isMobile
+                      ? "text-container-mobile"
+                      : "text-container-desktop"
+                  }`}
+                  gutterBottom
+                >
+                  <h2 className="header">
+                    <span className="word1">Your</span>&nbsp;
+                    <span className="word2">trusted</span>&nbsp;
+                    <span className="word3">partners</span>&nbsp;
+                    <span className="word4">in</span>&nbsp;
+                    <span className="word5">transformative</span>&nbsp;
+                    <span className="word6">times</span>
+                  </h2>
+                </Typography>
+              )}
+            </div>
+          )}
 
           {isVisible && (
             <Box
@@ -303,7 +355,10 @@ function DrawerAppBar(props) {
 
         <div
           className="mambo22"
-          style={{ backgroundColor: "#101010 !important" }}
+          style={{
+            backgroundColor: "#101010 !important",
+            marginBottom: "25rem",
+          }}
         >
           <div
             style={{
@@ -319,12 +374,20 @@ function DrawerAppBar(props) {
               height: "1500px",
             }}
           >
-            <h2 className="fontRubikMonoOne2" style={{ marginTop: "10rem" }}>
+            <h2
+              className="fontRubikMonoOne2"
+              style={{
+                marginTop: isMobile ? "40rem" : "32rem",
+                fontSize: isMobile ? "150%" : "400%",
+                marginBottom: "5rem",
+              }}
+            >
               TIENDA <span style={{ color: "#08FF08" }}>ON</span>LINE
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIA</span>
               <br />
             </h2>
+            <br />
             <h6>
               Potencia tu <strong>negocio digital</strong> sin intermediarios y
               sin comisiones

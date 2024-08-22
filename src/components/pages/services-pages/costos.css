@@ -1,101 +1,108 @@
 /* Costos.css */
 /* Estilos para el main */
-.container-principal{
-    display: flex;
-    background: rgb(1,208,255);
-    background: linear-gradient(200deg, rgba(1,208,255,1) 0%, rgba(38,155,182,1) 29%, rgba(46,46,46,1) 50%);
-    width: 100vw;
-    justify-content: center;
+.container-principal {
+  display: flex;
+  background: rgb(1, 208, 255);
+  background: linear-gradient(
+    200deg,
+    rgba(1, 208, 255, 1) 0%,
+    rgba(38, 155, 182, 1) 29%,
+    rgba(46, 46, 46, 1) 50%
+  );
+  width: 100vw;
+  justify-content: center;
 }
-
 
 /* Estilos para titulo costos y servicios */
 .cost-main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
 }
 
-
 .cost-container {
-    padding: 50px 20px;
-    text-align: center;
-    margin-top: 7.5rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  margin-top: 7.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Estilos para la imagen */
 
-.image-container img{
-    width: 40vw;
-    height: 100%;
-    
+.image-container img {
+  width: 100%;
+  height: 100%;
 }
-
 
 /* Título principal - Fuente Montserrat */
 .cost-title {
-font-size: 3.2em;
-margin-bottom: 20px;
-font-family: 'Montserrat', sans-serif;
-margin-left: 15rem;
+  font-size: 3.2em;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 15rem;
 }
 
 /* Subtítulos - Fuente Roboto */
 .cost-heading {
-margin-top: 40px;
-font-size: 2em;
-font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Ítems del listado - Fuente Raleway */
 .cost-list {
-text-align: left;
-max-width: 800px;
-margin: 0 auto;
-line-height: 1.6;
-font-size: 1.2em;
-font-family: 'Raleway', sans-serif;
-justify-content: space-between;
-margin: 1rem;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
 /* Cuerpo del texto general - Fuente Open Sans */
 .cost-paragraph {
-font-size: 1.2em;
-max-width: 60vw;
-margin-right: 5rem;
-line-height: 1.6;
-font-family: 'Open Sans', sans-serif;
-text-align: justify;
+  font-size: 1.2em;
+  width: 100%;
+  max-width: 800px;
+
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
 }
 
 /* Citas o citas textuales - Fuente Open Sans SemiCondensed */
 /* DISPONIBLE PARA USO */
 .cost-quote {
-font-size: 1.2em;
-font-style: italic;
-max-width: 800px;
-line-height: 1.6;
-font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.2em;
+  font-style: italic;
+  max-width: 800px;
+
+  line-height: 1.6;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 /* Botón de contacto */
 .contact-button {
-    margin-top: 40px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #008fb3;
-    color: black;
-    border: none;
-    border-radius: 30px;
-    font-family: 'Open Sans', sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .contact-button:hover {
-    background-color: #008fb3; /* Un azul más oscuro al hacer hover */
-    color: #d4dcdc; /* Cambia el texto a negro */
-  }
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #008fb3;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #008fb3; /* Un azul más oscuro al hacer hover */
+  color: #d4dcdc; /* Cambia el texto a negro */
+}

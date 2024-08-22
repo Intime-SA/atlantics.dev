@@ -59,7 +59,7 @@ const MobileCards = () => {
   };
 
   const iconContainerStyle = {
-    fontSize: "4rem",
+    fontSize: "6rem",
     marginBottom: "1rem",
     color: "#a7ffff",
   };
