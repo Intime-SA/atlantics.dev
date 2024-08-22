@@ -6,7 +6,7 @@ import Register from "../components/pages/register/Register";
 import ForgotPassword from "../components/pages/forgotPassword/ForgotPassword";
 import Staff from "../components/pages/staff/Staff";
 import Contacto from "../components/pages/contacto/Contacto";
-import Cost from "../components/pages/services-pages/cost";
+import Cost from "../components/pages/services-pages/Cost";
 
 const AppRouter = () => {
   return (
