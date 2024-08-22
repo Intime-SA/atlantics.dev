@@ -184,7 +184,7 @@ function DrawerAppBar(props) {
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
             borderRadius: "40px",
             position: "fixed", // Fija la toolbar en una posición
-            top: "50%", // Centra verticalmente
+            top: "51%", // Centra verticalmente
             left: "0%",
 
             // Opcional: bordes redondeados
