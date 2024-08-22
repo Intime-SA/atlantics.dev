@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
+  margin-top: "10rem";
 }
 
 .cost-container {
@@ -42,9 +43,9 @@
 /* Título principal - Fuente Montserrat */
 .cost-title {
   font-size: 3.2em;
-  margin-bottom: 20px;
+  margin-bottom: 5rem;
   font-family: "Montserrat", sans-serif;
-  margin-left: 15rem;
+  margin-top: 5rem;
 }
 
 /* Subtítulos - Fuente Roboto */
@@ -98,11 +99,15 @@
   color: black;
   border: none;
   border-radius: 30px;
-  font-family: "Open Sans", sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer; /* Añadir el cursor de clic */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #008fb3; /* Un azul más oscuro al hacer hover */
-  color: #d4dcdc; /* Cambia el texto a negro */
+  background-color: #006f8b; /* Azul más oscuro */
+  color: #d4dcdc; /* Color del texto */
+  transform: scale(1.1); /* Aumento de escala */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5); /* Sombra blanca brillosa */
 }

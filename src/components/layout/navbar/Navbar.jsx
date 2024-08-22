@@ -199,7 +199,7 @@ function DrawerAppBar(props) {
                   srcSet=""
                   className="logo-img"
                   style={{
-                    width: isScrolled && isMobile ? "8rem" : "16rem",
+                    width: isScrolled && isMobile ? "8rem" : "12rem",
                   }}
                 />
               </Link>
