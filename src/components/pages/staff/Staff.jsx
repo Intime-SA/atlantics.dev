@@ -142,11 +142,18 @@ const Staff = () => {
 
               {isMobile && (
                 <div>
-                  <Link to="/contacto" style={{ color: "white" }}>
-                    <h2 style={{ marginLeft: "5rem" }} className="h2-animation">
-                      {" "}
-                      Contact
-                    </h2>
+                  <Link
+                    to="/contacto"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    <Button onClick={() => handleDrawerToggle()}>
+                      <span
+                        class="material-symbols-outlined"
+                        style={{ color: "#63747b" }}
+                      >
+                        menu
+                      </span>
+                    </Button>
                   </Link>
                 </div>
               )}

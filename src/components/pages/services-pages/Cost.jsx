@@ -19,6 +19,9 @@ const Cost = () => {
   const handleNavigation = (route) => {
     navigate(route);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Desplaza automáticamente a la parte superior de la página
+  }, []);
 
   useEffect(() => {
     AOS.init({

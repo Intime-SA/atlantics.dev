@@ -15,6 +15,10 @@ const MainIdeas = () => {
     });
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Desplaza automáticamente a la parte superior de la página
+  }, []);
+
   const theme = useTheme();
 
   const navigate = useNavigate();

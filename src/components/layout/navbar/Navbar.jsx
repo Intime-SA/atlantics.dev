@@ -337,7 +337,7 @@ function DrawerAppBar(props) {
             } else if (isVisible && !isMobile) {
               return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')";
             } else if (!isVisible && isMobile) {
-              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')";
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(1).gif?alt=media&token=8fc95601-a534-48c2-aeb0-549075c482eb')";
             } else if (!isVisible && !isMobile) {
               return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')";
             } else {

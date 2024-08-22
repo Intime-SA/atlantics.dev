@@ -102,7 +102,7 @@ const MyCarousel = () => {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
       // Suponiendo que el índice máximo deseado es 5
-      const maxIndex = 4;
+      const maxIndex = 5;
 
       // Si el índice actual es 5, reiniciar a 0, de lo contrario, avanzar al siguiente índice
       return prevIndex === maxIndex ? 0 : prevIndex + 1;
