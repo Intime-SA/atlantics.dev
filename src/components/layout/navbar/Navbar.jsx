@@ -355,7 +355,10 @@ function DrawerAppBar(props) {
 
         <div
           className="mambo22"
-          style={{ backgroundColor: "#101010 !important" }}
+          style={{
+            backgroundColor: "#101010 !important",
+            marginBottom: "25rem",
+          }}
         >
           <div
             style={{
@@ -371,12 +374,20 @@ function DrawerAppBar(props) {
               height: "1500px",
             }}
           >
-            <h2 className="fontRubikMonoOne2" style={{ marginTop: "10rem" }}>
+            <h2
+              className="fontRubikMonoOne2"
+              style={{
+                marginTop: isMobile ? "40rem" : "32rem",
+                fontSize: isMobile ? "150%" : "400%",
+                marginBottom: "5rem",
+              }}
+            >
               TIENDA <span style={{ color: "#08FF08" }}>ON</span>LINE
               <br />
               <span style={{ color: "#00D1FF" }}>PROPIA</span>
               <br />
             </h2>
+            <br />
             <h6>
               Potencia tu <strong>negocio digital</strong> sin intermediarios y
               sin comisiones
