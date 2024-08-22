@@ -8,8 +8,29 @@ const CardsEmpleadosMobile = () => {
 
   const FontStyles = {
     fontFamily: '"Montserrat", sans-serif',
+    fontWeight: "400",
+    fontSize: "60%",
+    width: "200px",
+    textAlign: "center",
+  };
+  const FontStyles1 = {
+    fontFamily: '"Montserrat", sans-serif',
     fontWeight: "bold",
-    fontSize: "50%",
+    fontSize: "100%",
+    width: "200px",
+    textAlign: "center",
+  };
+
+  const FontStyles2 = {
+    fontFamily: '"Montserrat", sans-serif',
+    fontSize: "80%",
+    width: "200px",
+    textAlign: "center",
+  };
+
+  const FontStyles3 = {
+    fontFamily: '"Montserrat", sans-serif',
+    fontSize: "40%",
     width: "200px",
     textAlign: "center",
   };
@@ -46,7 +67,16 @@ const CardsEmpleadosMobile = () => {
           </h1>
         </div>
         {/* Cada tarjeta se muestra una debajo de la otra */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+            maxWidth: "350px",
+          }}
+        >
           {/* Tarjeta de Rodrigo Silva */}
           <div
             className="profile-card1mobile"
@@ -95,9 +125,9 @@ const CardsEmpleadosMobile = () => {
               alt="Ramiro Martin Arce"
               style={{ width: "50%", height: "auto" }}
             />
-            <h1 style={FontStyles}>Ramiro Martin Arce</h1>
-            <h2 style={FontStyles}>CEO - Cofounder</h2>
-            <h3 style={FontStyles}>Business Analyst</h3>
+            <h1 style={FontStyles1}>Ramiro Martin Arce</h1>
+            <h2 style={FontStyles2}>CEO - Cofounder</h2>
+            <h3 style={FontStyles3}>Business Analyst</h3>
             <p style={FontStyles}>
               Dirige la visión estratégica de la empresa, define los objetivos
               comerciales y lidera el crecimiento de la organización.

@@ -100,10 +100,96 @@ h1 {
   size: 0.5rem;
 }
 
+/* Animación para el texto */
+/* Animación para el texto */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación para cada palabra */
+.word1 {
+  display: inline-block;
+  animation: fadeIn 1s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.word2 {
+  display: inline-block;
+  animation: fadeIn 2s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.word3 {
+  display: inline-block;
+  animation: fadeIn 3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.word4 {
+  display: inline-block;
+  animation: fadeIn 4s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.word5 {
+  display: inline-block;
+  animation: fadeIn 5s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.word6 {
+  display: inline-block;
+  animation: fadeIn 6s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos para la imagen */
+.logo-img {
+  margin: 5px;
+  padding: 0;
+  animation: fadeIn 4s ease-in-out;
+}
+
+/* Estilos para el contenedor del texto */
+.text-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 120%;
+  color: #1976d2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+/* Estilos para el encabezado */
+.header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el contenedor del texto en dispositivos móviles */
+.text-container-mobile {
+  width: 50vw;
+  max-width: 500px;
+}
+
+/* Estilo para el contenedor del texto en dispositivos de escritorio */
+.text-container-desktop {
+  width: 30vw;
+  max-width: 500px;
+}
+
 .profile-card1mobile {
   border-radius: 25px;
   height: 500px;
-  width: 400px;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;

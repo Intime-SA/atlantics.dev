@@ -114,6 +114,9 @@ function DrawerAppBar(props) {
     return () => clearTimeout(timer);
   }, []);
 
+  const words = "Your trusted partners in transformative times".split(" ");
+  console.log(words);
+
   return (
     <Box
       sx={{
@@ -135,8 +138,8 @@ function DrawerAppBar(props) {
           borderRadius: "50px",
           marginTop: "3rem",
           position: "fixed", // Fija la toolbar en una posición
-          top: "0%", // Centra verticalmente
-          left: isMobile ? "38%" : "30%", // Centra horizontalmente
+          top: isScrolled ? "0%" : "30%", // Centra verticalmente
+          left: isMobile ? "45%" : "30%", // Centra horizontalmente
           transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
@@ -161,18 +164,41 @@ function DrawerAppBar(props) {
             // Opcional: bordes redondeados
           }}
         >
-          <Link to="/">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
-              alt="logo"
-              srcset=""
-              style={{
-                width: "12rem",
-                margin: "5px",
-                padding: "0px",
-              }}
-            />
-          </Link>
+          {isVisible && (
+            <div>
+              <Link to="/">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
+                  alt="logo"
+                  srcSet=""
+                  className="logo-img"
+                  style={{
+                    width: isMobile ? "20rem" : "12rem",
+                  }}
+                />
+              </Link>
+              {!isScrolled && (
+                <Typography
+                  variant="body1"
+                  className={`text-container ${
+                    isMobile
+                      ? "text-container-mobile"
+                      : "text-container-desktop"
+                  }`}
+                  gutterBottom
+                >
+                  <h2 className="header">
+                    <span className="word1">Your</span>&nbsp;
+                    <span className="word2">trusted</span>&nbsp;
+                    <span className="word3">partners</span>&nbsp;
+                    <span className="word4">in</span>&nbsp;
+                    <span className="word5">transformative</span>&nbsp;
+                    <span className="word6">times</span>
+                  </h2>
+                </Typography>
+              )}
+            </div>
+          )}
 
           {isVisible && (
             <Box
