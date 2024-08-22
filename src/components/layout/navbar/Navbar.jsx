@@ -99,6 +99,27 @@ function DrawerAppBar(props) {
     };
   }, []);
 
+  const [isScrolled2, setIsScrolled2] = React.useState(false);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setIsScrolled2(true);
+      } else {
+        setIsScrolled2(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const container = undefined;
   /*     window !== undefined ? () => window().document.body : undefined;
    */
@@ -133,18 +154,23 @@ function DrawerAppBar(props) {
         sx={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "transparent",
+          backgroundImage:
+            "linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%)",
           width: "40vw",
           borderRadius: "50px",
-          marginTop: "3rem",
+          marginTop: isMobile ? "10rem" : "3rem",
           position: "fixed", // Fija la toolbar en una posición
-          top: isScrolled ? "0%" : "30%", // Centra verticalmente
+          top: isScrolled && isMobile ? "-15%" : "0%",
           left: isMobile ? "45%" : "30%", // Centra horizontalmente
           transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
       >
         <Toolbar
           style={{
+            backgroundImage:
+              isScrolled &&
+              "linear-gradient(to top, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%)",
+
             height: "10vh",
             width: isMobile ? "50vw" : "80vw",
             display: "flex",
@@ -173,11 +199,11 @@ function DrawerAppBar(props) {
                   srcSet=""
                   className="logo-img"
                   style={{
-                    width: isMobile ? "20rem" : "12rem",
+                    width: isScrolled && isMobile ? "8rem" : "16rem",
                   }}
                 />
               </Link>
-              {!isScrolled && (
+              {!isScrolled && isMobile && (
                 <Typography
                   variant="body1"
                   className={`text-container ${
