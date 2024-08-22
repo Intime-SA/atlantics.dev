@@ -73,22 +73,30 @@ text-align: justify;
 }
 
 /* Citas o citas textuales - Fuente Open Sans SemiCondensed */
+/* DISPONIBLE PARA USO */
 .cost-quote {
 font-size: 1.2em;
 font-style: italic;
 max-width: 800px;
-margin: 20px auto;
+
 line-height: 1.6;
 font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* Botón de contacto */
 .contact-button {
-margin-top: 40px;
-padding: 10px 20px;
-font-size: 1.2em;
-background-color: #007bff;
-color: #fff;
-border: none;
-border-radius: 5px;
-}
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #008fb3;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #008fb3; /* Un azul más oscuro al hacer hover */
+    color: #d4dcdc; /* Cambia el texto a negro */
+  }
