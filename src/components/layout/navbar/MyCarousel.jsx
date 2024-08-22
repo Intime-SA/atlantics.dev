@@ -216,7 +216,7 @@ const MyCarousel = () => {
               display: "block",
               cursor: "pointer",
             }}
-            onClick={() => handleNavigation("/cloud")}
+            onClick={() => handleNavigation(card.route)}
           >
             <div
               key={index}

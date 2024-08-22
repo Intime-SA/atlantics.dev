@@ -80,20 +80,19 @@ a {
   color: #a7ffff;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6,
 p,
-li,
 ul {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
   font-style: normal;
   color: gainsboro;
-}
+} */
 h1 {
   color: gainsboro;
 }

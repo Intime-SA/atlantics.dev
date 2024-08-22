@@ -1,0 +1,71 @@
+/* Costos.css */
+.container-principal{
+    display: flex;
+    background: rgb(1,208,255);
+    background: linear-gradient(200deg, rgba(1,208,255,1) 0%, rgba(38,155,182,1) 29%, rgba(46,46,46,1) 50%);
+    width: 100vw;
+    justify-content: center;
+}
+
+.cost-container {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 7.5rem;
+  }
+  
+  /* Título principal - Fuente Montserrat */
+  .cost-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Subtítulos - Fuente Roboto */
+  .cost-heading {
+    margin-top: 40px;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Ítems del listado - Fuente Raleway */
+  .cost-list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  
+  /* Cuerpo del texto general - Fuente Open Sans */
+  .cost-paragraph {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Citas o citas textuales - Fuente Open Sans SemiCondensed */
+  .cost-quote {
+    font-size: 1.2em;
+    font-style: italic;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+  
+  /* Botón de contacto */
+  .contact-button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
