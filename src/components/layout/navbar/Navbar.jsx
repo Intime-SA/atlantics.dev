@@ -324,7 +324,7 @@ function DrawerAppBar(props) {
                 <h2 style={FontStyles}>CTO - Cofounder</h2>
                 <h3 style={FontStyles}>Full-Stack Developer</h3>
                 <p style={FontStyles}>
-                  Lidera la interfaz WEB de nuestros desarrollos, asegurando la
+                  Lidera la interfaz WEB de nuestros desarrollos , asegurando la
                   innovación continua y las mejores practicas del diseño de
                   Aplicacion Interactivas con sistemas externos.
                 </p>
@@ -452,3 +452,4 @@ function DrawerAppBar(props) {
 }
 
 export default DrawerAppBar;
+
