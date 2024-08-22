@@ -9,7 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const ImageContent = styled("img")({
   width: "90%",
-  maxWidth: "500px",
+  maxWidth: "1000px",
   height: "auto",
 });
 
