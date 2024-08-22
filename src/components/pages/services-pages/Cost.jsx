@@ -46,7 +46,7 @@ const Cost = () => {
         </div>
 
         <ImageContainer>
-          <ImageContent src="/public/Grafico-ingresos.png" alt="Grafico de ingresos" />
+          <ImageContent src="/Grafico-ingresos.png" alt="Grafico de ingresos" />
         </ImageContainer>
         <div style={{
           width:'50%',
