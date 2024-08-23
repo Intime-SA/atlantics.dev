@@ -225,7 +225,7 @@ h1 {
 .profile-card2 {
   border-radius: 25px;
   height: 500px;
-  width: 400px;
+  width: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,7 +235,7 @@ h1 {
   background: transparent;
   animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
   margin-bottom: 5rem;
-  margin: 5rem;
+  margin: 2rem;
 }
 .profile-card1 {
   margin-top: 25rem;

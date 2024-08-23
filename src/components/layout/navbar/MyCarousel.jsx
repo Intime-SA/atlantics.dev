@@ -14,101 +14,84 @@ const MyCarousel = () => {
 
   const cards = [
     {
-      icon: "paid",
-      text: "INTEGRACIONES con TODAS las pasarelas de pago",
-      route: "/pagos",
-    },
-    {
-      icon: "local_shipping",
-      text: "Convenios con PLATAFORMAS de Correo/Shipping",
-      route: "/shipping",
-    },
-
-    {
       icon: "price_change",
-      text: "¡SIN COMISIONES! sobre tus Ventas",
+      text: "<strong>SIN COMISIONES</strong>",
       route: "/cost",
     },
     {
       icon: "paid",
-      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      text: "<strong>PASARELAS DE PAGO</strong>",
       route: "/pagos",
     },
     {
       icon: "local_shipping",
-      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      text: "<strong>PLATAFORMAS de CORREO</strong>",
       route: "/shipping",
     },
-
     {
       icon: "price_change",
-      text: "¡SIN COMISIONES! sobre tus Ventas",
+      text: "<strong>SIN COMISIONES</strong>",
       route: "/cost",
     },
     {
       icon: "paid",
-      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      text: "<strong>PASARELAS DE PAGO</strong>",
       route: "/pagos",
     },
     {
       icon: "local_shipping",
-      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      text: "<strong>PLATAFORMAS de CORREO</strong>",
       route: "/shipping",
     },
-
     {
       icon: "price_change",
-      text: "¡SIN COMISIONES! sobre tus Ventas",
+      text: "<strong>SIN COMISIONES</strong>",
       route: "/cost",
     },
     {
       icon: "paid",
-      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      text: "<strong>PASARELAS DE PAGO</strong>",
       route: "/pagos",
     },
     {
       icon: "local_shipping",
-      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      text: "<strong>PLATAFORMAS de CORREO</strong>",
       route: "/shipping",
     },
-
     {
       icon: "price_change",
-      text: "¡SIN COMISIONES! sobre tus Ventas",
+      text: "<strong>SIN COMISIONES</strong>",
       route: "/cost",
     },
     {
       icon: "paid",
-      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      text: "<strong>PASARELAS DE PAGO</strong>",
       route: "/pagos",
     },
     {
       icon: "local_shipping",
-      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      text: "<strong>PLATAFORMAS de CORREO</strong>",
       route: "/shipping",
     },
 
+    // Uncomment and update the following items if needed
+    /*
     {
-      icon: "price_change",
-      text: "¡SIN COMISIONES! sobre tus Ventas",
-      route: "/cost",
-    },
-    /*    {
       icon: "security",
-      text: "Manejo de datos PRIVADO y SEGURO",
+      text: "Manejo de datos <strong>PRIVADO y SEGURO</strong>",
       route: "/security",
     },
-
     {
       icon: "monitoring",
-      text: "Reportes y funciones 100% CUSTOMIZABLE",
+      text: "Reportes y funciones <strong>100% CUSTOMIZABLE</strong>",
       route: "/functions",
     },
     {
       icon: "cloud",
-      text: "Servicio disponible 24/7 ¡SIN INTERRUPCIONES!",
+      text: "Servicio disponible <strong>24/7</strong> ¡SIN INTERRUPCIONES!",
       route: "/cloud",
-    }, */
+    },
+    */
   ];
 
   useEffect(() => {
@@ -278,7 +261,10 @@ const MyCarousel = () => {
                 </span>
               </div>
               <div style={{ padding: "2rem" }}>
-                <h2 style={cardTextStyle}>{card.text}</h2>
+                <h2
+                  style={cardTextStyle}
+                  dangerouslySetInnerHTML={{ __html: card.text }}
+                ></h2>
               </div>
             </div>
           </div>
