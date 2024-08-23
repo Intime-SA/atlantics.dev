@@ -14,7 +14,7 @@ const ImageContent = styled("img")({
   height: "auto",
 });
 
-const Pasarelas = () => {
+const Shipping = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (route) => {
@@ -64,11 +64,11 @@ const Pasarelas = () => {
                   fontSize: "100%",
                 }}
               >
-                INTEGRAMOS
+                MEJORA
               </span>
               <br />
-              TODOS LOS <br />
-              MEDIOS DE PAGO
+              TUS <br />
+              CONVENIOS
               <br />
             </h1>
           )}
@@ -83,10 +83,10 @@ const Pasarelas = () => {
                   fontSize: "100%",
                 }}
               >
-                INTEGRACION
+                MEJORAMOS
               </span>{" "}
               <br />
-              CON TODOS LOS MEDIOS DE PAGO
+              TODOS TUS CONVENIOS
             </h1>
           )}
           <p
@@ -130,7 +130,7 @@ const Pasarelas = () => {
           </p>
         </div>
         <div data-aos="fade-down">
-          <ImageContent src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Customer%20Acquisition%20Cost%20Report%20(1).png?alt=media&token=c39fb0ae-2a21-4fe9-8299-e3a78117c2fe" />
+          <ImageContent src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Customer%20Acquisition%20Cost%20Report.png?alt=media&token=e7859a41-11f5-4f16-82a3-605d239db80d" />
         </div>
 
         <div
@@ -165,4 +165,4 @@ const Pasarelas = () => {
   );
 };
 
-export default Pasarelas;
+export default Shipping;

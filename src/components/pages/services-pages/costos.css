@@ -91,7 +91,22 @@
 }
 
 /* Botón de contacto */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .contact-button {
+  /* Para hacer que el botón flote en la pantalla */
+  bottom: 20px; /* Ajusta según donde quieras que se coloque verticalmente */
+  right: 20px; /* Ajusta según donde quieras que se coloque horizontalmente */
   margin-top: 40px;
   padding: 10px 20px;
   font-size: 1.2em;
@@ -103,6 +118,7 @@
   cursor: pointer; /* Añadir el cursor de clic */
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease,
     box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite; /* Animación de flotación constante */
 }
 
 .contact-button:hover {
