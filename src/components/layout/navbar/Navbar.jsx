@@ -396,6 +396,41 @@ function DrawerAppBar(props) {
             {isMobile ? <MobileCards /> : <MyCarousel />}
           </div>
         </div>
+        <Box
+          component="main"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            padding: 0,
+            margin: 0,
+            minHeight: "30vh",
+            minWidth: "100vw",
+            backgroundImage: "linear-gradient(0deg, #010102 0%, #101010 55%)",
+          }}
+        ></Box>
+        {!isMobile && (
+          <Box
+            component="main"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+              padding: 0,
+              margin: 0,
+              minHeight: "100vh",
+              minWidth: "100vw",
+              backgroundImage:
+                "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/NO%20POSTERGES.gif?alt=media&token=e3e5bf13-be64-4b9a-8c57-eeea4ca80c76')",
+            }}
+          ></Box>
+        )}
 
         <FooterSeccion />
 

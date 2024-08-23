@@ -23,25 +23,11 @@ const MyCarousel = () => {
       text: "Convenios con PLATAFORMAS de Correo/Shipping",
       route: "/shipping",
     },
-    {
-      icon: "cloud",
-      text: "Servicio disponible 24/7 ¡SIN INTERRUPCIONES!",
-      route: "/cloud",
-    },
-    {
-      icon: "security",
-      text: "Manejo de datos PRIVADO y SEGURO",
-      route: "/security",
-    },
+
     {
       icon: "price_change",
       text: "¡SIN COMISIONES! sobre tus Ventas",
       route: "/cost",
-    },
-    {
-      icon: "monitoring",
-      text: "Reportes y funciones 100% CUSTOMIZABLE",
-      route: "/functions",
     },
     {
       icon: "paid",
@@ -53,26 +39,76 @@ const MyCarousel = () => {
       text: "Convenios con PLATAFORMAS de Correo/Shipping",
       route: "/shipping",
     },
-    {
-      icon: "cloud",
-      text: "Servicio disponible 24/7 ¡SIN INTERRUPCIONES!",
-      route: "/cloud",
-    },
-    {
-      icon: "security",
-      text: "Manejo de datos PRIVADO y SEGURO",
-      route: "/security",
-    },
+
     {
       icon: "price_change",
       text: "¡SIN COMISIONES! sobre tus Ventas",
       route: "/cost",
     },
     {
+      icon: "paid",
+      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      route: "/pagos",
+    },
+    {
+      icon: "local_shipping",
+      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      route: "/shipping",
+    },
+
+    {
+      icon: "price_change",
+      text: "¡SIN COMISIONES! sobre tus Ventas",
+      route: "/cost",
+    },
+    {
+      icon: "paid",
+      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      route: "/pagos",
+    },
+    {
+      icon: "local_shipping",
+      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      route: "/shipping",
+    },
+
+    {
+      icon: "price_change",
+      text: "¡SIN COMISIONES! sobre tus Ventas",
+      route: "/cost",
+    },
+    {
+      icon: "paid",
+      text: "INTEGRACIONES con TODAS las pasarelas de pago",
+      route: "/pagos",
+    },
+    {
+      icon: "local_shipping",
+      text: "Convenios con PLATAFORMAS de Correo/Shipping",
+      route: "/shipping",
+    },
+
+    {
+      icon: "price_change",
+      text: "¡SIN COMISIONES! sobre tus Ventas",
+      route: "/cost",
+    },
+    /*    {
+      icon: "security",
+      text: "Manejo de datos PRIVADO y SEGURO",
+      route: "/security",
+    },
+
+    {
       icon: "monitoring",
       text: "Reportes y funciones 100% CUSTOMIZABLE",
       route: "/functions",
     },
+    {
+      icon: "cloud",
+      text: "Servicio disponible 24/7 ¡SIN INTERRUPCIONES!",
+      route: "/cloud",
+    }, */
   ];
 
   useEffect(() => {

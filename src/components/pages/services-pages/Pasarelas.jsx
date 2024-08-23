@@ -123,9 +123,10 @@ const Pasarelas = () => {
                 marginBottom: "3rem",
               }}
             >
-              Una forma
-              <span style={{ fontWeight: "900" }}> NUEVA</span> de vender
-              online.
+              <span style={{ fontWeight: "900" }}>
+                {" "}
+                NUEVA FORMULA PARA VENDER ONLINE
+              </span>
             </h2>
           </p>
         </div>

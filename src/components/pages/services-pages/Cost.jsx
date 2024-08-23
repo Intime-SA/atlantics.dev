@@ -75,9 +75,19 @@ const Cost = () => {
           <br />
           <br />
           {!isMobile && (
-            <h1 className="cost-title" data-aos="fade-down">
-              DEJA DE ALQUILAR PLATAFORMAS
-            </h1>
+            <div>
+              <h1 className="cost-title" data-aos="fade-down">
+                DEJA DE ALQUILAR
+                <br />
+                PLATAFORMAS
+              </h1>
+              <h2
+                className="cost-title"
+                style={{ color: "#2E2E2E", fontWeight: "900" }}
+              >
+                INVERTI EN TU NEGOCIO
+              </h2>
+            </div>
           )}
           <p
             className="cost-paragraph"
@@ -86,21 +96,20 @@ const Cost = () => {
             data-aos-duration="2000"
             style={{
               textAlign: "center",
-              fontWeight: "100",
+              fontWeight: "300",
               fontFamily: "'Montserrat', sans-serif",
             }}
           >
             En{" "}
             <strong style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              Atlantics.dev
+              ATLANTICS
             </strong>
-            , desarrollamos una{" "}
+            .dev, desarrollamos una{" "}
             <span
               style={{
                 textAlign: "center",
                 fontWeight: "900",
                 fontFamily: "'Montserrat', sans-serif",
-                color: "#63747B ",
               }}
             >
               SOLUCION
@@ -121,7 +130,7 @@ const Cost = () => {
         </div>
 
         <ImageContent
-          src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Grafico-ingresos.png?alt=media&token=cfb685a2-83e1-4560-b8a0-6fe76d6c6743"
+          src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Sales%20and%20Marketing%20Report.png?alt=media&token=198a1f72-99aa-4123-95af-8969d3b53e61  "
           alt="Grafico de ingresos"
         />
 
@@ -138,9 +147,20 @@ const Cost = () => {
         <button
           className="contact-button"
           onClick={() => handleNavigation("/contacto")}
-          style={{ margin: "2rem" }}
+          style={{
+            margin: "2rem",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+          }}
         >
-          Contáctanos
+          <h6>Contáctanos</h6>
+          <span
+            style={{ margin: "0.5rem", color: "white" }}
+            class="material-symbols-outlined"
+          >
+            web_traffic
+          </span>
         </button>
       </section>
     </div>

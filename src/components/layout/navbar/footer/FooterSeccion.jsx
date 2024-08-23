@@ -32,7 +32,6 @@ const FooterSeccion = () => {
         color: "white",
         height: "500px", // Ajuste para que el contenedor se adapte al contenido
         width: "100%",
-        marginTop: "10rem",
         padding: isMobile ? "1rem" : "2rem", // Ajuste de padding según el tamaño de pantalla
         display: "flex",
         flexDirection: "column",

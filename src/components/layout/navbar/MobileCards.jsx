@@ -28,11 +28,6 @@ const MobileCards = () => {
       text: "¡SIN COMISIONES! sobre tus Ventas",
       route: "/cost",
     },
-    {
-      icon: "monitoring",
-      text: "Reportes y funciones 100% CUSTOMIZABLE",
-      route: "/functions",
-    },
   ];
 
   const navigate = useNavigate();

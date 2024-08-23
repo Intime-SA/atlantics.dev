@@ -7,6 +7,7 @@ import MainIdeas from "./MainIdeas";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PaymentShippingLogos from "./PaymentShippingLogos";
+import PaymentShipping from "./PaymentShipping";
 
 const ImageContent = styled("img")({
   width: "90%",
@@ -61,14 +62,16 @@ const Shipping = () => {
                 style={{
                   fontWeight: "900",
                   color: "#63747B",
-                  fontSize: "100%",
+                  fontSize: "140%",
                 }}
               >
-                MEJORA
+                MEJORAMOS
               </span>
               <br />
               TUS <br />
               CONVENIOS
+              <br />
+              CON
               <br />
             </h1>
           )}
@@ -104,7 +107,7 @@ const Shipping = () => {
             <strong style={{ fontFamily: "'Montserrat', sans-serif" }}>
               ATLANTICS
             </strong>
-            .dev , llevamos a cabo todas las{" "}
+            .dev , gestionamos la apertura directa con{" "}
             <span
               style={{
                 textAlign: "center",
@@ -113,9 +116,9 @@ const Shipping = () => {
                 color: "#2E2E2E",
               }}
             >
-              INTEGRACIONES
+              EMPRESAS DE CORREO
             </span>{" "}
-            necesarias para ofrecer todos los medios de Pago electronicos.
+            para gestionar envios desde la tienda.
             <h2
               style={{
                 fontFamily: "'Montserrat', sans-serif",
@@ -123,24 +126,25 @@ const Shipping = () => {
                 marginBottom: "3rem",
               }}
             >
-              Una forma
-              <span style={{ fontWeight: "900" }}> NUEVA</span> de vender
-              online.
+              BAJA LOS
+              <span style={{ fontWeight: "900" }}> COSTOS DE ENVIO</span> y
+              vende <span style={{ fontWeight: "900" }}> MAS</span>
             </h2>
           </p>
         </div>
         <div data-aos="fade-down">
-          <ImageContent src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Customer%20Acquisition%20Cost%20Report.png?alt=media&token=e7859a41-11f5-4f16-82a3-605d239db80d" />
+          <ImageContent src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Customer%20Acquisition%20Cost%20Report%20(2).png?alt=media&token=b0a1e353-8ff2-4184-a15c-b615b35bad36" />
         </div>
 
         <div
+          data-aos="fade-down"
           style={{
             width: "100%",
             display: "flex",
             justifyContent: "center",
           }}
         >
-          <PaymentShippingLogos />
+          <PaymentShipping />
         </div>
         <button
           className="contact-button"
