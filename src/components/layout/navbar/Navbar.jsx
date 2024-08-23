@@ -26,6 +26,7 @@ import FooterSeccion from "./footer/FooterSeccion";
 import CardsEmpleados from "../../pages/cardsEmpleados/CardsEmpleados";
 import CardsEmpleadosMobile from "../../pages/cardsEmpleados/CardsEmpleadosMobile";
 import MobileCards from "./MobileCards";
+import Aos from "aos";
 
 const drawerWidth = 240;
 const navItems = [
@@ -137,6 +138,13 @@ function DrawerAppBar(props) {
 
   const words = "Your trusted partners in transformative times".split(" ");
   console.log(words);
+
+  React.useEffect(() => {
+    Aos.init({
+      duration: 1000, // Duración de la animación
+      once: true, // Solo ejecuta la animación una vez
+    });
+  }, []);
 
   return (
     <Box
@@ -350,7 +358,80 @@ function DrawerAppBar(props) {
           className="grupoCardsPadre"
           style={{ marginTop: isMobile ? "1000px" : "1500px" }}
         ></div>
+        {isMobile && (
+          <Box
+            component="main"
+            sx={{
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row", // Cambia a columna si es mobile
+              justifyContent: isMobile ? "center" : "space-between", // Ajusta el centrado en mobile
+              alignItems: "center",
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+              padding: 0,
+              margin: 0,
+              minHeight: "100vh",
+              minWidth: "100vw",
+              backgroundImage: "linear-gradient(0deg, #010102 0%, #101010 55%)",
+              width: "100%",
+            }}
+          >
+            {/* Logo de la empresa y eslogan */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                color: "white",
+                width: isMobile ? "90%" : "45%", // Ajusta el ancho en mobile
+                marginBottom: isMobile ? "20px" : 0, // Espacio entre logo y video en mobile
+              }}
+            >
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
+                alt="Logo"
+                style={{
+                  width: "100%", // Ocupar todo el ancho disponible en ambos modos
+                  maxWidth: isMobile ? "200px" : "400px", // Tamaño reducido en mobile
+                  marginBottom: "20px",
+                }}
+              />
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "300", // Peso de la fuente ligero para el eslogan
+                  fontSize: isMobile ? "1.2em" : "1.5em", // Ajuste de tamaño de fuente en mobile
+                }}
+              >
+                Your trusted partner in transformative times...
+              </Typography>
+            </Box>
 
+            {/* Video con sombra difuminada */}
+            <Box
+              sx={{
+                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.5)", // Sombra difuminada
+                borderRadius: isMobile ? "0px" : "10px", // Bordes sutilmente redondeados
+                overflow: "hidden", // Para asegurar que el video respete el borde
+                width: isMobile ? "100%" : "45%", // El video ocupa todo el ancho en mobile
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/AUTOMATIZA%20TUS%20PROCESOS%20(2).gif?alt=media&token=d03fa299-712a-448d-a053-0075dc54a32e"
+                style={{
+                  height: "auto",
+                  width: "100%", // Ocupar el 100% del contenedor
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+            </Box>
+          </Box>
+        )}
         {isSmallDesktop ? <CardsEmpleadosMobile /> : <CardsEmpleados />}
 
         <div
@@ -396,22 +477,83 @@ function DrawerAppBar(props) {
             {isMobile ? <MobileCards /> : <MyCarousel />}
           </div>
         </div>
-        <Box
-          component="main"
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundSize: "100%",
-            backgroundRepeat: "no-repeat",
-            padding: 0,
-            margin: 0,
-            minHeight: "30vh",
-            minWidth: "100vw",
-            backgroundImage: "linear-gradient(0deg, #010102 0%, #101010 55%)",
-          }}
-        ></Box>
+
+        {!isMobile && (
+          <Box
+            component="main"
+            sx={{
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row", // Cambia a columna si es mobile
+              justifyContent: isMobile ? "center" : "space-between", // Ajusta el centrado en mobile
+              alignItems: "center",
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+              padding: 0,
+              margin: 0,
+              minHeight: "100vh",
+              minWidth: "100vw",
+              backgroundImage: "linear-gradient(0deg, #010102 0%, #101010 55%)",
+              width: "100%",
+            }}
+          >
+            {/* Logo de la empresa y eslogan */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                color: "white",
+                width: isMobile ? "90%" : "45%", // Ajusta el ancho en mobile
+                marginBottom: isMobile ? "20px" : 0, // Espacio entre logo y video en mobile
+              }}
+            >
+              <img
+                data-aos="fade-down"
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
+                alt="Logo"
+                style={{
+                  width: "100%", // Ocupar todo el ancho disponible en ambos modos
+                  maxWidth: isMobile ? "200px" : "400px", // Tamaño reducido en mobile
+                  marginBottom: "20px",
+                }}
+              />
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: "300", // Peso de la fuente ligero para el eslogan
+                  fontSize: isMobile ? "1.2em" : "1.5em", // Ajuste de tamaño de fuente en mobile
+                }}
+              >
+                Your trusted partner in transformative times...
+              </Typography>
+            </Box>
+
+            {/* Video con sombra difuminada */}
+            <Box
+              sx={{
+                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.5)", // Sombra difuminada
+                borderRadius: isMobile ? "0px" : "10px", // Bordes sutilmente redondeados
+                overflow: "hidden", // Para asegurar que el video respete el borde
+                width: isMobile ? "100%" : "45%", // El video ocupa todo el ancho en mobile
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/AUTOMATIZA%20TUS%20PROCESOS%20(2).gif?alt=media&token=d03fa299-712a-448d-a053-0075dc54a32e"
+                style={{
+                  height: "auto",
+                  width: "100%", // Ocupar el 100% del contenedor
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+            </Box>
+          </Box>
+        )}
+
         {!isMobile && (
           <Box
             component="main"
