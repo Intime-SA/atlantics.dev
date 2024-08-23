@@ -7,6 +7,7 @@ import ForgotPassword from "../components/pages/forgotPassword/ForgotPassword";
 import Staff from "../components/pages/staff/Staff";
 import Contacto from "../components/pages/contacto/Contacto";
 import Cost from "../components/pages/services-pages/Cost";
+import Pasarelas from "../components/pages/services-pages/Pasarelas";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
 
       <Route path="/contacto" element={<Contacto />} />
 
+      <Route path="/pasarelas" element={<Pasarelas />} />
       <Route path="/cost" element={<Cost />} />
 
       {/* Login */}
