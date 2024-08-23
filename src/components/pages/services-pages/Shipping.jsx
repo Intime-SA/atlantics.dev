@@ -71,7 +71,6 @@ const Shipping = () => {
               TUS <br />
               CONVENIOS
               <br />
-              CON
               <br />
             </h1>
           )}
