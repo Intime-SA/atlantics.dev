@@ -44,20 +44,21 @@ const MainIdeas = () => {
           fontFamily: "'Raleway', sans-serif",
           fontSize: "1.3rem",
           margin: "1rem",
-          textAlign: "CENTER",
           marginLeft: "0rem",
+          textAlign: isMobile ? "left" : "center",
         }}
         data-aos="zoom-in-left" // Animación para esta sección
       >
-        ¡<strong>BASTA</strong>
-        <span style={{ fontWeight: "100" }}> DE </span> COMISIONES!
+        <span style={{ fontWeight: "100" }}>Transacciones</span>{" "}
+        <strong>LIMPIAS</strong>, <span style={{ fontWeight: "100" }}>sin</span>{" "}
+        <strong>COMISIONES</strong>
       </Box>
       <Box
         component="p"
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: "left",
+          textAlign: isMobile ? "justify" : "center",
           marginTop: "5rem",
         }}
         data-aos="zoom-in-left" // Animación para este texto
@@ -103,7 +104,7 @@ const MainIdeas = () => {
           fontSize: "1.3rem",
           margin: "1rem",
           marginRight: "0rem",
-          textAlign: "right",
+          textAlign: isMobile ? "right" : "center",
         }}
         data-aos="zoom-in-left" // Animación para esta sección
       >
@@ -114,7 +115,7 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: "right",
+          textAlign: isMobile ? "justify" : "center",
         }}
         data-aos="zoom-in-left" // Animación para este texto
       >
@@ -157,7 +158,7 @@ const MainIdeas = () => {
           fontSize: "1.3rem",
           margin: "1rem",
           marginLeft: "0",
-          textAlign: "left",
+          textAlign: isMobile ? "left" : "center",
         }}
         data-aos="zoom-in-right" // Animación para esta sección
       >
@@ -168,7 +169,7 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: "left",
+          textAlign: isMobile ? "justify" : "center",
         }}
         data-aos="zoom-in-right" // Animación para este texto
       >

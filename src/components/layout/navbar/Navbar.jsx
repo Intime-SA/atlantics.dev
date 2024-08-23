@@ -207,7 +207,7 @@ function DrawerAppBar(props) {
                   srcSet=""
                   className="logo-img"
                   style={{
-                    width: isScrolled && isMobile ? "8rem" : "12rem",
+                    width: isScrolled && isMobile ? "8rem" : "8rem", // Cambie el tamaño del logo en desktop
                   }}
                 />
               </Link>
