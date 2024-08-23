@@ -55,7 +55,7 @@ const CardsEmpleados = () => {
             <h1 style={FontStyles}>Rodrigo Silva</h1>
             <h2 style={FontStyles}>CTO - Cofounder</h2>
             <h3 style={FontStyles}>Full-Stack Developer</h3>
-            <p style={FontStyles}>
+            <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Lidera la interfaz WEB de nuestros desarrollos , asegurando la
               innovación continua y las mejores practicas del diseño de
               Aplicacion Interactivas con sistemas externos.
@@ -86,7 +86,7 @@ const CardsEmpleados = () => {
             <h1 style={FontStyles}>Ramiro Martin Arce</h1>
             <h2 style={FontStyles}>CEO - Cofounder</h2>
             <h3 style={FontStyles}>Business Analyst</h3>
-            <p style={FontStyles}>
+            <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Dirige la visión estratégica de la empresa, define los objetivos
               comerciales y lidera el crecimiento y la expansión de la
               organizacion.
@@ -117,7 +117,7 @@ const CardsEmpleados = () => {
             <h1 style={FontStyles}>Federico Larrea</h1>
             <h2 style={FontStyles}>COO - Consultant</h2>
             <h3 style={FontStyles}>Engineer Mercado Libre</h3>
-            <p style={FontStyles}>
+            <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Supervisa las operaciones diarias, optimizando procesos y
               asegurando la eficiencia en cada aspecto de la infraestructura de
               nuestros servicios.
