@@ -356,7 +356,7 @@ function DrawerAppBar(props) {
       >
         <div
           className="grupoCardsPadre"
-          style={{ marginTop: isMobile ? "1000px" : "1500px" }}
+          style={{ marginTop: isMobile ? "250px" : "1500px" }}
         >
           <section>
             <div
@@ -540,17 +540,44 @@ function DrawerAppBar(props) {
               className="fontRubikMonoOne2"
               style={{
                 marginTop: isMobile ? "40rem" : "32rem",
-                fontSize: isMobile ? "150%" : "400%",
+                fontSize: isMobile ? "190%" : "400%",
                 marginBottom: "5rem",
               }}
             >
-              TIENDA <span style={{ color: "#08FF08" }}>ON</span>LINE
+              <span
+                style={{
+                  color: "#2D2D2D",
+                  fontSize: isMobile ? "120%" : "150%",
+                  textShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Subtle white shadow
+                }}
+              >
+                TIENDA
+              </span>{" "}
               <br />
-              <span style={{ color: "#00D1FF" }}>PROPIA</span>
+              <span
+                style={{
+                  color: "#08FF08",
+                  animation: "flicker 1.5s infinite alternate",
+                  textShadow: "0 0 5px #08FF08, 0 0 10px #08FF08",
+                }}
+              >
+                ON LINE
+              </span>
+              <br />
+              <span
+                style={{
+                  color: "#2D2D2D",
+                  fontSize: isMobile ? "120%" : "150%",
+                  textShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Subtle white shadow
+                }}
+              >
+                PROPIA
+              </span>
               <br />
             </h2>
+
             <br />
-            <h6>
+            <h6 style={{ textAlign: isMobile ? "center" : "left" }}>
               Potencia tu <strong>negocio digital</strong> sin intermediarios y
               sin comisiones
             </h6>

@@ -41,6 +41,7 @@ const FooterSeccion = () => {
         alignItems: "center",
         justifyContent: "center",
         paddingBottom: "10rem",
+        marginBottom: "5rem",
       }}
     >
       <Stack
