@@ -103,10 +103,6 @@ function DrawerAppBar(props) {
   const [isScrolled2, setIsScrolled2] = React.useState(false);
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1000) {
         setIsScrolled2(true);
@@ -168,7 +164,7 @@ function DrawerAppBar(props) {
           borderRadius: "50px",
           marginTop: isMobile ? "10rem" : "3rem",
           position: "fixed", // Fija la toolbar en una posición
-          top: isScrolled && isMobile ? "-15%" : "0%",
+          top: isScrolled && isMobile ? "-20%" : "0%",
           left: isMobile ? "45%" : "30%", // Centra horizontalmente
           transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
         }}
@@ -192,7 +188,7 @@ function DrawerAppBar(props) {
             WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
             borderRadius: "40px",
             position: "fixed", // Fija la toolbar en una posición
-            top: "51%", // Centra verticalmente
+            top: "10%", // Centra verticalmente
             left: "0%",
 
             // Opcional: bordes redondeados
@@ -207,8 +203,9 @@ function DrawerAppBar(props) {
                   srcSet=""
                   className="logo-img"
                   style={{
-                    width: isScrolled && isMobile ? "8rem" : "8rem", // Cambie el tamaño del logo en desktop
+                    width: isScrolled && isMobile ? "8rem" : "11rem", // Cambie el tamaño del logo en desktop
                   }}
+                  onClick={() => window.scrollTo(0, 0)} // Ejecuta el scroll al hacer clic
                 />
               </Link>
               {!isScrolled && isMobile && (
