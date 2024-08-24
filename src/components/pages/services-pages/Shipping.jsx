@@ -106,7 +106,7 @@ const Shipping = () => {
             <strong style={{ fontFamily: "'Montserrat', sans-serif" }}>
               ATLANTICS
             </strong>
-            .dev , gestionamos la apertura directa con{" "}
+            .dev, gestionamos la apertura directa con{" "}
             <span
               style={{
                 textAlign: "center",
@@ -117,7 +117,7 @@ const Shipping = () => {
             >
               EMPRESAS DE CORREO
             </span>{" "}
-            para gestionar envios desde la tienda.
+            para gestionar envíos desde la tienda.
             <h2
               style={{
                 fontFamily: "'Montserrat', sans-serif",

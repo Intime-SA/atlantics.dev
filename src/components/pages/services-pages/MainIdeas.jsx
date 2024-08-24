@@ -58,15 +58,15 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: isMobile ? "justify" : "center",
+          textAlign: isMobile ? "left" : "justify",
           marginTop: "5rem",
         }}
         data-aos="zoom-in-left" // Animación para este texto
       >
         A diferencia de otras plataformas, donde se realiza un pago mensual +
         pago de comisiones (3% sobre todas las ventas), nuestro servicio se
-        compone por la Inversion Inicial y se abona{" "}
-        <strong>POR UNICA VEZ</strong>.
+        compone de una inversión inicial que se abona{" "}
+        <strong>POR ÚNICA VEZ</strong>.
         <br />
         <strong style={{ color: "#00D1FF" }}>TUS GANANCIAS NO SE TOCAN</strong>
         <br />
@@ -78,10 +78,11 @@ const MainIdeas = () => {
               fontFamily: '"Montserrat", sans-serif',
             }}
           >
-            Cotizacion a medida de las necesidades del negocio.
+            Cotización a medida de las necesidades del negocio.
           </span>
         </div>
       </Box>
+
       <Divider
         sx={{
           marginY: 2,
@@ -115,7 +116,7 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: isMobile ? "justify" : "center",
+          textAlign: isMobile ? "right" : "justify",
         }}
         data-aos="zoom-in-left" // Animación para este texto
       >
@@ -169,11 +170,11 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: isMobile ? "justify" : "center",
+          textAlign: isMobile ? "left" : "justify",
         }}
         data-aos="zoom-in-right" // Animación para este texto
       >
-        Nuestra solucion consiste en replicar las interfaces modernas del
+        Nuestra solución consiste en replicar las interfaces modernas del
         mercado y aplicarlas en un <strong>DESARROLLO PROPIO</strong> generando
         un ahorro exponencial en los gastos y comisiones de su tienda online.
         <br />
@@ -200,7 +201,7 @@ const MainIdeas = () => {
         sx={{
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
-          textAlign: "justify",
+          textAlign: "left",
           marginTop: "15rem",
         }}
         data-aos="zoom-in-right" // Animación para este texto
@@ -209,18 +210,18 @@ const MainIdeas = () => {
           style={{ fontFamily: '"Montserrat", sans-serif', fontWeight: "100" }}
         >
           A diferencia de otras plataformas en el mercado, nuestra solución no
-          retiene comisiones sobre tus ventas, solamente se cobra el uso.
+          retiene comisiones sobre tus ventas, solo se cobra por el uso.
           <br />
-          Si un mes no usas la plataforma, no genera gastos.
+          Si un mes no utilizas la plataforma, no genera gastos.
           <br />
-          Cada venta que realices es 100% para tu negocio.-
+          Cada venta que realices es 100% para tu negocio.
           <br />
           <br />
           Ejemplo:
           <br />
           <br />
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <span>Ventas Brutas :</span>
+            <span>Ventas brutas:</span>
             <span>$100.000</span>
           </div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>

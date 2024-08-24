@@ -115,7 +115,7 @@ const Pasarelas = () => {
             >
               INTEGRACIONES
             </span>{" "}
-            necesarias para ofrecer todos los medios de Pago electronicos.
+            necesarias para ofrecer todos los medios de Pago electrónicos.
             <h2
               style={{
                 fontFamily: "'Montserrat', sans-serif",

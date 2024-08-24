@@ -85,7 +85,7 @@ const Cost = () => {
                 className="cost-title"
                 style={{ color: "#2E2E2E", fontWeight: "900" }}
               >
-                INVERTI EN TU NEGOCIO
+                INVIERTA EN SU NEGOCIO
               </h2>
             </div>
           )}
@@ -114,8 +114,8 @@ const Cost = () => {
             >
               SOLUCION
             </span>{" "}
-            diseñada para optimizar tu negocio en el area del Comercio
-            Electronico.
+            diseñada para optimizar tu negocio en el área del comercio
+            electrónico.
             <h2
               style={{
                 fontFamily: "'Montserrat', sans-serif",
