@@ -33,6 +33,7 @@ const CardsEmpleados = () => {
             style={{
               fontFamily: '"Montserrat", sans-serif',
               fontSize: "500%",
+              color:'#EEF8FA',
             }}
           >
             PROFESIONALES <br />
@@ -53,7 +54,7 @@ const CardsEmpleados = () => {
               alt="Rodrigo Silva"
             />
             <h1 style={FontStyles}>Rodrigo Silva</h1>
-            <h2 style={FontStyles}>CTO - Cofounder</h2>
+            <h2 style={{...FontStyles, color:'#269bb6'}}>CTO - Cofounder</h2>
             <h3 style={FontStyles}>Full-Stack Developer</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Lidera la interfaz WEB de nuestros desarrollos , asegurando la
@@ -67,6 +68,7 @@ const CardsEmpleados = () => {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "80%",
+                ...FontStyles,
               }}
             >
               <img
@@ -84,7 +86,7 @@ const CardsEmpleados = () => {
               alt="Ramiro Martin Arce"
             />
             <h1 style={FontStyles}>Ramiro Martin Arce</h1>
-            <h2 style={FontStyles}>CEO - Cofounder</h2>
+            <h2 style={{...FontStyles, color:'#269bb6'}}>CEO - Cofounder</h2>
             <h3 style={FontStyles}>Business Analyst</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Dirige la visión estratégica de la empresa, define los objetivos
@@ -98,6 +100,7 @@ const CardsEmpleados = () => {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "80%",
+                ...FontStyles,
               }}
             >
               <img
@@ -115,7 +118,7 @@ const CardsEmpleados = () => {
               alt="Federico Larrea"
             />
             <h1 style={FontStyles}>Federico Larrea</h1>
-            <h2 style={FontStyles}>COO - Consultant</h2>
+            <h2 style={{...FontStyles, color:'#269bb6'}}>COO - Consultant</h2>
             <h3 style={FontStyles}>Engineer Mercado Libre</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Supervisa las operaciones diarias, optimizando procesos y
@@ -129,6 +132,7 @@ const CardsEmpleados = () => {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "80%",
+                ...FontStyles,
               }}
             >
               <img

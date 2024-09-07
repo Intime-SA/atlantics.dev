@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import {
-  AppBar,
   Box,
   Button,
   Container,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import "./Staff.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import NewNavbar from "../../layout/Newnavbar";
+import { FontStyles, FontStyles4 } from "../../styles/styles";
+
 
 const Staff = () => {
   const theme = useTheme();
@@ -21,13 +22,6 @@ const Staff = () => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const navItems = [
-    { nombre: "Inicio", url: "/" },
-    { nombre: "Staff", url: "/staff" },
-    { nombre: "Contacto", url: "/contacto" },
-  ];
-
-  const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,60 +54,18 @@ const Staff = () => {
 
   return (
     <Container maxWidth="lg" className="home-container">
-      <AppBar
-        component="nav"
+      <Box 
         sx={{
           display: "flex",
+          width: "0vw",
+          padding: "0px",
+          margin: "0px",
           justifyContent: "center",
-          backgroundColor: "transparent",
-          width: "40vw",
-          borderRadius: "50px",
-          marginTop: "3rem",
-          position: "fixed", // Fija la toolbar en una posición
-          top: "0%", // Centra verticalmente
-          left: "30%", // Centra horizontalmente
-          transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
-        }}
-      >
-        <Toolbar
-          style={{
-            height: "8vh",
-            width: "80vw",
-            display: "flex",
-            justifyContent: "center",
-            backgroundColor: isScrolled
-              ? "rgba(255, 255, 255, 0.3)"
-              : "transparent", // Fondo semitransparente cuando se desplaza
-            backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
-            WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-            borderRadius: "40px",
-            position: "fixed", // Fija la toolbar en una posición
-            top: "50%", // Centra verticalmente
-            left: "0%",
+          width: "100vw",
+        }}>
 
-            // Opcional: bordes redondeados
-          }}
-        >
-          <Link to="/">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
-              alt="logo"
-              srcset=""
-              style={{
-                width: "5rem",
-                height: "5rem",
-                margin: "5px",
-                padding: "0px",
-              }}
-            />
-          </Link>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            {" "}
-          </Typography>
+        <NewNavbar/>
+      </Box>
           {isVisible && (
             <Box
               sx={{
@@ -122,23 +74,6 @@ const Staff = () => {
                 width: isMobile ? "100%" : "40%",
               }}
             >
-              {navItems.map((item) => (
-                <Typography
-                  key={item.nombre}
-                  sx={{
-                    fontSize: "2rem",
-                    position: "relative",
-                    opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
-                    transition:
-                      "opacity 2s ease-in-out, transform 2s ease-in-out",
-                    transform: isVisible ? "translateY(0)" : "translateY(10px)", // Desplazamiento vertical más leve
-                  }}
-                >
-                  <Link to={item.url} id="asd123">
-                    <h2>{item.nombre}</h2>
-                  </Link>
-                </Typography>
-              ))}
 
               {isMobile && (
                 <div>
@@ -159,8 +94,7 @@ const Staff = () => {
               )}
             </Box>
           )}
-        </Toolbar>
-      </AppBar>
+
       <section
         className="hero-section"
         style={{
@@ -194,7 +128,7 @@ const Staff = () => {
               marginTop: "5rem",
             }}
           >
-            <h1 className="fontRubikMonoOne">Staff</h1>
+            <h1 style={{...FontStyles, marginTop:'6rem'}}>Staff</h1>
           </Typography>
           <Typography
             variant="body1"
@@ -208,7 +142,11 @@ const Staff = () => {
             }}
             gutterBottom
           >
-            <h2 className="h2-animation" style={{ width: "100%" }}>
+            <h2 style={{
+              ...FontStyles4, 
+              width: "100%", fontSize: isMobile ? '1.5rem' : '2rem', 
+              padding: '1rem',
+              }}>
               "A motivated team, united by a common purpose, is the most
               powerful creative force..."
             </h2>
@@ -235,7 +173,7 @@ const Staff = () => {
           </span>
         </div>
         <style>
-          {`
+        {`
           @keyframes float {
             0% {
               transform: scale(1);
@@ -251,174 +189,69 @@ const Staff = () => {
         </style>
       </section>
       <div className="equipo">
-        <div className="integrante">
+        <div className="integrante"
+        style={{ padding: isMobile ? '2.5rem' : '5rem' }}>
           <img
             src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
             alt="logoRama"
-            srcset=""
             className="fotoTeam"
+            style={{ 
+              width: isMobile ? '100%' : '50%',
+              height: isMobile ? '100%' : '10%'
+             }} 
           />
-
           <h1>Ramiro Martin Arce</h1>
-          <div>
-            <h2>
-              CEO & cofunder @ atlantics.dev | Project Coordinator | DevOps
-              Specialist | Cloud Solutions | Scrum Master | Manager Databases
-            </h2>
-          </div>
-          <div>
-            <br />
-            <br />
-            <h3>
-              Desarrollador de Software con más de 7 años de experiencia en la
-              industria Tech, tiene una trayectoria notable. Inició su carrera
-              como Proyect Manager en una startup de préstamos personales, donde
-              adquirió la habilidad de identificar los desafíos empresariales y
-              los puntos de dolor en las relaciones comerciales con empresas de
-              software.
-              <br />
-              <br />
-              En su rol actual como{" "}
-              <strong>
-                Project Coordinator & DevOps Specialist en @atlantics.dev
-              </strong>
-              , lidera un equipo que ofrece soluciones innovadoras para empresas
-              en la nueva era digital. Se destaca por su capacidad para traducir
-              necesidades comerciales en requisitos técnicos, planificar y
-              ejecutar proyectos ágiles con un enfoque en la satisfacción del
-              cliente y la coordinación de equipos.
-              <br />
-              <br />
-              Su experiencia incluye el manejo comercial con proveedores líderes
-              como <strong>Vercel, Firebase, AWS y Google Cloud</strong> para
-              implementar soluciones serverless, despliegues en la nube y
-              contenerización utilizando Docker. <br />
-              Su experiencia se extiende al diseño e implementación de pipelines
-              eficientes para automatizar flujos de desarrollo y garantizar la
-              entrega de proyectos sin contratiempos, orquestando las diferentes
-              áreas involucradas en cada proceso.
-              <br />
-              <br />
-              Especializado en metodologías de trabajo{" "}
-              <strong>Agile-Scrum</strong>, con certificaciones{" "}
-              <strong>ITIL y PMI Waterfall</strong> obtenidas en Digital House,
-              Ramiro tiene un enfoque riguroso en la gestión de proyectos,
-              respetando las distintas ceremonias dentro de cada sprint.
-              Actualmente, está persiguiendo la certificación #CTD en
-              DigitalHouse para fortalecer sus habilidades en infraestructura de
-              micro-servicios.
+          <h2>CEO & Cofundador @atlantics.dev | DevOps Specialist</h2>
+          {!isMobile && (
+            <h3 style={{textAlign: 'justify'}}>
+              Ramiro cuenta con más de 7 años de experiencia en gestión de proyectos y
+              DevOps. Su enfoque está en la planificación estratégica y la implementación de
+              soluciones en la nube, liderando equipos en entornos ágiles.
             </h3>
-          </div>
+          )}
         </div>
-        <div className="integrante">
-          <div
-            style={{ width: "100%", textAlign: "right", marginTop: "15rem" }}
-          >
-            <img
-              src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1729123200&v=beta&t=8rdHfSBFx1BazjqjCmhnKo7Ejv10PbNxrgjATBD8HL4"
-              alt="Ingeniero de Software"
-              className="fotoTeam"
-            />
-            <h1 style={{ color: "white" }}>Federico Larrea</h1>
-            <div>
-              <h2>Software Engineer & DevOps Arquitec en @atlantics.dev</h2>
-            </div>
-            <h3>
-              Mercado Libre
-              <br />
-              Argentina
-              <br />
-              <br />
-            </h3>
-          </div>
 
-          <div>
-            <br />
-            <br />
-
-            <h3>
-              Federico Larrea es un apasionado ingeniero de sistemas
-              especializado en base de datos, con una sólida experiencia en el
-              mantenimiento de grandes conjuntos de datos. Actualmente, reside
-              en Buenos Aires, Argentina, donde se encuentra prestando servicios
-              en <strong>Mercado Libre</strong>
-              .
-              <br />
-              <br />
-              En su rol actual como{" "}
-              <strong>
-                Software Engineer & DevOps Arquitec en @atlantics.dev
-              </strong>
-              , Federico se encarga de la creación y optimización de
-              infraestructura. Sus principales habilidades se basan en
-              automatizar todos los procesos de entrega continua a clientes
-              (CD/CI)
-              <br />
-              <br />
-              Federico maneja una amplia variedad de tecnologías y herramientas
-              modernas. Es experto en Elixir, .NET, React y SQL Server, lo que
-              le permite abordar proyectos complejos y garantizar su correcto
-              funcionamiento y escalabilidad. Además
-              <br />
-              <br />
+        <div className="integrante"
+        style={{ padding: isMobile ? '2.5rem' : '5rem' }}>
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1729123200&v=beta&t=8rdHfSBFx1BazjqjCmhnKo7Ejv10PbNxrgjATBD8HL4"
+            alt="Federico Larrea"
+            className="fotoTeam"
+            style={{ 
+              width: isMobile ? '100%' : '50%',
+              height: isMobile ? '100%' : '10%'
+             }} 
+          />
+          <h1>Federico Larrea</h1>
+          <h2>Software Engineer @atlantics.dev</h2>
+          {!isMobile && (
+            <h3 style={{textAlign: 'justify'}}>
+              Federico es un ingeniero de software con experiencia en desarrollo de
+              infraestructura y automatización de procesos. Actualmente, trabaja en la
+              optimización de sistemas y plataformas en entornos de alto rendimiento.
             </h3>
-          </div>
+          )}
         </div>
-        <div className="integrante">
-          <div style={{ width: "100%", marginTop: "15rem" }}>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/RodrigoSilva.jpeg?alt=media&token=005632f0-c198-4bae-98c9-e99a5d5a5393"
-              alt="Rodrigo Silva"
-              className="fotoTeam"
-            />
-          </div>
+
+        <div className="integrante"
+        style={{ padding: isMobile ? '2.5rem' : '5rem' }}>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/tallernaval2.appspot.com/o/RodrigoSilva.jpeg?alt=media&token=005632f0-c198-4bae-98c9-e99a5d5a5393"
+            alt="Rodrigo Silva"
+            className="fotoTeam"
+            style={{ 
+              width: isMobile ? '100%' : '50%',
+              height: isMobile ? '100%' : '10%'
+             }} 
+          />
           <h1>Rodrigo Silva</h1>
-
-          <div>
-            <h2>
-              Front-End Developer @ atlantics.dev | UI/UX Designer | JavaScript
-              | React | CSS | HTML | Agile Methodologies | LegalTech
-            </h2>
-          </div>
-          <div>
-            <br />
-            <br />
-            <h3>
-              Rodrigo Silva es un apasionado desarrollador de software
-              especializado en Front-End, con una sólida base en diseño de
-              interfaces de usuario y experiencia de usuario. Actualmente,
-              reside en Byron Bay, Australia, donde se encuentra expandiendo los
-              horizontes comerciales
-              <br />
-              <br />
-              Rodrigo comenzó su carrera estudiando abogacía y software, una
-              combinación poco convencional que le permitió desarrollar una
-              perspectiva única en el campo de la tecnología, especialmente en
-              el sector de LegalTech. Tras completar su educación, decidió
-              seguir su pasión por el desarrollo web y se especializó en el
-              desarrollo Front-End.
-              <br />
-              <br />
-              En su rol actual como{" "}
-              <strong>Front-End Developer en @atlantics.dev</strong>, Rodrigo se
-              encarga de la creación y optimización de interfaces de usuario
-              atractivas y funcionales. Su habilidad se trata de transformar
-              ideas y requisitos en productos digitales efectivos y
-              estéticamente agradables.
-              <br />
-              <br />
-              Su experiencia incluye el uso de tecnologías y herramientas
-              modernas como{" "}
-              <strong>React, JavaScript, CSS, y HTML, nodeJS</strong>, así como
-              metodologías ágiles para garantizar la entrega oportuna y
-              eficiente de proyectos. Rodrigo también tiene un profundo interés
-              en la intersección de la tecnología y el derecho, explorando cómo
-              las soluciones digitales pueden mejorar el acceso y la
-              administración de servicios legales y validaciones impositivas.
-              <br />
-              <br />
+          <h2>Front-End Developer @atlantics.dev</h2>
+          {!isMobile && (
+            <h3 style={{textAlign: 'justify'}}>
+              Rodrigo se especializa en desarrollo Front-End, con experiencia en React,
+              JavaScript y CSS. Su enfoque está en crear interfaces de usuario eficientes y optimizadas, aplicando metodologías ágiles en sus proyectos.
             </h3>
-          </div>
+          )}
         </div>
       </div>
     </Container>

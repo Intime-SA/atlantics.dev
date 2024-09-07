@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FontStyles } from "../../styles/styles";
 
 const MobileCards = () => {
   const cards = [
@@ -55,6 +56,7 @@ const MobileCards = () => {
     textAlign: "center",
     color: "white",
     padding: "1rem",
+    ...FontStyles,
   };
 
   const handleNavigation = (route) => {

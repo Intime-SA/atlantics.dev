@@ -1,39 +1,11 @@
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import {FontStyles, FontStyles1, FontStyles2, FontStyles3} from "../../styles/styles"
 
 const CardsEmpleadosMobile = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-  const FontStyles = {
-    fontFamily: '"Montserrat", sans-serif',
-    fontWeight: "400",
-    fontSize: "60%",
-    width: "200px",
-    textAlign: "center",
-  };
-  const FontStyles1 = {
-    fontFamily: '"Montserrat", sans-serif',
-    fontWeight: "bold",
-    fontSize: "100%",
-    width: "200px",
-    textAlign: "center",
-  };
-
-  const FontStyles2 = {
-    fontFamily: '"Montserrat", sans-serif',
-    fontSize: "80%",
-    width: "200px",
-    textAlign: "center",
-  };
-
-  const FontStyles3 = {
-    fontFamily: '"Montserrat", sans-serif',
-    fontSize: "40%",
-    width: "200px",
-    textAlign: "center",
-  };
 
   return (
     <div
@@ -91,7 +63,7 @@ const CardsEmpleadosMobile = () => {
               style={{ width: "50%", height: "auto" }}
             />
             <h1 style={FontStyles1}>Rodrigo Silva</h1>
-            <h2 style={FontStyles2}>CTO - Cofounder</h2>
+            <h2 style={{...FontStyles2, color:'#269bb6'}}>CTO - Cofounder</h2>
             <h3 style={FontStyles3}>Full-Stack Developer</h3>
             <p style={FontStyles}>
               Lidera la interfaz WEB de nuestros desarrollos, asegurando la
@@ -114,7 +86,7 @@ const CardsEmpleadosMobile = () => {
                 style={{ width: "30px", height: "auto", marginRight: "10px" }}
               />
 
-              <p>silva.rodrigo@atlantics.dev</p>
+              <p style={{...FontStyles}}>silva.rodrigo@atlantics.dev</p>
             </a>
           </div>
 
@@ -126,7 +98,7 @@ const CardsEmpleadosMobile = () => {
               style={{ width: "50%", height: "auto" }}
             />
             <h1 style={FontStyles1}>Ramiro Martin Arce</h1>
-            <h2 style={FontStyles2}>CEO - Cofounder</h2>
+            <h2 style={{...FontStyles2, color:'#269bb6'}}>CEO - Cofounder</h2>
             <h3 style={FontStyles3}>Business Analyst</h3>
             <p style={FontStyles}>
               Dirige la visión estratégica de la empresa, define los objetivos
@@ -147,7 +119,7 @@ const CardsEmpleadosMobile = () => {
                 alt="LinkedIn"
                 style={{ width: "30px", height: "auto", marginRight: "10px" }}
               />
-              <p>arce.ramiro@atlantics.dev</p>
+              <p style={{...FontStyles}}>arce.ramiro@atlantics.dev</p>
             </a>
           </div>
 
@@ -159,7 +131,7 @@ const CardsEmpleadosMobile = () => {
               style={{ width: "50%", height: "auto" }}
             />
             <h1 style={FontStyles1}>Federico Larrea</h1>
-            <h2 style={FontStyles2}>COO - Consultant</h2>
+            <h2 style={{...FontStyles2, color:'#269bb6'}}>COO - Consultant</h2>
             <h3 style={FontStyles3}>Engineer Mercado Libre</h3>
             <p style={FontStyles}>
               Supervisa las operaciones diarias, optimizando procesos y
@@ -180,7 +152,7 @@ const CardsEmpleadosMobile = () => {
                 alt="LinkedIn"
                 style={{ width: "30px", height: "auto", marginRight: "10px" }}
               />
-              <p>larrea.federico@atlantics.dev</p>
+              <p style={{...FontStyles}}>larrea.federico@atlantics.dev</p>
             </a>
           </div>
         </div>

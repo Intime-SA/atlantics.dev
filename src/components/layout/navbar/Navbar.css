@@ -93,6 +93,12 @@ ul {
   font-style: normal;
   color: gainsboro;
 } */
+
+h3, h2 {
+  font-family: "Montserrat", sans-serif;
+  color:  #EEF8FA;
+}
+
 h1 {
   color: gainsboro;
 }
@@ -581,7 +587,7 @@ h1 {
 }
 
 .componentPesos h2 {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #a7ffff;

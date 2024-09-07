@@ -68,19 +68,7 @@
   height: 200vh;
   width: "100vw";
 }
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-ul {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  color: gainsboro;
-}
+
 
 .left-component {
   background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
@@ -92,20 +80,6 @@ ul {
   padding: 20px;
 }
 
-h1 {
-  background: white;
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent; /* Hacer el color del texto transparente */
-}
-
-h2 {
-  background: white;
-  font-weight: 400;
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent; /* Hacer el color del texto transparente */
-}
 
 .section-animation {
   width: "90vw";
@@ -114,38 +88,6 @@ h2 {
   margin-top: "50vh";
 }
 
-@media only screen and (max-width: 768px) {
-  .fontRubikMonoOne {
-    font-size: 70%;
-  }
-}
-
-.fontRubikMonoOne {
-  font-family: "Rubik Mono One", monospace;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent;
-  margin-top: 10rem;
-  margin-left: 0rem;
-}
 
 @keyframes slideInAndGrow {
   from {

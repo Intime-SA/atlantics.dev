@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify"; // Importar ToastContainer y toast
 import "react-toastify/dist/ReactToastify.css"; // Importar estilos
+import NewNavbar from "../../layout/Newnavbar";
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -86,76 +87,18 @@ const Contacto = () => {
 
   return (
     <div className="contact-form-container">
-      <AppBar
-        component="nav"
+      
+      <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
-          backgroundColor: "transparent",
+          justifyContent: "space-around",
+          width: "40%",
         }}
       >
-        <Toolbar
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "flex-start",
-            backgroundColor: isScrolled
-              ? "rgba(255, 255, 255, 0.3)"
-              : "transparent", // Fondo semitransparente cuando se desplaza
-            backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
-            WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-          }}
-        >
-          <Link to="/">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
-              alt="logo"
-              srcset=""
-              style={{
-                width: "5rem",
-                height: "5rem",
-                margin: "5px",
-                marginLeft: "10px",
-                padding: "0px",
-              }}
-            />
-          </Link>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            {" "}
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: "40%",
-            }}
-          >
-            {navItems.map((item) => (
-              <Typography
-                key={item.nombre}
-                sx={{
-                  fontSize: "2rem",
-                  position: "relative",
-                  opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
-                  transition:
-                    "opacity 2s ease-in-out, transform 1s ease-in-out", // Transición suave
-                  transform: isVisible
-                    ? "translateY(-10px)"
-                    : "translateY(50px)", // Desplazamiento vertical
-                }}
-              >
-                <Link to={item.url} id="asd123" class="typography-animation">
-                  <h2>{item.nombre}</h2>
-                </Link>
-              </Typography>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <NewNavbar/>
+      </Box>
+        
+      
       <div className="contact-form-container">
         <div className="div50">
           <img

@@ -49,7 +49,7 @@ const Cost = () => {
       <section className="cost-container">
         <div className="cost-main">
           {isMobile && (
-            <h1
+            <h1 
               style={{
                 fontSize: "200%",
                 fontFamily: '"Montserrat", sans-serif',
@@ -59,11 +59,11 @@ const Cost = () => {
               <span
                 style={{
                   fontWeight: "900",
-                  color: "#63747B",
-                  fontSize: "220%",
+                  color:'#EEF8FA',
+                  fontSize: "180%",
                 }}
               >
-                BASTA
+                DEJA
               </span>
               <br />
               DE
@@ -83,7 +83,7 @@ const Cost = () => {
               </h1>
               <h2
                 className="cost-title"
-                style={{ color: "#2E2E2E", fontWeight: "900" }}
+                style={{ color: "#2E2E2E", fontWeight: "800" }}
               >
                 INVIERTA EN SU NEGOCIO
               </h2>
@@ -96,19 +96,19 @@ const Cost = () => {
             data-aos-duration="2000"
             style={{
               textAlign: "center",
-              fontWeight: "300",
+              fontWeight: "450",
               fontFamily: "'Montserrat', sans-serif",
             }}
           >
             En{" "}
-            <strong style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            <strong>
               ATLANTICS
             </strong>
             .dev, desarrollamos una{" "}
             <span
               style={{
                 textAlign: "center",
-                fontWeight: "900",
+                fontWeight: "600",
                 fontFamily: "'Montserrat', sans-serif",
               }}
             >
@@ -120,10 +120,12 @@ const Cost = () => {
               style={{
                 fontFamily: "'Montserrat', sans-serif",
                 marginTop: "2rem",
+                color: "white",
+                fontWeight:'300',
               }}
             >
               Una alternativa
-              <span style={{ fontWeight: "900" }}> SUPERADORA</span> en el
+              <span style={{ fontWeight: "700" }}> SUPERADORA</span> en el
               mercado
             </h2>
           </p>

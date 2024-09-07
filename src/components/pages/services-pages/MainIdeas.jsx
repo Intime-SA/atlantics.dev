@@ -39,13 +39,14 @@ const MainIdeas = () => {
       <Box
         component="h6"
         sx={{
-          fontWeight: "bold",
+          fontWeight: "600",
           mb: 1,
           fontFamily: "'Raleway', sans-serif",
-          fontSize: "1.3rem",
+          fontSize: "1.5rem",
           margin: "1rem",
           marginLeft: "0rem",
           textAlign: isMobile ? "left" : "center",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-left" // Animación para esta sección
       >
@@ -59,7 +60,9 @@ const MainIdeas = () => {
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
           textAlign: isMobile ? "left" : "justify",
+          fontSize: '1rem',
           marginTop: "5rem",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-left" // Animación para este texto
       >
@@ -74,8 +77,9 @@ const MainIdeas = () => {
           <span
             style={{
               marginTop: "5rem",
-              fontWeight: "100",
-              fontFamily: '"Montserrat", sans-serif',
+              fontWeight: "400",
+              fontFamily: '"Open Sans", sans-serif',
+              color:'#EEF8FA',
             }}
           >
             Cotización a medida de las necesidades del negocio.
@@ -99,13 +103,14 @@ const MainIdeas = () => {
       <Box
         component="h6"
         sx={{
-          fontWeight: "bold",
+          fontWeight: "600",
           mb: 1,
           fontFamily: "'Raleway', sans-serif",
           fontSize: "1.3rem",
           margin: "1rem",
           marginRight: "0rem",
           textAlign: isMobile ? "right" : "center",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-left" // Animación para esta sección
       >
@@ -115,8 +120,10 @@ const MainIdeas = () => {
         component="p"
         sx={{
           mb: 2,
+          fontSize:'1rem',
           fontFamily: "'Open Sans', sans-serif",
           textAlign: isMobile ? "right" : "justify",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-left" // Animación para este texto
       >
@@ -130,8 +137,10 @@ const MainIdeas = () => {
           <span
             style={{
               marginTop: "5rem",
-              fontWeight: "100",
-              fontFamily: '"Montserrat", sans-serif',
+              fontWeight: "300",
+              fontFamily: '"Open Sans", sans-serif',
+              fontSize:'1rem',
+              color:'#EEF8FA',
             }}
           >
             Costo Mensual: Se abona <strong>UNICAMENTE</strong> el gasto del
@@ -156,10 +165,11 @@ const MainIdeas = () => {
           fontWeight: "bold",
           mb: 1,
           fontFamily: "'Raleway', sans-serif",
-          fontSize: "1.3rem",
+          fontSize: "1.5rem",
           margin: "1rem",
           marginLeft: "0",
           textAlign: isMobile ? "left" : "center",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-right" // Animación para esta sección
       >
@@ -171,6 +181,7 @@ const MainIdeas = () => {
           mb: 2,
           fontFamily: "'Open Sans', sans-serif",
           textAlign: isMobile ? "left" : "justify",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-right" // Animación para este texto
       >
@@ -186,8 +197,9 @@ const MainIdeas = () => {
           <span
             style={{
               marginTop: "5rem",
-              fontWeight: "100",
-              fontFamily: '"Montserrat", sans-serif',
+              fontWeight: "300",
+              fontFamily: '"Open Sans", sans-serif',
+              color:'#EEF8FA',
             }}
           >
             Generamos <strong>CONVENIOS DIRECTOS</strong> con proveedores para
@@ -203,11 +215,12 @@ const MainIdeas = () => {
           fontFamily: "'Open Sans', sans-serif",
           textAlign: "left",
           marginTop: "15rem",
+          color:'#EEF8FA',
         }}
         data-aos="zoom-in-right" // Animación para este texto
       >
         <p
-          style={{ fontFamily: '"Montserrat", sans-serif', fontWeight: "100" }}
+          style={{ fontFamily: '"Open Sans", sans-serif', fontWeight: "300", lineHeight: '1.6', }}
         >
           A diferencia de otras plataformas en el mercado, nuestra solución no
           retiene comisiones sobre tus ventas, solo se cobra por el uso.

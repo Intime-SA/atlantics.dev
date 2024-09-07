@@ -5,19 +5,6 @@
   height: 200vh;
   width: "100vw";
 }
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-ul {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  color: gainsboro;
-}
 
 .left-component {
   background-color: #f0f0f0; /* Color de fondo para la sección izquierda */
@@ -30,51 +17,8 @@ ul {
 }
 
 h1 {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent; /* Hacer el color del texto transparente */
-}
-
-h2 {
-  background: linear-gradient(
-    270deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent; /* Hacer el color del texto transparente */
+  color:white;
+  font-family: "Montserrat", sans-serif;
 }
 
 .section-animation {
@@ -90,32 +34,6 @@ h2 {
   }
 }
 
-.fontRubikMonoOne {
-  font-family: "Rubik Mono One", monospace;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0,
-    #ffffff 7.14%,
-    #fdffff 14.29%,
-    #ebffff 21.43%,
-    #d7ffff 28.57%,
-    #c1ffff 35.71%,
-    #a7ffff 42.86%,
-    #89fcff 50%,
-    #66f1fe 57.14%,
-    #3be7fe 64.29%,
-    #00deff 71.43%,
-    #00d5ff 78.57%,
-    #00ccff 85.71%,
-    #00c4ff 92.86%,
-    #00bcff 100%
-  );
-  -webkit-background-clip: text; /* Aplicar el gradiente de fondo al texto */
-  background-clip: text;
-  color: transparent;
-  margin-top: 10rem;
-  margin-left: 0rem;
-}
 
 @keyframes slideInAndGrow {
   from {
@@ -171,22 +89,35 @@ h2 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 400px;
+  margin-top: 10rem;
 }
 
+
 .integrante {
+  background-color: #269bb6; /* Fondo individual de cada integrante */
+  margin: 2rem;
+  padding: 5rem;
+  border-radius: 1.5%;
+  line-height: 1.5;
+  width: 70%; /* Máximo ancho para cada card */
+  height: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
 }
 
 .fotoTeam {
   width: 20vw;
   height: 20vw;
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: 1.5%;
   background-color: white; /* Fondo blanco */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra blanca/gris */
   padding: 0.5rem; /* Margen adicional para mostrar la sombra */
+  justify-content: center;
+}
+
+h2 strong {
+  font-family: "Montserrat", sans-serif;
+  color:white;
 }

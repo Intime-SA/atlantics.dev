@@ -1,6 +1,7 @@
-import React from "react";
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Box, Button, Drawer, IconButton, List, ListItem, ListItemText, Toolbar, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 
@@ -12,139 +13,215 @@ const NewNavbar = () => {
   ];
 
   const theme = useTheme();
-
-  const [isScrolled, setIsScrolled] = React.useState(false);
-
-  const [isVisible, setIsVisible] = React.useState(false);
-
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   React.useEffect(() => {
-    // Añadir un pequeño retraso para la animación
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500); // Ajusta el tiempo de retraso
-
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <AppBar
-      component="nav"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        backgroundColor: "transparent",
-        width: "40vw",
-        borderRadius: "50px",
-        marginTop: "3rem",
-        position: "fixed", // Fija la toolbar en una posición
-        top: "0%", // Centra verticalmente
-        left: "30%", // Centra horizontalmente
-        transform: "translate(-50%, -50%)", // Ajusta para que quede realmente centrada
-      }}
+  // Contenido del Drawer para Mobile
+  const drawerContent = (
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", backgroundColor: "#2E2E2E", height: "100%", padding:'1rem'}}
     >
-      <Toolbar
-        style={{
-          height: "8vh",
-          width: "80vw",
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.nombre} disablePadding>
+            <ListItemText
+              primary={
+                <Link
+                  to={item.url}
+                  style={{
+                    textDecoration: "none",
+                    color: "#d9e2ec",
+                    fontSize: "1.2rem",
+                    fontFamily: '"Montserrat", sans-serif',
+                    fontWeight: "400",
+                    marginBottom:'1rem',
+                  }}
+                >
+                  {item.nombre}
+                </Link>
+              }
+            />
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  return (
+    <>
+      <AppBar
+        component="nav"
+        sx={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: isScrolled
-            ? "rgba(255, 255, 255, 0.3)"
-            : "transparent", // Fondo semitransparente cuando se desplaza
-          backdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque cuando se desplaza
-          WebkitBackdropFilter: isScrolled ? "blur(10px)" : "none", // Desenfoque para Safari cuando se desplaza
-          borderRadius: "40px",
-          position: "fixed", // Fija la toolbar en una posición
-          top: "50%", // Centra verticalmente
-          left: "0%",
-
-          // Opcional: bordes redondeados
+          backgroundColor: "#2E2E2E",
+          backdropFilter: isScrolled ? "blur(15px)" : "none",
+          width: "100%",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          transition: "background-color 0.5s ease, box-shadow 0.5s ease",
+          zIndex: 10,
         }}
       >
-        <Link to="/">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
-            alt="logo"
-            srcset=""
-            style={{
-              width: "5rem",
-              height: "5rem",
-              margin: "5px",
-              padding: "0px",
-            }}
-          />
-        </Link>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+        <Toolbar
+          style={{
+            height: "12vh",
+            width: "100vw",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#2E2E2E",
+            padding: "0px",
+            margin: "0px",
+          }}
         >
-          {" "}
-        </Typography>
-        {isVisible && (
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              width: isMobile ? "100%" : "40%",
-            }}
-          >
-            {navItems.map((item) => (
-              <Typography
-                key={item.nombre}
-                sx={{
-                  fontSize: "2rem",
-                  position: "relative",
-                  opacity: isVisible ? 1 : 0, // Cambia la opacidad de 0 a 1
-                  transition:
-                    "opacity 2s ease-in-out, transform 2s ease-in-out",
-                  transform: isVisible ? "translateY(0)" : "translateY(10px)", // Desplazamiento vertical más leve
-                }}
-              >
-                <Link to={item.url} id="asd123">
-                  <h2>{item.nombre}</h2>
-                </Link>
-              </Typography>
-            ))}
+          {/* Logo */}
+          <Link to="/" style={{ marginLeft: "1rem" }}>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
+              alt="logo"
+              style={{
+                width: "9rem",
+                height: "9rem",
+                margin: "0",
+                transition: "transform 0.3s ease",
+              }}
+              className="logo-img"
+            />
+          </Link>
 
-            {isMobile && (
-              <div>
-                <Link
-                  to="/contacto"
-                  style={{ color: "white", textDecoration: "none" }}
+          {/* Links para Desktop */}
+          {!isMobile && isVisible && (
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "right",
+                width: "100%",
+                gap: "5rem",
+                backgroundColor: "#2E2E2E",
+                padding: "0",
+                marginRight: "5rem",
+              }}
+            >
+              {navItems.map((item) => (
+                <Typography
+                  key={item.nombre}
+                  sx={{
+                    fontSize: "1rem",
+                    fontFamily: '"Montserrat", sans-serif',
+                    fontWeight: "300",
+                    transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
+                    transform: isVisible ? "translateY(0)" : "translateY(10px)",
+                  }}
                 >
-                  <Button onClick={() => handleDrawerToggle()}>
-                    <span
-                      class="material-symbols-outlined"
-                      style={{ color: "#63747b" }}
+                  <Link
+                    to={item.url}
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <h2
+                      className="link-newNavbar"
+                      style={{
+                        fontFamily: '"Montserrat", sans-serif',
+                        fontSize: "1.3rem",
+                        fontWeight: "400",
+                        color: "#d9e2ec",
+                      }}
                     >
-                      menu
-                    </span>
-                  </Button>
-                </Link>
-              </div>
-            )}
-          </Box>
-        )}
-      </Toolbar>
-    </AppBar>
+                      {item.nombre}
+                    </h2>
+                  </Link>
+                </Typography>
+              ))}
+            </Box>
+          )}
+
+          {/* Menú desplegable para Mobile */}
+          {isMobile && (
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ marginRight: "1rem" }}
+            >
+              <MenuIcon sx={{ fontSize: "2rem", color: "#d9e2ec" }} />
+            </IconButton>
+          )}
+        </Toolbar>
+      </AppBar>
+
+      {/* Drawer para Mobile */}
+      <Drawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Mejora el rendimiento en mobile
+        }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            backgroundColor: "#2E2E2E",
+            color: "#d9e2ec",
+            width: 240,
+          },
+        }}
+      >
+        {drawerContent}
+      </Drawer>
+
+      {/* Estilos CSS para el hover interactivo */}
+      <style jsx="true">
+        {`
+          a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #63747b;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+          }
+          a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+          img.logo-img:hover {
+            transform: scale(1.1);
+          }
+        `}
+      </style>
+    </>
   );
 };
+
 export default NewNavbar;
