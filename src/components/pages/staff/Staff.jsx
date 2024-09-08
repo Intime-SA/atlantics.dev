@@ -144,7 +144,8 @@ const Staff = () => {
           >
             <h2 style={{
               ...FontStyles4, 
-              width: "100%", fontSize: isMobile ? '1.5rem' : '2rem', 
+              width: "100%", 
+              fontSize: isMobile ? '1.5rem' : '2rem', 
               padding: '1rem',
               }}>
               "A motivated team, united by a common purpose, is the most
@@ -190,18 +191,18 @@ const Staff = () => {
       </section>
       <div className="equipo">
         <div className="integrante"
-        style={{ padding: isMobile ? '2.5rem' : '5rem' }}>
+        style={{padding: isMobile ? '2.5rem' : '5rem'}}>
           <img
             src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/CambioUrl.png?alt=media&token=94aa2e43-12bd-4806-94ce-3e75967627db"
             alt="logoRama"
             className="fotoTeam"
             style={{ 
               width: isMobile ? '100%' : '50%',
-              height: isMobile ? '100%' : '10%'
+              height: isMobile ? '100%' : '10%',
              }} 
           />
-          <h1>Ramiro Martin Arce</h1>
-          <h2>CEO & Cofundador @atlantics.dev | DevOps Specialist</h2>
+          <h1 style={{fontSize: isMobile ? '1.5rem' : '2rem'}}>Ramiro Arce</h1>
+          <h2 style={{fontSize: isMobile ? '1rem' : '1.5rem'}}>Business Analytics @atlantics.dev</h2>
           {!isMobile && (
             <h3 style={{textAlign: 'justify'}}>
               Ramiro cuenta con más de 7 años de experiencia en gestión de proyectos y
@@ -222,8 +223,8 @@ const Staff = () => {
               height: isMobile ? '100%' : '10%'
              }} 
           />
-          <h1>Federico Larrea</h1>
-          <h2>Software Engineer @atlantics.dev</h2>
+          <h1 style={{fontSize: isMobile ? '1.5rem' : '2rem'}}>Federico Larrea</h1>
+          <h2 style={{fontSize: isMobile ? '1rem' : '1.5rem'}}>Software Engineer @atlantics.dev</h2>
           {!isMobile && (
             <h3 style={{textAlign: 'justify'}}>
               Federico es un ingeniero de software con experiencia en desarrollo de
@@ -244,8 +245,8 @@ const Staff = () => {
               height: isMobile ? '100%' : '10%'
              }} 
           />
-          <h1>Rodrigo Silva</h1>
-          <h2>Front-End Developer @atlantics.dev</h2>
+          <h1 style={{fontSize: isMobile ? '1.5rem' : '2rem'}}>Rodrigo Silva</h1>
+          <h2 style={{fontSize: isMobile ? '1rem' : '1.5rem'}}>Front-End Developer @atlantics.dev</h2>
           {!isMobile && (
             <h3 style={{textAlign: 'justify'}}>
               Rodrigo se especializa en desarrollo Front-End, con experiencia en React,
