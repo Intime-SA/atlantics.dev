@@ -105,14 +105,15 @@ h1 {
   flex-direction: column;
   text-align:left;
 }
-
+.frase-staff {
+  padding: 1rem;
+}
 .fotoTeam {
   width: 20vw;
   height: 20vw;
   margin-bottom: 1rem;
   border-radius: 1.5%;
-  background-color: white; /* Fondo blanco */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra blanca/gris */
+  background-color: white; /* Fondo blanco */ /* Sombra blanca/gris */
   padding: 0.5rem; /* Margen adicional para mostrar la sombra */
   justify-content: center;
   align-items: center;

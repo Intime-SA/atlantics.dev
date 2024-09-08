@@ -142,11 +142,12 @@ const Staff = () => {
             }}
             gutterBottom
           >
-            <h2 style={{
+            <h2 className= "frase-staff" style={{
+              padding: isMobile ? '1rem' : '0',
               ...FontStyles4, 
               width: "100%", 
-              fontSize: isMobile ? '1.5rem' : '2rem', 
-              padding: '1rem',
+              fontSize: isMobile ? '1.5rem' : '2rem',
+              textAlign: "center"
               }}>
               "A motivated team, united by a common purpose, is the most
               powerful creative force..."
