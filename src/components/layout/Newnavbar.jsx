@@ -1,14 +1,27 @@
-import React, { useState } from "react";
-import { AppBar, Box, Button, Drawer, IconButton, List, ListItem, ListItemText, Toolbar, Typography } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 
 const NewNavbar = () => {
+  // Captura la URL de donde viene el usuario// Ejecuta solo una vez al montar
+
   const navItems = [
-    { nombre: "Inicio", url: "/" },
-    { nombre: "Staff", url: "/staff" },
+    { nombre: "Inicio", url: "https://landing.atlantics.dev" },
+    { nombre: "Staff", url: "https://staff.atlantics.dev" },
     { nombre: "Contacto", url: "/contacto" },
   ];
 
@@ -41,7 +54,12 @@ const NewNavbar = () => {
   const drawerContent = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: "center", backgroundColor: "#2E2E2E", height: "100%", padding:'1rem'}}
+      sx={{
+        textAlign: "center",
+        backgroundColor: "#2E2E2E",
+        height: "100%",
+        padding: "1rem",
+      }}
     >
       <List>
         {navItems.map((item) => (
@@ -56,7 +74,7 @@ const NewNavbar = () => {
                     fontSize: "1.2rem",
                     fontFamily: '"Montserrat", sans-serif',
                     fontWeight: "400",
-                    marginBottom:'1rem',
+                    marginBottom: "1rem",
                   }}
                 >
                   {item.nombre}
@@ -133,7 +151,8 @@ const NewNavbar = () => {
                     fontSize: "1rem",
                     fontFamily: '"Montserrat", sans-serif',
                     fontWeight: "300",
-                    transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
+                    transition:
+                      "opacity 2s ease-in-out, transform 2s ease-in-out",
                     transform: isVisible ? "translateY(0)" : "translateY(10px)",
                   }}
                 >

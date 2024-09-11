@@ -16,9 +16,8 @@ import CardsEmpleados from "../../pages/cardsEmpleados/CardsEmpleados";
 import CardsEmpleadosMobile from "../../pages/cardsEmpleados/CardsEmpleadosMobile";
 import MobileCards from "./MobileCards";
 import Aos from "aos";
-import NewNavbar from '../Newnavbar';
+import NewNavbar from "../Newnavbar";
 import { FontStyles } from "../../styles/styles";
-
 
 function DrawerAppBar(props) {
   const theme = useTheme();
@@ -108,31 +107,29 @@ function DrawerAppBar(props) {
             } else if (!isVisible && isMobile) {
               return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(1).gif?alt=media&token=8fc95601-a534-48c2-aeb0-549075c482eb')";
             } else if (!isVisible && !isMobile) {
-              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/loading2.gif?alt=media&token=c84522a8-b815-44d8-83eb-e86c98b80868')";
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(6).gif?alt=media&token=f2132045-7e96-4146-9ef8-e52c0254d368')";
             } else {
-              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(1).gif?alt=media&token=8fc95601-a534-48c2-aeb0-549075c482eb')";
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(6).gif?alt=media&token=f2132045-7e96-4146-9ef8-e52c0254d368')";
             }
           },
         }}
       >
         {isVisible && (
-            <div>
-              {!isScrolled && isMobile && (
-                <Typography
-                  sx={{marginTop:'9rem', textAlign: 'center'}}
-                >
-                  <h2 style={{...FontStyles}}>
-                    <span className="word1">Your</span>&nbsp;
-                    <span className="word2">trusted</span>&nbsp;
-                    <span className="word3">partners</span>&nbsp;
-                    <span className="word4">in</span>&nbsp;
-                    <span className="word5">transformative</span>&nbsp;
-                    <span className="word6">times</span>
-                  </h2>
-                </Typography>
-              )}
-            </div>
-          )}
+          <div>
+            {!isScrolled && isMobile && (
+              <Typography sx={{ marginTop: "9rem", textAlign: "center" }}>
+                <h2 style={{ ...FontStyles }}>
+                  <span className="word1">Your</span>&nbsp;
+                  <span className="word2">trusted</span>&nbsp;
+                  <span className="word3">partners</span>&nbsp;
+                  <span className="word4">in</span>&nbsp;
+                  <span className="word5">transformative</span>&nbsp;
+                  <span className="word6">times</span>
+                </h2>
+              </Typography>
+            )}
+          </div>
+        )}
 
         <div
           className="grupoCardsPadre"
@@ -357,7 +354,9 @@ function DrawerAppBar(props) {
             </h2>
 
             <br />
-            <h6 style={{ ...FontStyles, textAlign: isMobile ? "center" : "left" }}>
+            <h6
+              style={{ ...FontStyles, textAlign: isMobile ? "center" : "left" }}
+            >
               Potencia tu <strong>negocio digital</strong> sin intermediarios y
               sin comisiones
             </h6>
