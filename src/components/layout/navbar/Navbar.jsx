@@ -101,11 +101,11 @@ function DrawerAppBar(props) {
           minWidth: "100vw",
           backgroundImage: () => {
             if (isVisible && isMobile) {
-              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(2).gif?alt=media&token=2046189a-9f33-4d48-a0aa-9661606c54cd')";
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Copy%20of%20Untitled%20Design%20(2).gif?alt=media&token=12acecef-7ed2-4c97-b273-bd2b60e52dc4')";
             } else if (isVisible && !isMobile) {
               return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/ATLANTICS%20(4).gif?alt=media&token=10010d52-7dca-4ba9-94e0-a7e0afad346c')";
             } else if (!isVisible && isMobile) {
-              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(1).gif?alt=media&token=8fc95601-a534-48c2-aeb0-549075c482eb')";
+              return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Copy%20of%20Untitled%20Design.gif?alt=media&token=aacb23b2-16c8-4a1d-b598-2d21b457fa1a')";
             } else if (!isVisible && !isMobile) {
               return "url('https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/download%20(6).gif?alt=media&token=f2132045-7e96-4146-9ef8-e52c0254d368')";
             } else {
@@ -114,23 +114,6 @@ function DrawerAppBar(props) {
           },
         }}
       >
-        {isVisible && (
-          <div>
-            {!isScrolled && isMobile && (
-              <Typography sx={{ marginTop: "9rem", textAlign: "center" }}>
-                <h2 style={{ ...FontStyles }}>
-                  <span className="word1">Your</span>&nbsp;
-                  <span className="word2">trusted</span>&nbsp;
-                  <span className="word3">partners</span>&nbsp;
-                  <span className="word4">in</span>&nbsp;
-                  <span className="word5">transformative</span>&nbsp;
-                  <span className="word6">times</span>
-                </h2>
-              </Typography>
-            )}
-          </div>
-        )}
-
         <div
           className="grupoCardsPadre"
           style={{ marginTop: isMobile ? "250px" : "1500px" }}

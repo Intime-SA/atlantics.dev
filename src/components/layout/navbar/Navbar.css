@@ -94,9 +94,10 @@ ul {
   color: gainsboro;
 } */
 
-h3, h2 {
+h3,
+h2 {
   font-family: "Montserrat", sans-serif;
-  color:  #EEF8FA;
+  color: #eef8fa;
 }
 
 h1 {
@@ -128,31 +129,31 @@ h1 {
 
 .word2 {
   display: inline-block;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
   font-family: "Montserrat", sans-serif;
 }
 
 .word3 {
   display: inline-block;
-  animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
   font-family: "Montserrat", sans-serif;
 }
 
 .word4 {
   display: inline-block;
-  animation: fadeIn 4s ease-in-out;
+  animation: fadeIn 2.5s ease-in-out;
   font-family: "Montserrat", sans-serif;
 }
 
 .word5 {
   display: inline-block;
-  animation: fadeIn 5s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
   font-family: "Montserrat", sans-serif;
 }
 
 .word6 {
   display: inline-block;
-  animation: fadeIn 6s ease-in-out;
+  animation: fadeIn 3.5s ease-in-out;
   font-family: "Montserrat", sans-serif;
 }
 

@@ -190,7 +190,7 @@ const NewNavbar = () => {
               onClick={handleDrawerToggle}
               sx={{ marginRight: "1rem" }}
             >
-              <MenuIcon sx={{ fontSize: "6rem", color: "#d9e2ec" }} />
+              <MenuIcon sx={{ fontSize: "3rem", color: "#d9e2ec" }} />
             </IconButton>
           )}
         </Toolbar>
