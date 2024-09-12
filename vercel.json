@@ -3,6 +3,7 @@
     { "source": "/", "destination": "/" },
     { "source": "/staff", "destination": "/" },
     { "source": "/contacto", "destination": "/" },
-    { "source": "/pays", "destination": "/" }
+    { "source": "/pays", "destination": "/" },
+    { "source": "/pagos", "destination": "/" }
   ]
 }
