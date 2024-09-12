@@ -12,7 +12,7 @@ const MobileCards = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "/pagos",
+      route: "https://pasarelas.atlantics.dev",
     },
     {
       icon: "local_shipping",
@@ -58,9 +58,14 @@ const MobileCards = () => {
     padding: "1rem",
     ...FontStyles,
   };
-
   const handleNavigation = (route) => {
-    navigate(route);
+    if (route.startsWith("http")) {
+      // Navega a una URL absoluta externa
+      window.location.href = route;
+    } else {
+      // Si es una ruta relativa, navega internamente usando 'react-router-dom'
+      navigate(route);
+    }
   };
 
   return (

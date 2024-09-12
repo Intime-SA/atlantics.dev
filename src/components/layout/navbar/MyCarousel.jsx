@@ -21,7 +21,7 @@ const MyCarousel = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "/pagos",
+      route: "https://pasarelas.atlantics.dev",
     },
     {
       icon: "local_shipping",
@@ -36,7 +36,7 @@ const MyCarousel = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "/pagos",
+      route: "https://pasarelas.atlantics.dev",
     },
     {
       icon: "local_shipping",
@@ -51,7 +51,7 @@ const MyCarousel = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "/pagos",
+      route: "https://pasarelas.atlantics.dev",
     },
     {
       icon: "local_shipping",
@@ -66,7 +66,7 @@ const MyCarousel = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "/pagos",
+      route: "https://pasarelas.atlantics.dev",
     },
     {
       icon: "local_shipping",
@@ -220,9 +220,14 @@ const MyCarousel = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (route) => {
-    navigate(route);
+    if (route.startsWith("http")) {
+      // Navega a una URL absoluta externa
+      window.location.href = route;
+    } else {
+      // Si es una ruta relativa, navega internamente usando 'react-router-dom'
+      navigate(route);
+    }
   };
-
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
