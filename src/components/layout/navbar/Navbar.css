@@ -241,33 +241,23 @@ h1 {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: transparent;
-  animation: floating 5s ease-in-out infinite alternate; /* Animación de flotación */
   margin-bottom: 5rem;
   margin: 2rem;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Añade transición suave */
 }
+
 .profile-card1 {
   margin-top: 25rem;
 }
 
-@keyframes floating {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.1); /* Aumenta el tamaño */
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
 .profile-card1:hover,
 .profile-card2:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.4); /* Aumenta el tamaño en hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.6);
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-size: 120%; /* Ajusta el tamaño de la imagen al 120% del contenedor */
+  z-index: initial;
 }
 
 .profile-card1:hover {
@@ -418,12 +408,6 @@ h1 {
   justify-content: center;
   padding: 20px;
   background-size: cover;
-  background-image: linear-gradient(
-    0deg,
-    #101010 46%,
-    #41aed0 73%,
-    #101010 94%
-  );
 
   background-color: #101010;
 }
@@ -511,7 +495,6 @@ h1 {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: transparent; /* Fondo blanco para la card */
-  transition: transform 0.6s, width 0.5s; /* Añade un efecto de transición */
   position: relative; /* Añadir posición relativa para referencia */
   top: 100px;
   right: 50px;
@@ -523,7 +506,6 @@ h1 {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff; /* Fondo blanco para la card */
-  transition: transform 0.6s, width 0.5s; /* Añade un efecto de transición */
   position: relative; /* Posición relativa para superponer */
   top: -50px;
 }

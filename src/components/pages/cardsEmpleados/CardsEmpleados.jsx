@@ -33,7 +33,7 @@ const CardsEmpleados = () => {
             style={{
               fontFamily: '"Montserrat", sans-serif',
               fontSize: "500%",
-              color:'#EEF8FA',
+              color: "#EEF8FA",
             }}
           >
             PROFESIONALES <br />
@@ -54,7 +54,7 @@ const CardsEmpleados = () => {
               alt="Rodrigo Silva"
             />
             <h1 style={FontStyles}>Rodrigo Silva</h1>
-            <h2 style={{...FontStyles, color:'#269bb6'}}>CTO - Cofounder</h2>
+            <h2 style={{ ...FontStyles, color: "#269bb6" }}>CTO - Cofounder</h2>
             <h3 style={FontStyles}>Full-Stack Developer</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Lidera la interfaz WEB de nuestros desarrollos , asegurando la
@@ -65,7 +65,7 @@ const CardsEmpleados = () => {
               href="https://au.linkedin.com/in/rodrigo-silva-58508a30b"
               style={{
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 width: "80%",
                 ...FontStyles,
@@ -74,7 +74,7 @@ const CardsEmpleados = () => {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
                 alt="pola"
-                style={{ width: "30px", height: "auto" }}
+                style={{ width: "30px", height: "auto", marginRight: "1rem" }}
               />
               <p>silva.rodrigo@atlantics.dev</p>
             </a>
@@ -86,7 +86,7 @@ const CardsEmpleados = () => {
               alt="Ramiro Martin Arce"
             />
             <h1 style={FontStyles}>Ramiro Martin Arce</h1>
-            <h2 style={{...FontStyles, color:'#269bb6'}}>CEO - Cofounder</h2>
+            <h2 style={{ ...FontStyles, color: "#269bb6" }}>CEO - Cofounder</h2>
             <h3 style={FontStyles}>Business Analyst</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Dirige la visión estratégica de la empresa, define los objetivos
@@ -97,7 +97,7 @@ const CardsEmpleados = () => {
               href="https://www.linkedin.com/in/ramiro-martin-arce-3a7843ba/"
               style={{
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 width: "80%",
                 ...FontStyles,
@@ -106,7 +106,7 @@ const CardsEmpleados = () => {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
                 alt="pola"
-                style={{ width: "30px", height: "auto" }}
+                style={{ width: "30px", height: "auto", marginRight: "1rem" }}
               />
               <p>arce.ramiro@atlantics.dev</p>
             </a>
@@ -118,7 +118,9 @@ const CardsEmpleados = () => {
               alt="Federico Larrea"
             />
             <h1 style={FontStyles}>Federico Larrea</h1>
-            <h2 style={{...FontStyles, color:'#269bb6'}}>COO - Consultant</h2>
+            <h2 style={{ ...FontStyles, color: "#269bb6" }}>
+              COO - Consultant
+            </h2>
             <h3 style={FontStyles}>Engineer Mercado Libre</h3>
             <p style={{ ...FontStyles, fontSize: "80%", textAlign: "center" }}>
               Supervisa las operaciones diarias, optimizando procesos y
@@ -128,17 +130,17 @@ const CardsEmpleados = () => {
             <a
               href="https://www.linkedin.com/in/larreaf/?originalSubdomain=ar"
               style={{
-                display: "flex",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "80%",
                 ...FontStyles,
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                width: "100%",
               }}
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/linkedin-01-01-512.webp?alt=media&token=a6e33e97-1292-4138-902d-a1f1ecf92c80"
                 alt="pola"
-                style={{ width: "30px", height: "auto" }}
+                style={{ width: "30px", height: "auto", marginRight: "1rem" }}
               />
               <p>larrea.federico@atlantics.dev</p>
             </a>

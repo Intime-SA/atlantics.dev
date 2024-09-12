@@ -296,47 +296,6 @@ function DrawerAppBar(props) {
               height: "1500px",
             }}
           >
-            <h2
-              className="fontRubikMonoOne2"
-              style={{
-                marginTop: isMobile ? "40rem" : "32rem",
-                fontSize: isMobile ? "190%" : "400%",
-                marginBottom: "5rem",
-              }}
-            >
-              <span
-                style={{
-                  color: "#2D2D2D",
-                  fontSize: isMobile ? "120%" : "150%",
-                  textShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Subtle white shadow
-                }}
-              >
-                TIENDA
-              </span>{" "}
-              <br />
-              <span
-                style={{
-                  color: "#08FF08",
-                  animation: "flicker 1.5s infinite alternate",
-                  textShadow: "0 0 5px #08FF08, 0 0 10px #08FF08",
-                }}
-              >
-                ON LINE
-              </span>
-              <br />
-              <span
-                style={{
-                  color: "#2D2D2D",
-                  fontSize: isMobile ? "120%" : "150%",
-                  textShadow: "0 0 10px rgba(255, 255, 255, 0.8)", // Subtle white shadow
-                }}
-              >
-                PROPIA
-              </span>
-              <br />
-            </h2>
-
-            <br />
             <h6
               style={{ ...FontStyles, textAlign: isMobile ? "center" : "left" }}
             >
