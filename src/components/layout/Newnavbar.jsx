@@ -233,7 +233,7 @@ const NewNavbar = () => {
             transform: scaleX(1);
           }
           img.logo-img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
           }
         `}
       </style>
