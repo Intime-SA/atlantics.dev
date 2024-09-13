@@ -21,7 +21,7 @@ const NewNavbar = () => {
 
   const navItems = [
     { nombre: "Inicio", url: "https://landing.atlantics.dev" },
-    { nombre: "Staff", url: "https://staff.atlantics.dev" },
+    { nombre: "Staff", url: "https://landing.atlantics.dev/team" },
     { nombre: "Contacto", url: "/contacto" },
   ];
 
