@@ -117,15 +117,13 @@ const NewNavbar = () => {
           }}
         >
           {/* Logo */}
-          <Link to="/" style={{ marginLeft: "1rem" }}>
+          <Link to="/" style={{ marginLeft: "0rem" }}>
             <img
               src="https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/Pesta%C3%B1aLogo%2FSinFondoLogo.png?alt=media&token=8a59df40-df50-4c65-8677-43a9fee55622"
               alt="logo"
               style={{
-                width: "6rem",
-                height: "6rem",
+                width: "8rem",
                 margin: "0",
-                transition: "transform 0.3s ease",
               }}
               className="logo-img"
             />
