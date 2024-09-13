@@ -71,7 +71,7 @@ const NewNavbar = () => {
                   style={{
                     textDecoration: "none",
                     color: "#d9e2ec",
-                    fontSize: "1.2rem",
+                    fontSize: "1.3rem",
                     fontFamily: '"Montserrat", sans-serif',
                     fontWeight: "400",
                     marginBottom: "1rem",
