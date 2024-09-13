@@ -84,7 +84,7 @@ function DrawerAppBar(props) {
         width: "100vw",
       }}
     >
-      <NewNavbar />
+      {isVisible && <NewNavbar />}
 
       <Box
         component="main"
