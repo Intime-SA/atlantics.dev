@@ -58,7 +58,7 @@ function DrawerAppBar(props) {
     // Añadir un pequeño retraso para la animación
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 5000); // Ajusta el tiempo de retraso
+    }, 2500); // Ajusta el tiempo de retraso
 
     return () => clearTimeout(timer);
   }, []);
