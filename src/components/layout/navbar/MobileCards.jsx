@@ -12,7 +12,7 @@ const MobileCards = () => {
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "https://pasarelas.atlantics.dev",
+      route: "https://landing.atlantics.dev/pasarelas",
     },
     {
       icon: "local_shipping",
