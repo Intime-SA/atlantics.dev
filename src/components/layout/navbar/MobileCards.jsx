@@ -17,7 +17,7 @@ const MobileCards = () => {
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "/shipping",
+      route: "https://landing.atlantics.dev/shipping",
     },
   ];
 

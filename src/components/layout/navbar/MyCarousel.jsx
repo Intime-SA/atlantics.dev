@@ -26,7 +26,7 @@ const MyCarousel = () => {
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "/shipping",
+      route: "https://landing.atlantics.dev/shipping",
     },
     {
       icon: "price_change",
@@ -41,7 +41,7 @@ const MyCarousel = () => {
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "/shipping",
+      route: "https://landing.atlantics.dev/shipping",
     },
     {
       icon: "price_change",
@@ -56,7 +56,7 @@ const MyCarousel = () => {
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "/shipping",
+      route: "https://landing.atlantics.dev/shipping",
     },
     {
       icon: "price_change",
@@ -71,7 +71,7 @@ const MyCarousel = () => {
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "/shipping",
+      route: "https://landing.atlantics.dev/shipping",
     },
 
     // Uncomment and update the following items if needed
