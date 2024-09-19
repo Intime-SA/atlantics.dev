@@ -7,7 +7,7 @@ const MobileCards = () => {
     {
       icon: "price_change",
       text: "<strong>SIN COMISIONES</strong>",
-      route: "/cost",
+      route: "https://landing.atlantics.dev/comisiones",
     },
     {
       icon: "paid",
