@@ -16,62 +16,62 @@ const MyCarousel = () => {
     {
       icon: "price_change",
       text: "<strong>SIN COMISIONES</strong>",
-      route: "https://landing.atlantics.dev/comisiones",
+      route: "/",
     },
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "https://landing.atlantics.dev/pasarelas",
+      route: "/",
     },
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "https://landing.atlantics.dev/shipping",
+      route: "/",
     },
     {
       icon: "price_change",
       text: "<strong>SIN COMISIONES</strong>",
-      route: "https://landing.atlantics.dev/comisiones",
+      rroute: "/",
     },
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "https://landing.atlantics.dev/pasarelas",
+      route: "/",
     },
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "https://landing.atlantics.dev/shipping",
+      route: "/",
     },
     {
       icon: "price_change",
       text: "<strong>SIN COMISIONES</strong>",
-      route: "https://landing.atlantics.dev/comisiones",
+      route: "/",
     },
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "https://landing.atlantics.dev/pasarelas",
+      route: "/",
     },
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "https://landing.atlantics.dev/shipping",
+      route: "/",
     },
     {
       icon: "price_change",
       text: "<strong>SIN COMISIONES</strong>",
-      route: "https://landing.atlantics.dev/comisiones",
+      route: "/",
     },
     {
       icon: "paid",
       text: "<strong>PASARELAS DE PAGO</strong>",
-      route: "https://landing.atlantics.dev/pasarelas",
+      route: "/",
     },
     {
       icon: "local_shipping",
       text: "<strong>PLATAFORMAS de CORREO</strong>",
-      route: "https://landing.atlantics.dev/shipping",
+      route: "/",
     },
 
     // Uncomment and update the following items if needed
