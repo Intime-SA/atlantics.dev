@@ -114,7 +114,7 @@ const CardsEmpleados = () => {
 
           <div class="profile-card1">
             <img
-              src="https://media.licdn.com/dms/image/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_800_800/0/1675287129289?e=1729123200&v=beta&t=8rdHfSBFx1BazjqjCmhnKo7Ejv10PbNxrgjATBD8HL4"
+              src="https://media.licdn.com/dms/image/v2/D4D03AQEYBMSyhgCIHQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1675287129289?e=1751500800&v=beta&t=RyFy4KMd_S4fhG7jBjOC27x2clI-dHjHi-CImu8liLo"
               alt="Federico Larrea"
             />
             <h1 style={FontStyles}>Federico Larrea</h1>
